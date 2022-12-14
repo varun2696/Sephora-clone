@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commemerce store</title>
+    <link rel="stylesheet" href="./product.css">
+     
+</head>
+<body>
+ 
+        <a href="./product1.html">Products</a>
+
+    <input id = "search" oninput="search()"  type="text" placeholder="Search"> 
+
+    <div id="products-container">
+
+        <div class="filter">
+            <label for="SortedByPrice" class="Sorting" data-icon="u">Sorted By</label><br>
+            <select    onChange= "handleSort()">
+                <option value="LTH">Low</option>
+                <option value="HTL">High</option>
+            </select><br>
+            <label for="filterByCategory" class="filtering" data-icon="u">Filter By</label><br>
+            <select  id="filtered" onChange="filterByCategory()" >
+                <option value="ALL">ALL</option>
+                <option value="SEPHORA COLLECTION">SEPHORA COLLECTION</option>
+                <option value="FOREST ESSENTIALS">FOREST ESSENTIALS</option>
+                <option value="BENEFIT COSMETICS">BENEFITS COSMETICS</option>
+                <option value="GIVENCHY">GIVENCHY</option>
+              </select>
+            </div>
+        <div class="container">
+            <input type="text">
+              
+        </div>
+    </div>
+   
+    
+</body>
+</html>
+ <script src="./product2.js"></script>
