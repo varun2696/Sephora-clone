@@ -1,0 +1,341 @@
+:root{
+   --main-color:#ff3399;
+   --nav-blue : #0092df;
+   --grey :#f2f2f2;
+   --red: #ea0020;
+   --padding-left-right: 200px;
+
+}
+ @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap'); 
+ /* font-family: 'Sen', sans-serif;  */
+     
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Sen', sans-serif;
+}
+/* body{
+    box-sizing: border-box;
+    
+} */
+
+.menubar{
+background-color: #fff;
+height: 50px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0px 200px;
+
+}
+.menubar>img{
+    height: 70%;
+}
+.menubar>div{
+    font-size: ;
+}
+#mainbar{
+    background-color: var(--nav-blue);
+    height: 70px;
+    justify-content: center;
+}
+#mybag{
+    color: #fff;
+}
+
+#nav-dropdown{
+position: relative;
+display: inline-block;
+}
+#nav-dropdown:hover {
+    
+    cursor: pointer;
+}
+#nav-dropdown .fa-circle-chevron-down{
+    color: var(--main-color);
+    
+}
+
+#dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    
+    padding: 12px 16px;
+    z-index: 1;
+}
+#nav-dropdown:hover #dropdown-content{
+    display: block;
+}
+.fa-solid{color :var(--main-color);margin: 10px;}
+#dropdown-content>*{margin: 10px;}
+.fa-user{color:var(--nav-blue)}
+.fa-box{color: rgb(6, 199, 6);}
+/* -----------------------------nav part end ------------------------------- */
+
+
+.main_container{
+    height: auto;
+    width: 80%;
+    /* background-color: #ea0020; */
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.cartItems{
+height: auto;
+width: 68%;
+/* background-color: rgb(117, 91, 91); */
+
+
+
+}
+.price{
+    width: 30%;
+    height: auto;
+
+
+/* background-color: #0092df; */
+}
+/* ******************overview part ************************/
+#promocode{
+    background-color:var(--grey);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-weight: 700;
+    
+}
+
+#overview{
+    background-color: var(--grey);
+    padding: 50px 20px;
+    margin-top: 50px;
+    height: auto;
+
+}
+#overview>h1{
+    font-weight: 900;
+    font-size: x-large;
+    margin-bottom: 20px;
+}
+#overview hr{
+    margin-top: 20px;
+    border-top: 1px solid black;
+}
+#overview>div{
+    display: flex;
+    width: 98%;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+
+}
+.price>button{
+    width: 100%;
+    padding: 20px;
+    font-size: x-large;
+    font-weight: 700;
+    margin-top: 25px;
+    
+   
+}
+#checkout-btn{
+    background-color: var(--main-color);
+    border: 0px;
+    color: #fff;
+
+}
+#shopmore-btn{
+border: 4px solid black;
+}
+
+#cartItem{
+    height: auto;
+    width: 100%;
+    /* background-color: rgb(14, 85, 148); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* display: grid;
+    grid-template-columns: 3,30%;
+    grid-template-rows: auto,100%; */
+    padding: 20px 0px;
+    border-bottom: 2px solid rgb(153, 149, 149);
+
+
+}
+#cartItem>div{height: 200px;width: 30%;background-color: #fff;
+
+}
+#cartItem>div>img{height: 100%;}
+
+
+
+ 
+
+    #overview1>h1{
+        font-weight: 100;
+        font-size: x-large;
+        margin-bottom: 20px;
+    }
+    #overview1 hr{
+        margin-top: 20px;
+        border-top: 1px solid black;
+    }
+    #overview1>div{
+        display: flex;
+        width: 98%;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+    
+    }
+    #overview1>h3{
+        color: var(--main-color);
+    }
+   #button_div>button:nth-child(1),#button_div>button:nth-child(3){
+    color: var(--main-color);
+    padding: 5px;
+    background-color: white;
+   }
+   #button_div>button:nth-child(2){
+      background-color: var(--main-color);
+      padding: 10px;
+      border: 0px;
+      border-radius: 3px;
+      color: white;
+   }
+   #button_div>button{
+    margin-left: 10px;
+    font-weight: 900;
+    font-size: large;
+    border: 1px solid #ff3399;
+    border-radius: 3px;
+   }
+
+
+
+
+/* /////////////////media queries////////////////////////////// */
+@media all and (min-width:1px) and (max-width:599px){
+    body{
+        /* mobile   background-color: rgb(205, 50, 179); */
+    }
+       /* nav start//////////////////////////////// */
+       .menubar{
+      
+        padding: 0px 5px;
+        
+        }
+    /* nav end//////////////////////////////// */
+    .main_container{
+        width: 95%;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        flex-direction: column-reverse;
+    }
+    .cartItems{
+        width: 100%;
+        }
+    .price{
+            width: 100%;
+        }
+
+
+        #checkout-btn{
+           margin-top: 10px;
+        
+        }
+        #shopmore-btn{
+        border: 4px solid black;
+        }
+        #shopmore-btn{
+     
+            margin-top: 10px;
+            }
+      #overview{
+                margin-top: 10px;
+                
+                
+           
+                }
+     #cartItem{
+         display: grid;
+    grid-template-columns: 1,100%;
+    grid-template-rows: auto,100%; 
+    justify-content: center; 
+     
+
+   
+
+    } 
+    #cartItem>div{
+        width: 100%;
+    }
+    
+}
+@media all and (min-width:600px) and (max-width:1200px){
+   body{
+       /* backround-color: green; */
+   }
+   /* nav start//////////////////////////////// */
+   .menubar{
+      
+    padding: 0px 50px;
+    
+    }
+    /* nav end//////////////////////////////// */
+   .main_container{
+    
+    width: 95%;
+
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cartItems{
+    width: 55%;
+    }
+.price{
+        width: 44%;
+    }
+#checkout-btn{
+        margin-top: 20px;
+     
+     }
+#shopmore-btn{
+     
+     margin-top: 20px;
+     }
+#overview{
+     margin-top: 20px;
+     
+     
+
+     }
+
+     #cartItem{
+        display: grid;
+   grid-template-columns: 1,100%;
+   grid-template-rows: auto,100%; 
+   justify-content: center; 
+    
+
+  
+
+   } 
+   #cartItem>div{
+       width: 100%;
+   }
+   
+}
