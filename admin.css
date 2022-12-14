@@ -19,7 +19,7 @@
     margin-top: 40px;
     /* border: 1px solid red; */
     width: 99%;
-    height: 700px;
+    height: 6100px;
     display: flex;
     justify-content: space-between;
     /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
@@ -112,4 +112,96 @@
     border-color: bisque;
     border-radius: 10px;
     background-color: #f39;
+}
+
+/*  After Login Successfully */
+
+#Container,#Container_1{
+    /* border: 1px solid red; */
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(1);
+    grid-template-rows: repeat(1);
+    padding-top: 20px;
+}
+#pr_btn,#ad_btn{
+    font-size: 30px;
+    height: 70px;
+    width: 80%;
+    margin-top: 30px;
+    margin: auto;
+    border: none;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    color: rgb(26, 3, 3);
+}
+#ur_btn{
+    font-size: 30px;
+    height: 70px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 320px;
+    border: none;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    color: rgb(26, 3, 3);
+}
+
+#pr_btn:hover,#ad_btn:hover,#de_btn:hover,#ur_btn:hover,#ft_btn:hover{
+    cursor: pointer !important;
+    background-color: pink;
+    color: rgba(23, 16, 16, 0.683);
+}
+
+#ft_btn{
+    font-size: 30px;
+    height: 70px;
+    width: 80%;
+    margin: auto;
+    margin-bottom:20px;
+    border: none;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    color: rgb(26, 3, 3);
+}
+
+#de_btn{
+    font-size: 30px;
+    height: 70px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 200px;
+    border: none;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    color: rgb(26, 3, 3);
+}
+
+#Cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* grid-template-rows: auto; */
+    gap: 8px;
+    width: 98%;
+    height: 80%;
+    /* border: 1px solid green; */
+    margin: auto;
+    margin-top: 5px;
+   
+}
+
+.SmallCards{
+    /* border: 1px solid rgb(32, 29, 29); */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 9px;
+    height: 90%;
+    width: 100%;
+    text-align: center;
+}
+
+.SmallCards>img{
+    border-radius: 9px;
+    padding-top: 2px;
+    width: 98%;
+    height: 50%;
 }
