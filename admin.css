@@ -46,6 +46,19 @@
     border-radius :9px;
 }
 
+.wel{
+    width: 80%;
+    border: 1px solid red;
+    text-align: center;
+    border: 1px solid skyblue;
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgb(181, 213, 226);
+    border-radius: 8px;
+    color: rgb(111, 8, 8);
+}
+
+
 /* Login Button & Login Details */
 .login{
     height: 50px;
@@ -125,7 +138,7 @@
     padding-top: 20px;
 }
 #pr_btn,#ad_btn{
-    font-size: 30px;
+    font-size: 25px;
     height: 70px;
     width: 80%;
     margin-top: 30px;
@@ -136,7 +149,7 @@
     color: rgb(26, 3, 3);
 }
 #ur_btn{
-    font-size: 30px;
+    font-size: 25px;
     height: 70px;
     width: 80%;
     margin: auto;
@@ -154,7 +167,7 @@
 }
 
 #ft_btn{
-    font-size: 30px;
+    font-size: 25px;
     height: 70px;
     width: 80%;
     margin: auto;
@@ -166,7 +179,7 @@
 }
 
 #de_btn{
-    font-size: 30px;
+    font-size: 25px;
     height: 70px;
     width: 80%;
     margin: auto;
@@ -204,4 +217,20 @@
     padding-top: 2px;
     width: 98%;
     height: 50%;
+}
+
+#Back{
+    width: 8%;
+    height: 100%;
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    color: rgb(128, 24, 24);
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#Back:hover{
+    cursor: pointer;
 }

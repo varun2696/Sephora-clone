@@ -3,6 +3,12 @@ let loginButton = document.querySelector("#login_btn");
 window.addEventListener("load", () => {
   loginButton.addEventListener("click", (e) => {
     e.target.parentNode.remove();
+    document.querySelector("#Right").innerHTML="";
+    document.querySelector("#Right").innerHTML=`
+      <div class="wel">
+        <h1> Login First ! </h1>
+      </div>
+    `
     setTimeout(() => {
       logindetails();
     }, 0);
@@ -46,11 +52,18 @@ function click() {
 
   function data() {
     if (userNameValue.value == "admin" && userPassValue.value == "C4RA") {
+      WelcomeScreen()
       alert("Hello Admin !");
       document.querySelector("#submit_btn").parentNode.remove();
       setTimeout(() => {
         details();
-      }, 1000);
+        document.querySelector("#Right").innerHTML="";
+        document.querySelector("#Right").innerHTML=`
+          <div class="wel">
+            <h1> Admin DashBoard ! </h1>
+          </div>
+        `
+      }, 2000);
     } else {
       alert("Please Enter Correct Details !");
     }
@@ -58,6 +71,14 @@ function click() {
 }
 
 // After Login Successfully
+
+function WelcomeScreen() {
+  document.querySelector("#Right").innerHTML=`
+    <div class="wel">
+      <h1> Welcome in Admin Page ! </h1>
+    </div>
+  `  
+}
 
 function details() {
   leftdiv.innerHTML = `
@@ -74,9 +95,16 @@ function ClickFunction() {
 
   productBtn.addEventListener("click", (e) => {
     e.target.parentNode.remove()
+   
     setTimeout(()=>{
         InsideProductBtn();
     },1000);
+    document.querySelector("#Right").innerHTML="";
+    document.querySelector("#Right").innerHTML=`
+          <div class="wel">
+            <h1> Product DashBoard ! </h1>
+          </div>
+    `
   });
 
   let UserBtn = document.querySelector("#ur_btn");
@@ -90,17 +118,32 @@ function ClickFunction() {
 function InsideProductBtn() {
     leftdiv.innerHTML = `
       <div id="Container_1">
+            <button id="Back"><</button>
             <button id="ft_btn">Fetch Products</button>
             <button id="ad_btn">Add Product</button>
             <button id="de_btn">Delete Product</button>
+            
       </div>
     `;
+    back();
+    fetch_button();
     add_button();
 }
-
+function back(){
+  let back_button = document.querySelector("#Back")
+  back_button.addEventListener("click",()=>{
+    details()
+    document.querySelector("#Right").innerHTML="";
+    document.querySelector("#Right").innerHTML=`
+          <div class="wel">
+            <h1> Admin DashBoard ! </h1>
+          </div>
+    `
+  });
+}
 // After InsideProductBtn has been called
 
- function add_button() {
+ function fetch_button() {
     let fetch_btn = document.querySelector("#ft_btn");
 
     fetch_btn.addEventListener("click", (e) =>{
@@ -130,6 +173,7 @@ async function FetchProduct() {
 
 
 function DisplayProduct(data){
+  Rightdiv.innerHTML ="";
     Rightdiv.innerHTML =`
         <div id="Cards">
                 ${data.map((el)=>{
@@ -142,4 +186,12 @@ function DisplayProduct(data){
                             </div>`  
                 }).join(" ")} 
         </div> `
+}
+
+function add_button() {
+  let add_btn = document.querySelector("#ad_btn");
+
+  add_btn.addEventListener("click", (e) =>{
+      Rightdiv.innerHTML="";
+  });
 }
