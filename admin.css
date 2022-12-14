@@ -1,0 +1,115 @@
+/* Heading */
+#heading {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  border-bottom: 1px solid black;
+  border-top: 1px solid grey;
+  font-size: 43px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+#heading:hover{
+    cursor: pointer;
+}
+
+/* Main Container */
+#mainContainer{
+    margin: auto;
+    margin-top: 40px;
+    /* border: 1px solid red; */
+    width: 99%;
+    height: 700px;
+    display: flex;
+    justify-content: space-between;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+}
+
+/* Left Side  */
+#Left{
+    /* border: 1px solid green;   */
+    width: 31%;
+    height: 100%; 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background-color: rgb(251, 243, 244);
+    border-radius :9px;
+}
+
+/* Right Side */
+#Right{
+    
+    /* border: 1px solid red; */
+    width: 68%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background-color:  rgb(251, 243, 244);
+    border-radius :9px;
+}
+
+/* Login Button & Login Details */
+.login{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* login button */
+#login_btn{
+   width: 65%;
+   height: 70px;
+   font-size: 28px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-weight: bolder ;
+   border: none;
+   border-radius: 7px;
+}
+
+#login_btn:hover{
+    cursor: pointer;
+    background-color: #f39;
+    color: aliceblue;
+}
+
+.form{
+    padding-top: 40px;
+    border: 1px solid black;
+    width: 99%;
+    height: 300px;
+    margin: auto;
+    /* margin-top: 40px; */
+    background-color: cornsilk;
+    border-radius: 18px;
+}
+
+#username , #password{
+    width: 90%;
+    height: 30px;
+    margin-left:15px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#lab{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 24px;
+    margin-left:20px;
+    margin-top: 40px;
+}
+
+#submit_btn{
+    font-size: 25px;
+    margin-left: 100px;
+    width: 40%;
+    height: 40px;
+    
+}
+#submit_btn:hover{
+    cursor: pointer;
+    border: none;
+    border-color: bisque;
+    border-radius: 10px;
+    background-color: #f39;
+}
