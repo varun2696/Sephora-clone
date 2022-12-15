@@ -27,7 +27,7 @@ function logindetails() {
         <br>
         <input id="password" type="password" placeholder="Enter Password" required="Fill Password" maxlength="8" minlength="5">
         <button id="submit_btn">Login</button>
-        </div>
+    </div>
     `;
   click();
 }
@@ -129,6 +129,7 @@ function InsideProductBtn() {
     fetch_button();
     add_button();
 }
+
 function back(){
   let back_button = document.querySelector("#Back")
   back_button.addEventListener("click",()=>{
@@ -141,6 +142,7 @@ function back(){
     `
   });
 }
+
 // After InsideProductBtn has been called
 
  function fetch_button() {
@@ -193,5 +195,42 @@ function add_button() {
 
   add_btn.addEventListener("click", (e) =>{
       Rightdiv.innerHTML="";
+
+       Rightdiv.innerHTML =`
+         <div id="FormInput">
+            <h2 id="inputHeader">Product Form</h2>
+             <form>
+                
+                <input type="number" id="id" placeholder="Enter Product Id" required maxlength="2">
+                
+                <br>
+                
+                <input type="url" id="imageUrl" required="Mandatory Field" placeholder="Enter Product Url" >
+
+                <br>
+                
+                <input type="text" id="category" required="Mandatory Field" placeholder="Enter Product Category" >
+
+                <br>
+                
+                <input type="text" id="title" required="Mandatory Field" placeholder="Enter Product Title" >
+
+                <br>
+
+                <input type="number" id="price" required="Mandatory Field" placeholder="Enter Product Price" > 
+                
+                <br>
+
+                <input type="submit">
+
+             </form>
+         </div>
+       `
   });
+}
+
+
+function InputTag(){  
+  let productInput = document.querySelectorAll("input");
+  console.log(productInput);
 }
