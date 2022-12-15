@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-        #block{
+        #block {
             width: 25%;
             height: auto;
             margin: auto;
-            border: 1px solid;
+            /* border: 1px solid; */
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             margin-top: 50px;
         }
-        h1{
+
+        h1 {
             width: 60%;
             text-align: center;
             margin: auto;
-            margin-top: 50px;
+            padding-top: 50px;
             margin-bottom: 30px;
         }
-        h2{
+
+        h2 {
             text-align: center;
             color: #ff3399;
         }
@@ -36,7 +40,8 @@
             padding-left: 15px;
 
         }
-        #login_btn{
+
+        #login_btn {
             width: 89%;
             height: 40px;
             margin: 15px;
@@ -46,23 +51,65 @@
             color: white;
             font-weight: 600;
             font-size: 18px;
+            margin-bottom: 50px;
         }
-        #login_btn:hover{
+
+        #login_btn:hover {
             cursor: pointer;
         }
+
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            padding-top: 50px;
+        }
+
+        .close {
+            position: absolute;
+            right: 35px;
+            top: 15px;
+            font-size: 40px;
+            font-weight: bold;
+            color: #f1f1f1;
+        }
+
+        /* .close:hover,
+        .close:focus {
+            color: #f44336;
+            cursor: pointer;
+        } */
     </style>
 </head>
+
 <body>
-    <h2>Login</h2>
-    <div id="block">
+    <button onclick="document.getElementById('pop').style.display='block'" style="width:auto;">Login</button>
+
+    <div id="pop" class="modal">
+        <h2>Login</h2>
+        <button id="signout">SingnOut</button>
+        <div id="block">
             <h1>LOGIN</h1>
             <label for="">Enter your Username</label><br>
             <input type="text" placeholder="username" id="username"> <br>
             <label for="">Enter your Password</label><br>
             <input type="password" placeholder="password" id="password"><br>
             <button id="login_btn">CONTINUE</button>
+        </div>
     </div>
 </body>
+
 </html>
 
 <script src="./login.js"></script>
