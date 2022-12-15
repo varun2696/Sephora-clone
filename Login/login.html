@@ -9,9 +9,8 @@
     <style>
         #block {
             width: 25%;
-            height: auto;
+            height: 450px;
             margin: auto;
-            /* border: 1px solid; */
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             margin-top: 50px;
         }
@@ -58,45 +57,17 @@
             cursor: pointer;
         }
 
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            padding-top: 50px;
+        a{
+            display: flex;
+            flex-direction: row-reverse;
+            padding-right: 20px;
         }
-
-        .close {
-            position: absolute;
-            right: 35px;
-            top: 15px;
-            font-size: 40px;
-            font-weight: bold;
-            color: #f1f1f1;
-        }
-
-        /* .close:hover,
-        .close:focus {
-            color: #f44336;
-            cursor: pointer;
-        } */
     </style>
 </head>
 
 <body>
-    <button onclick="document.getElementById('pop').style.display='block'" style="width:auto;">Login</button>
 
-    <div id="pop" class="modal">
+   
         <h2>Login</h2>
         <button id="signout">SingnOut</button>
         <div id="block">
@@ -106,8 +77,8 @@
             <label for="">Enter your Password</label><br>
             <input type="password" placeholder="password" id="password"><br>
             <button id="login_btn">CONTINUE</button>
+            <a href="./register.html">Create Account</a>
         </div>
-    </div>
 </body>
 
 </html>
