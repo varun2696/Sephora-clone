@@ -7,7 +7,7 @@ label{
     font-size: 25px;
 }
 .filter{
-    width: 350px;
+    width: 300px;
     background-color: white;
 }
 
@@ -29,7 +29,7 @@ h1{
 }
 input{
     height:40px;
-    width:500px;
+    width:300px;
     font-size: 30px;
 }
 .container{
@@ -37,11 +37,11 @@ input{
     grid-template-columns: repeat(3,1fr);
     gap:20px;
     margin:auto;
-    width:80%;
+    width:60%;
     margin-bottom: 20px;
 }
 .container>div>img{
-   width:80%;
+   width:70%;
    height:65%;
 }
 

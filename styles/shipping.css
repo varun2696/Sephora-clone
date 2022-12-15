@@ -1,0 +1,152 @@
+:root{
+    --main-color:#ff3399;
+    --nav-blue : #0092df;
+    --grey :#f2f2f2;
+    --red: #ea0020;
+    --padding-left-right: 200px;
+ 
+ }
+
+
+
+#mainbar{
+    display: flex;
+    justify-content: left;
+    color: #fff;
+}
+
+#ship-pay-btns{
+    display: flex;
+justify-content: center;
+ /* background-color: aqua;  */
+height: 100%;
+width: 90%;
+}
+#ship-pay-btns>button{
+    background-color:var(--nav-blue);
+    border: 0px;
+    color: #fff;
+    margin-right: 20px;
+    border-bottom: 5px solid #ff3399;
+    cursor: pointer;
+}
+#disabled>h1, #disabled>h1>i{
+    color: rgb(184, 179, 179);
+    
+}
+#ship-pay-btns>#disabled{
+    border-bottom: 5px solid rgb(184, 179, 179);
+}
+
+/* **********************cart items second display starts here *************/
+
+
+/*******************media queries----mobile *****************************/
+@media all and (min-width:1px) and (max-width:390px){
+    body{
+            /*background-color: rgb(205, 50, 179);  */
+    }
+    #checkout{
+      display: none;
+    }
+    #disabled{
+        display: none;
+      }
+    #logo{
+        display: none;
+    }
+    .menubar{
+        padding: 30px ;
+    }
+}
+.fa-circle-dot{
+    color: darkblue;
+    margin-right: 5px;
+}
+#cartItem{
+    border-top: 2px solid grey;
+}
+#address{
+    /* background-color: #ea0020; */
+    border-bottom: 0px;
+}
+#change_address{
+    background-color:#fff ;
+    border: 0px;
+    margin-top: 20px;
+    padding: 0px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #ff3399;
+
+}
+#adressmaindiv{
+    border-bottom: 0px;
+}
+footer{
+width: 100%;
+height: auto;
+background-color: var(--grey);
+
+display: flex;
+justify-content: space-evenly;
+padding: 0px ;
+margin: auto;
+padding: 20px;
+background-color: var(--grey);
+margin-top: 100px;
+
+
+}
+footer>div{
+width: 40%;
+
+height: 50px;
+display: flex;
+
+}
+footer>div:nth-child(1){
+    justify-content: space-evenly;
+}
+footer>div:nth-child(2){
+    justify-content: center;
+    align-items: center;
+}
+@media all and (min-width:391px) and (max-width:799px){
+    body{
+            /* background-color: rgb(205, 50, 179);   */
+    }
+    #disabled{
+      display: none;
+    }
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer>div{
+        width: 70%;
+        
+        justify-content: space-evenly;
+        
+    }
+}
+@media all and (min-width:800px) and (max-width:1200px){
+    body{
+            /* background-color: rgb(177, 205, 50);   */
+    }
+    
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer>div{
+        width: 70%;
+        justify-content: space-evenly;
+        
+    }
+}
+
+
+

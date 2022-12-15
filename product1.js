@@ -70,6 +70,7 @@ function displayCard(data){
     Price.innerText="Rs."+elem.price;
   
     let btn=document.createElement("button");
+    btn.className = "show-modal"; // className added 
     btn.innerText=`Add  to
      cart `
  
@@ -77,7 +78,8 @@ function displayCard(data){
     btn.addEventListener("click", function () {
       cartproducts.push(elem);
       localStorage.setItem("cart",JSON.stringify(cartproducts));
-      alert("Product added to cart");
+      // alert("Product added to cart");
+      showfeed()
     });
 
     div.append(imageProduct,Category,title,Price,btn);
@@ -85,4 +87,43 @@ function displayCard(data){
     document.querySelector(".container").append(div);
       });
     }
+
+    
+// feedback functionality - day-3
+
+const section = document.querySelector("section"),
+showBtn = document.querySelector(".show-modal"),
+overlay = document.querySelector(".overlay"),
+closeBtn = document.querySelector(".close-btn");
+function addtoBag(){
+
+}
+console.log(showBtn)
+showBtn.addEventListener("click", showfeed );
+
+function showfeed(){
+section.classList.add("active")
+}
+
+overlay.addEventListener("click", addedtoBag);
+function addedtoBag(){
+section.classList.remove("active")
+}
+
+closeBtn.addEventListener("click", cancel);
+
+function cancel(){
+  section.classList.remove("active")
+}
+
+
+// drop down functionalities
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function dropdownBrand() {
+  document.getElementById("Brand").classList.toggle("show");
+}
+function dropdownGender() {
+  document.getElementById("Gender").classList.toggle("show");
+}
  

@@ -225,10 +225,11 @@ body{
 }
 #pTag{
     /* border: 1px solid black; */
-    margin-top: 9px;
-    margin-left: 0px;
+    margin-top: 10px;
+    margin-left: 5px;
     height: 25px;
     text-decoration: none;
+    padding-top: 2px;
     color: black;
 }
 #searchbar{
@@ -434,7 +435,7 @@ text-align: center;
  
   }
   #JustLand{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 90px;
     width: 90%;
     margin-top: 110px;
@@ -450,8 +451,8 @@ text-align: center;
     width: 100%;
   }
   .slivid{
-    border: 2px solid black;
-    margin-top: 40px;
+    /* border: 2px solid black; */
+    margin-top: 90px;
     height: 400px;
     width: 80%;
     margin: auto;
@@ -459,7 +460,399 @@ text-align: center;
     justify-content: flex-start;
   }
   .slivid>div{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: 350;
     width: 50%;
+    margin-top: 5px;
+  }
+
+  /* #slid{
+    display: flex;
+
+  } */
+
+  .slider {
+    margin: 0 auto;
+    max-width: 940px;
+  }
+  
+  .slide_viewer {
+    height: 340px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slide_group {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .slide {
+    /* border: 1px solid black; */
+    display: none;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    /* margin: auto; */
+    margin-left: 10px;
+    text-align: center;
+  }
+  .slide>img{
+    /* border: 1px solid black; */
+    width: auto;
+    height: 200px;
+    margin-left: 13px;
+    margin-top: 20px;
+  }
+  .slide>p{
+    text-align: center;
+  }
+  .slide:first-child {
+    display: block;
+  }
+  /* 
+  .slide:nth-of-type(1) {
+    background: #D7A151;
+  }
+  
+  .slide:nth-of-type(2) {
+    background: #F4E4CD;
+  }
+  
+  .slide:nth-of-type(3) {
+    background: #C75534;
+  }
+  
+  .slide:nth-of-type(4) {
+    background: #D1D1D4;
+  } */
+  
+  .slide_buttons {
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+  }
+  
+  a.slide_btn {
+    color: #474544;
+    font-size: 42px;
+    margin: 0 0.175em;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .slide_btn.active, .slide_btn:hover {
+    color: #428CC6;
+    cursor: pointer;
+  }
+  
+  .directional_nav {
+    height: 340px;
+    margin: 0 auto;
+    max-width: 940px;
+    position: relative;
+    top: -340px;
+  }
+  
+  .previous_btn {
+    /* border: 1px solid black; */
+    bottom: 0;
+    left: 10px;
+    /* margin: auto; */
+    margin-top: 25px;
+    margin-left: 0px;
+    position: absolute;
+    top: 100px;
+    /* background-color: rgb(241, 26, 62); */
+  }
+  
+  .next_btn {
+    bottom: 0;
+    /* margin: auto; */
+    margin-top: 25px;
+    position: absolute;
+    right: 5px;
+    top: 100px;
+    /* font-display: rgb(241, 26, 62); */
+  }
+  
+  .previous_btn, .next_btn {
+    cursor: pointer;
+    height: 65px;
+    opacity: 0.5;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    -ms-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+    width: 65px;
+  }
+  
+  .previous_btn:hover, .next_btn:hover {
+    opacity: 1;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .previous_btn {
+      left: 50px;
+    }
+    .next_btn {
+      right: 50px;
+    }
+  }
+  #Videop{
+   background-color: rgb(4, 16, 1)
+  }
+  #playvideo{
+    border: 3px solid black;
+    margin-top: 40px;
+    margin-left: 25px;
+    width: 90%;
+    /* background-color: teal; */
+  }
+  #Videop>p{
+    text-align: center;
+  }
+  .C4RAImage{
+    /* border: 5px solid red; */
+    width: 90%;
+    height: 170px;
+    margin-top: 10px;
+    margin-left: 30px;
+    text-align: center;
+  }
+  .C4RAImage>img{
+    /* border: 2px solid red; */
+    width: 1200px;
+    margin-top: 30px;
+    margin-left: 70px;
+  }
+
+.LazyGirl{
+    /* border: 2px solid black; */
+    height: 90px;
+    width: 90%;
+    margin-top: 1px;
+    transform: translateZ(0);
+    font-size: 0;
+    margin-left: 50px;
+  }
+  .LazyGirl>img{ 
+    margin-top: 5px;
+    /* margin-left: 20px; */
+    text-align: center;
+    height: 80px;
+    width: 100%;
+  }
+  #LazyGirlCard{
+    /* border: 1px solid black; */
+    width: 1200px;
+    height: 360px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  #smallCard{
+    border-radius: 10px;
+    text-align: center;
+    height: 300px;
+  }
+  #smallCard>img{
+    /* border: 1px solid yellow; */
+    padding-top: 8px;
+    height:350px;
+    width:380px;
+    text-align: center;
+  }
+
+
+  #favouriteBrand{
+      /* border: 2px solid black; */
+      height: 90px;
+      width: 90%;
+      margin-top: 15px;
+      transform: translateZ(0);
+      font-size: 0;
+      margin-left: 50px;
+  }
+ 
+  #favouriteBrand>img{ 
+    margin-top: 5px;
+    /* margin-left: 20px; */
+    text-align: center;
+    height: 80px;
+    width: 100%;
+  }
+  .BrandContainer{
+    /* border: 3px solid black; */
+    height: 150px;
+    width: 80%;
+    display: flex;
+    /* text-align: center; */
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 0px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .BrandContainer>div{
+    /* border: 2px solid red; */
+    height: 80px;
+    width: 16%;
+    margin-top: 1px;
+    /* margin-left: 40px;
+    margin-right: 40px; */
+    /* padding-top: 15px; */
+    text-align: center;
+    color: white;
+    /* background-color: black; */
+  }
+  .BrandContainer>div>img{
+    height: 80px;
+    width: 180px;
+    
+  }
+  #Block{
+    /* border: 2px solid black; */
+    height: 90px;
+    width: 90%;
+    margin-top: 10px;
+    transform: translateZ(0);
+    font-size: 0;
+    margin-left: 50px;
+}
+
+#Block>img{ 
+  text-align: center;
+  height: 80px;
+  width: 100%;
+}
+#BlockContainer{
+    /* border: 2px solid black; */
+    width: 85%;
+    margin: auto;
+    height: 550px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 5px;
+    row-gap:0px;
+}
+#BlockContainer>div{
+    /* border: 2px solid black; */
+    margin-left: 5spx;
+    margin-top: 5px;
+   height: 250px;
+/* width: ; */
+}
+#BlockContainer>div>img{
+    height: 250px;
+    width: 395px;
+}
+
+#C4RADiary{
+    /* border: 3px solid black; */
+    align-items: center;
+    text-align: center;
+    margin-top: 1px;
+    /* padding-top: 6px; */
+    height: 90px;
+  }
+  #C4RADiary>img{
+    margin-top: 5px;
+    text-align: center;
+    height: 80px;
+    width: 100%;
+  }
+  .C4RADiarierContainer{
+    /* border: 1px solid red; */
+    height: 450px;
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0px;
+    margin-top: 5px;
+    margin-left: 150px;
+
+
+  }
+  #smallCard{
+    /* border: 2px solid black; */
+    height: 400px;
+    width: 360px;
+    margin-left: 10px;
+    margin-top: 0px;
+  }
+  
+  #smallCard>img{
+    /* border:1px solid red; */
+    padding-top: 0px;
+    height: 290px;
+    width: 350px
+  }
+  #btn1{
+    /* border: 1px solid black; */
+    height: 50px;
+    width: 170px;
+    font-size: medium;
+    text-decoration: solid;
+    background-color: #ABC72C;
+    margin-left: 650px;
+  }
+  #back{
+    text-decoration: none;
+    color: black;
+  }
+  .Subscribe{
+    /* border: 1px solid black; */
+    height: 120px;
+    width: 100%;
+    background-color: #f2f2f2;
+    text-align: center;
+    font-size:larger;
+    font-family: Avenir-NextBold;
+    color: #000;
+    padding: 30px 12px 10px;
+  }
+  
+  .Subscribe>div{
+    /* border: 1px solid black; */
+    display: flex;
+    width: 400px;
+    height: 50px;
+    margin: auto;
+  }
+  .Subscribe>div input{
+    flex-grow: 4;
+    background: #fff;
+    width: 100px;
+    padding-left: 10px;
+    font-size: medium;
+  }
+  .Subscribe>div>button{
+    flex-grow: 1;
+    display: inline-block;
+    border: 0;
+    padding: 14px;
+    background: #000;
+    cursor: pointer;
+    font-size:medium;
+    font-weight:bolder;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .footerdocs{
+    border: 1px solid black;
+    height: 500px;
+    width: 100%;
   }
