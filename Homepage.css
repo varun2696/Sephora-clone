@@ -188,7 +188,6 @@ body{
     width: 400px;
 
 }
-
 #webName >div:nth-child(2){
     width: 600px;
     text-align: center;
@@ -283,12 +282,13 @@ transition: background 0.4s;
 
 }
 #productlist a:hover{
-    /* background-color: #305753; */
+    /* background-color: pink; */
     color: rgb(242, 59, 181);
 }
 #productlist ul{
 list-style: none;
 display: flex;
+text-align: center;
 }
 #productlist li{
     width: 100%;
@@ -304,30 +304,43 @@ display: flex;
     display: none;
     position: absolute;
     top: 0px;
+    height: 100px;
 }
 .submenu{
     display: flex;
     flex-direction: column;
     position: absolute;
     width: 200PX;
+    height: 60px;
 }
 .submenu li{
     position: relative;
+    height: 60px;
+    margin-top: 0px;
 }
 .submenu li:hover .submenu-2 li{
     display: block;
+    
 }
 .submenu-2 li{
     display: none;
+    height: 60px;
+    margin-top: 0px;
 }
 .submenu-2{
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 0px;
     left: 160px;
     width: 300px;
+    height: 70px;
 }
+
+   /* NavbarcssEnd */
+
+
 .arrow{
     margin-left: 8px;
     column-gap: #eee;
@@ -346,31 +359,41 @@ display: flex;
 
   .deal{
     /* border: 3px solid black; */
-    height: 80px;
+    height: 170px;
+    width: 80%;
     display: flex;
+    /* text-align: center; */
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 0px;
+    margin: auto;
     padding-left: 20px;
     padding-right: 20px;
   }
   .deal>div{
     /* border: 2px solid red; */
     height: 50px;
-    width: 170px;
+    width: 14%;
     margin-top: 10px;
-    margin-left: 40px;
-    margin-right: 40px;
+    /* margin-left: 40px;
+    margin-right: 40px; */
     padding-top: 15px;
     text-align: center;
     color: white;
     background-color: black;
   }
   #heading{
-  
+    /* border: 3px solid black; */
+    align-items: center;
     text-align: center;
-    height: 50px;
+    margin-top: 3px;
+    /* padding-top: 6px; */
+    height: 90px;
+  }
+  #heading>h2{
+    /* border: 3px solid black; */
+    margin-top: 30px;
   }
   #tomimg{
   
@@ -382,18 +405,16 @@ display: flex;
     width: 80%;
     
   }
-
-
   .TomFord{
    
     display: grid;
     text-align: center;
     grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+    gap: 10px;
     height:300px;
-    width: 95%;
+    width: 80%;
     margin:auto;
-    margin-top: 5px;
+    margin-top: 25px;
     padding-bottom: 10px;
     padding-left: 30px;
     padding-right: 30px;
@@ -407,8 +428,38 @@ display: flex;
   }
   .TomFord>div>img{
     padding-top: 8px;
-    width: 90%;
-    height: 280px;
+    height:400px;
+    width:370px;
     text-align: center;
  
+  }
+  #JustLand{
+    border: 2px solid black;
+    height: 90px;
+    width: 90%;
+    margin-top: 110px;
+    transform: translateZ(0);
+    font-size: 0;
+    margin-left: 50px;
+  }
+  #JustLand>img{ 
+    margin-top: 5px;
+    /* margin-left: 20px; */
+    text-align: center;
+    height: 80px;
+    width: 100%;
+  }
+  .slivid{
+    border: 2px solid black;
+    margin-top: 40px;
+    height: 400px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .slivid>div{
+    border: 2px solid red;
+    height: 350;
+    width: 50%;
   }
