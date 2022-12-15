@@ -38,7 +38,8 @@ const LoginUser = async (username, password) => {
             if(username == DATA[0].username && password == DATA[0].password){
                 alert('login sucees');
                 sessionStorage.setItem('c4raUser', username);
-                window.location.reload();
+                // window.location.reload();
+                window.location.href = './homepage.html'
             } 
             else{
                 alert('Please enter valid username and password')
