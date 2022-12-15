@@ -6,8 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> </title>
     <link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="./sidebar.css">
+    <link rel="stylesheet" href="./feedback.css">
 </head>
 <body>
+    
+  <section>
+    <button class="show-modal">Add to bag</button>
+    <span class="overlay"></span>
+
+    <div class="modal-box">
+      <img src="./added to bag.png" alt="">
+      <h2>Success</h2>
+      <h3>Successfully added to bag !</h3>
+
+      <div class="buttons">
+        <button class="close-btn">Ok, done !</button>
+      </div>
+    </div>
     <a href="./product2.html">Products</a>
     <input id = "searching" oninput="search()" type="text" placeholder="Search"> 
 
@@ -25,13 +41,44 @@
                 <option value="Perfume"> <h2>Perfume</h2></option>
                 <option value="Mists and Deodrants"> <h2>Mists and Deodrants</h2> </option>
               </select>
+
+              
+<!-- drop down menu -->
+           <div class="dropdown">
+            <button onclick="dropdownGender()" class="dropbtn">Gender </button>
+         <div id="Gender" class="dropdown-content">
+            <a href="#about">Sephora Collection(12)</a>
+            <a href="#base">CLINIQUE(8)</a>
+            <a href="#blog"> SHISEIDO(7)</a>
+            <a href="#contact"> Estee Lauder(6)</a>
+            <a href="#custom"> Kama Ayurveda(6)</a>
+            <a href="#support">Wishful(5)</a>
+            <a href="#tools">Mario Badescu(3)</a>
+            </div>
+          </div><br>
+
+       <div class="dropdown">
+            <button onclick="dropdownBrand()" class="dropbtn">Brand</button>
+         <div id="Brand" class="dropdown-content">
+            <a href="#about">Sephora Collection(12)</a>
+            <a href="#base">CLINIQUE(8)</a>
+            <a href="#blog"> SHISEIDO(7)</a>
+            <a href="#contact"> Estee Lauder(6)</a>
+            <a href="#custom"> Kama Ayurveda(6)</a>
+            <a href="#support">Wishful(5)</a>
+            <a href="#tools">Mario Badescu(3)</a>
+            </div>
+          </div>
+
+    </div>
+    
         </div>
         <div class="container">
             <input type="text">
               
         </div>
     </div>
-   
+</section>
 </body>
 </html>
  <script src="./product1.js"></script>
