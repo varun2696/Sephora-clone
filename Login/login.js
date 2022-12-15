@@ -27,30 +27,48 @@ const LoginUser = async (username, password) => {
             let data = await login_res.json();
             // console.log(data);
             let DATA = data.filter((el) => {
-                if (el.username == username && el.password == password) {
+                if (el.username == username) {
                     // let Name = el.username
-                    console.log(el)
+                    // console.log(el)
                     return el;
-
-
                 }
             });
-            console.log(DATA[0].username)
-            let loginName = DATA[0].username || null;
-
-            if (loginName) {
-                alert('login sucees')
-                sessionStorage.setItem('c4raUser', loginName);
-                window.location.reload()
-            }
-            else {
+            
+            // console.log(DATA)
+            if(username == DATA[0].username && password == DATA[0].password){
+                alert('login sucees');
+                sessionStorage.setItem('c4raUser', username);
+                window.location.reload();
+            } 
+            else{
                 alert('Please enter valid username and password')
             }
+
         }
 
     }
     catch (error) {
-        alert('something went wrong')
+        alert('Something went wrong User not found')
         console.log('error', error)
     }
+}
+
+
+let signout = document.getElementById('signout');
+signout.addEventListener('click',  ()=>{
+
+    alert('You are signout from the site')
+    sessionStorage.removeItem('c4raUser');
+    window.location.reload();
+})
+
+
+
+var modal = document.getElementById('pop');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
