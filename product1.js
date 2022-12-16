@@ -71,8 +71,7 @@ function displayCard(data){
   
     let btn=document.createElement("button");
     btn.className = "show-modal"; // className added 
-    btn.innerText=`Add  to
-     cart `
+    btn.innerText=`Add to cart `
  
     
     btn.addEventListener("click", function () {
@@ -107,13 +106,15 @@ section.classList.add("active")
 
 overlay.addEventListener("click", addedtoBag);
 function addedtoBag(){
-section.classList.remove("active")
+section.classList.remove("active");
+window.location.href="cart.html";
 }
 
 closeBtn.addEventListener("click", cancel);
 
 function cancel(){
-  section.classList.remove("active")
+  section.classList.remove("active");
+  window.location.href="cart.html";
 }
 
 

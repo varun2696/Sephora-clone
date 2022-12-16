@@ -4,15 +4,111 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> </title>
+    <title>C4RA</title>
     <link rel="stylesheet" href="./product.css">
     <link rel="stylesheet" href="./sidebar.css">
     <link rel="stylesheet" href="./feedback.css">
+    <link rel="stylesheet" href="./hamberger.css">
+    <link rel="stylesheet" href="./navbar.css">
 </head>
 <body>
-    
+ 
+   
   <section>
-    <button class="show-modal">Add to bag</button>
+      <!-- Navbar -->
+      <div class="topNav">
+        <div id="Image">
+            <a href="">
+                <img src="./C4RA.png" alt="" href="">
+            </a>
+        </div>
+        <div id="slash"></div>
+        <div id="StoreLocator">
+            <img src="https://cdn1.vectorstock.com/i/thumb-large/66/20/map-pointer-location-icon-pink-pin-on-white-vector-21806620.jpg" alt="">
+            <p>Store Locator</p>
+        </div>
+
+        <div id="star">
+            <i class="fas fa-star fa-xs" id="str1"></i>
+            <i class="fas fa-star fa-xs" id="str2"></i>
+            <i class="fas fa-star fa-xs" id="str3"></i>
+        </div>
+        <div id="coupon">
+            <p>Get 10% OFF on your first purchase.<br>Use Code: BEAUTY10</p>
+        </div>   
+        <div id="star">
+            <i class="fas fa-star fa-xs" id="str1"></i>
+            <i class="fas fa-star fa-xs" id="str2"></i>
+            <i class="fas fa-star fa-xs" id="str3"></i>
+        </div> 
+        <div id="GetApp">
+            <img src="https://th.bing.com/th/id/OIP.M4D-XaQiJ-Z5rygt_UfNKQAAAA?pid=ImgDet&rs=1" alt="">
+            <p>Get App</p>
+        </div>
+        <div id="trackOrder">
+            <img src="https://th.bing.com/th/id/OIP.yyw1fHGdYgOzd8yt4qP16gAAAA?pid=ImgDet&w=280&h=280&rs=1" alt="">
+            <p>Track Order</p>
+        </div>
+        <div id="loyality">
+            <img src="https://th.bing.com/th/id/OIP.02mw2NwyDPdKutRVQhplDAHaHa?pid=ImgDet&w=187&h=187&c=7&dpr=2" alt="">
+            <p>Loyality</p>
+
+        </div>
+    </div>
+
+    <div id="webName">
+        <div id="search">
+            <a href="#">
+                <i class="fas fa-search fa-xs" id="searchbar"></i>
+            </a>
+          
+            <input  placeholder="Search C4RA">
+        </div>
+        <div id="BrandName">
+            <h4>C&nbsp;4&nbsp;R&nbsp;A</h4>
+        </div>
+        <div id="icons">
+            <a href="admin.html">
+                <i class="fas fa-user fa-xs" id="searchbar"></i>
+            </a>
+            <a href="">
+                <img src="https://www.colourbox.com/preview/5559833-icon-shopping-cart-pink.jpg" alt="cart">
+            </a>
+            <div id="login">
+                <a href="login">
+                    <i class="fas fa-user fa-xs" id="searchbar"></i>
+                </a>
+                <a href="" id="pTag">
+                    Login
+                   
+                </a>
+                
+            </div>
+            
+            
+        </div>
+
+    </div>
+
+    <div class="top-nav">
+        <div></div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li><a href="#">SALE</a></li>
+            <li><a href="#">MAKEUP</a></li>
+            <li><a href="#">SKINCARE</a></li>
+            <li><a href="#">FRAGRANCE</a></li>
+            <li><a href="#">TOOLS & BRUSHES</a></li>
+            <li><a href="#">BRANDS</a></li>
+        </ul>
+    </div>
+
+
+    <!-- End of Navbar -->
+    <button style = "visibility: hidden" class="show-modal" >Cart</button>
     <span class="overlay"></span>
 
     <div class="modal-box">
@@ -24,9 +120,10 @@
         <button class="close-btn">Ok, done !</button>
       </div>
     </div>
-    <a href="./product2.html">Products</a>
-    <input id = "searching" oninput="search()" type="text" placeholder="Search"> 
 
+    <!-- <a href="./product2.html">Products</a> -->
+    
+   
     <div id="products-container">
         <div class="filter">
             <label for="SortedByPrice" class="Sorting" data-icon="u">Sorted By</label><br>
@@ -45,7 +142,7 @@
               
 <!-- drop down menu -->
            <div class="dropdown">
-            <button onclick="dropdownGender()" class="dropbtn">Gender </button>
+            <button onclick="dropdownGender()"  id="dropbtn">Gender </button>
          <div id="Gender" class="dropdown-content">
             <a href="#about">Sephora Collection(12)</a>
             <a href="#base">CLINIQUE(8)</a>
@@ -58,7 +155,7 @@
           </div><br>
 
        <div class="dropdown">
-            <button onclick="dropdownBrand()" class="dropbtn">Brand</button>
+            <button onclick="dropdownBrand()"  id="dropbtn">Brand</button>
          <div id="Brand" class="dropdown-content">
             <a href="#about">Sephora Collection(12)</a>
             <a href="#base">CLINIQUE(8)</a>
@@ -67,14 +164,13 @@
             <a href="#custom"> Kama Ayurveda(6)</a>
             <a href="#support">Wishful(5)</a>
             <a href="#tools">Mario Badescu(3)</a>
-            </div>
-          </div>
-
-    </div>
-    
+      </div>
         </div>
+
+       </div>
+   
         <div class="container">
-            <input type="text">
+            <!-- <input type="text"> -->
               
         </div>
     </div>
