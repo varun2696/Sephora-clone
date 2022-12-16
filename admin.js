@@ -153,7 +153,15 @@ function fetch_button() {
   let fetch_btn = document.querySelector("#ft_btn");
 
   fetch_btn.addEventListener("click", (e) => {  
+    Rightdiv.style.background="white";
+    Rightdiv.innerHTML=''
+    Rightdiv.innerHTML=`
+      <div id="loading" style=" background-color:white; height:6100px;" >
+          <img src="./Spinner-5.gif" alt="error">
+      </div>
+    `
       FetchProduct();
+      Rightdiv.style.background="rgb(251, 243, 244)"
   });
 }
 
