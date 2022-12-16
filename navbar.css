@@ -1,0 +1,353 @@
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.topNav{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 60px;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(244, 243, 243);
+}
+#Image{
+    margin-top: 1px;
+    margin-left: 10px;
+    height: 58px;
+    width: 120px;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+#Image img{
+    /* margin-bottom: 10px; */
+    height:55px;
+    padding-top: 1px;
+    
+    /* border: 2px solid black; */
+    width: 60px;
+    border-radius: 40px;
+}
+#slash{
+    border: 1px solid rgb(93, 93, 93);
+    border-left: 2px;
+    border-top: 1px;
+    border-bottom: 1px;
+    margin-top: 10px;
+    height: 30px;
+    width: 20px;
+}
+#StoreLocator{
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid black; */
+    height: 40px;
+    width: 200px;
+    margin-top: 6px;
+    margin-left: 3px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight:normal;
+}
+#StoreLocator img{
+    /* border: 1px solid black; */
+    height: 25px;
+    width: 25px;
+    margin-top: 3px;
+    border-radius: 40px;
+
+}
+#StoreLocator p{
+    /* border: 1px solid black; */
+    height: 20px;
+    margin-top: 8px;
+    margin-bottom: 50px;
+    padding-left: 5px;
+   
+    /* padding-bottom: 20px; */
+}
+#star{
+    /* border: 1px solid black; */
+    height: 20px;
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 5px;
+    text-align: center;
+    
+
+}
+#str1{
+    color: blueviolet;
+}
+#str2{
+    color: orange
+}
+#str3{
+    color: rgb(247, 51, 220);
+    /* background-color: yellow; */
+}
+#coupon{
+    /* border:2px solid black; */
+    width:280px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    margin-left: 20px;
+   text-align: center;
+}
+#GetApp{
+    border: 1px solid black;
+    border-left: 2px;
+    border-top: 1px;
+    border-bottom: 1px;
+    padding-left: 3px;
+    display: flex;
+    margin-top: 10px;
+    height: 30px;
+    width: 130px;
+}
+#GetApp img{
+    /* border: 3px solid black; */
+    height: 20px;
+    width: 20px;
+}
+#GetApp p{
+    /* border: 1px solid red; */
+    margin-top: 2px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+#trackOrder{
+    border: 1px solid black;
+    border-left: 2px;
+    border-top: 1px;
+    border-bottom: 1px;
+    padding-left: 3px;
+    display: flex;
+    margin-top: 10px;
+    height: 30px;
+    width: 130px;
+}
+#trackOrder img{
+    /* border: 3px solid black; */
+    border-radius: 30px;
+    background-color: rgb(244, 243, 243);
+    height: 22px;
+    width: 22px;
+}
+#trackOrder p{
+    /* border: 1px solid red; */
+    margin-top: 2px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+#loyality{
+    /* border: 1px solid black; */
+    display: flex;
+    margin-top: 10px;
+    margin-left: 3px;
+    padding-left: 6px;
+    height: 30px;
+    width: 130px;
+}
+#loyality img{
+    /* border: 3px solid black; */
+    border-radius: 30px;
+    height: 20px;
+    width: 20px;
+}
+#loyality>p{
+    /* border: 1px solid red; */
+    margin-top: 2px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+.topNav1{
+    /* border: 1px solid black; */
+    height: 200px;
+    width:100%;
+    background-color: white;
+    /* display: flex; */
+    
+}
+#webName{
+    height: 90px;
+    display: flex;
+
+}
+#webName >div{
+    height: 80px;
+    width: 300px;
+    margin-top: 5px;
+}
+#webName >div:nth-child(1){
+    display: flex;
+    margin-left: 20px;
+    text-align: center;
+    width: 400px;
+
+}
+#webName >div:nth-child(2){
+    width: 600px;
+    text-align: center;
+    font-size:xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#webName >div:nth-child(2) h4{
+    margin-top: 10px;
+}
+#webName >div:nth-child(3){
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 80px;
+    margin-top: 15px;
+    text-align: center;
+    width: 200px;
+}
+#webName >div:nth-child(3) img{
+    /* border: 1px solid black; */
+    margin-left: 20px;
+    height: 30px;
+    width: 30px;
+    margin-top: 6px;
+    margin-right: 5px;
+    
+    /* color: rgb(247, 51, 220); */
+}
+#login{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60px;
+    height: 40px;
+    margin-top: 2px;
+    /* border: 2px solid black; */
+}
+#pTag{
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 25px;
+    text-decoration: none;
+    padding-top: 2px;
+    color: black;
+}
+#searchbar{
+    margin-top: 12px;
+    color: rgb(247, 51, 220);
+    font-size:medium;
+}
+#search input{
+    border: 1px solid black;
+    border-color: rgb(238, 235, 235);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-top: 5px;
+    height: 30px;
+    width: 500px;
+}
+#webName p{
+    /* border: 2px solid black; */
+    height: 20px;
+    margin: 2px;
+}
+#productlist{
+    /* border: 2px solid yellow; */
+    height: 105px;
+    position: relative;
+}
+.Main{
+    /* border: 2px solid black; */
+    padding-left: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+#productlist a{
+/* border: 2px solid black; */
+color: #f6f7f8;
+/* background: #254441; */
+background: white;
+color: black;
+display: block;
+margin-top: 0px;
+/* margin-left: 10px; */
+height: 100px;
+font-family: lato;
+font-weight: bold;
+display: flex;
+align-items:center;
+justify-content: center;
+text-decoration: none;
+transition: background 0.4s;
+
+}
+#productlist a:hover{
+    /* background-color: pink; */
+    color: rgb(242, 59, 181);
+}
+#productlist ul{
+list-style: none;
+display: flex;
+text-align: center;
+}
+#productlist li{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+#productlist li:hover .submenu >li{
+    display: block;
+    top: 0px;
+
+}
+.submenu li{
+    display: none;
+    position: absolute;
+    top: 0px;
+    height: 100px;
+}
+.submenu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 200PX;
+    height: 60px;
+}
+.submenu li{
+    position: relative;
+    height: 60px;
+    margin-top: 0px;
+}
+.submenu li:hover .submenu-2 li{
+    display: block;
+    
+}
+.submenu-2 li{
+    display: none;
+    height: 60px;
+    margin-top: 0px;
+}
+.submenu-2{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    left: 160px;
+    width: 300px;
+    height: 70px;
+}
+
+   /* NavbarcssEnd */
+
+   @media (max-width: 1200px) {
+    .topNav{
+      visibility: hidden;
+      height:0px;
+    } 
+    #webName{
+        visibility: hidden;
+        height:0px;
+    }
+   }
