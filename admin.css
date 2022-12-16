@@ -160,7 +160,10 @@
     color: rgb(26, 3, 3);
 }
 
-#pr_btn:hover,#ad_btn:hover,#de_btn:hover,#ur_btn:hover,#ft_btn:hover{
+#pr_btn:hover,#ad_btn:hover,#de_btn:hover,#ur_btn:hover,#ft_btn:hover,#up_btn:hover,
+#regis_btn:hover,
+#user_btn:hover
+{
     cursor: pointer !important;
     background-color: pink;
     color: rgba(23, 16, 16, 0.683);
@@ -171,7 +174,7 @@
     height: 70px;
     width: 80%;
     margin: auto;
-    margin-bottom:20px;
+    margin-top: -10px;
     border: none;
     border: 1px solid gainsboro;
     border-radius: 8px;
@@ -183,7 +186,41 @@
     height: 70px;
     width: 80%;
     margin: auto;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
+    border: none;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    color: rgb(26, 3, 3);
+}
+#up_btn{
+    font-size: 25px;
+    height: 70px;
+    width: 80%;
+    margin: auto;
+    margin-top: 0px;
+    border: none;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    color: rgb(26, 3, 3);
+}
+
+#regis_btn{
+    font-size: 25px;
+    height: 70px;
+    width: 80%;
+    margin: auto;
+    margin-top: -20px;
+    border: none;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    color: rgb(26, 3, 3);
+}
+#user_btn{
+    font-size: 25px;
+    height: 70px;
+    width: 80%;
+    margin: auto;
+    margin-top: -100px;
     border: none;
     border: 1px solid gainsboro;
     border-radius: 8px;
@@ -221,9 +258,9 @@
 
 #Back{
     width: 8%;
-    height: 100%;
-    margin-top: -10px;
-    display: flex;
+    height: 60%;
+    margin-top: -19px;
+    display: block;
     justify-content: center;
     border: none;
     color: rgb(128, 24, 24);
@@ -236,23 +273,15 @@
 }
 
 #FormInput{
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(163, 158, 158, 0.22) 0px 10px 10px; */
     margin: auto;
     width: 50%;
     height: 450px;
     margin-top: 50px;
-    /* border: 2px solid gray; */
     border-radius: 9px;
     opacity: 2.5;
-    /* background: opaque; */
-    /* transform: rotate3d(); */
-    /* background-color: rgba(175, 179, 179, 0.603); */
-    /* display: flex; */
-    /* display: grid; */
 }
 
 form{
-    /* display: grid; */
     margin: auto;
 }
 
@@ -276,3 +305,20 @@ input[type="submit"]:hover{
     text-align: center;
 }
 
+#DeleteInput{
+    margin: auto;
+    width: 50%;
+    height: 100px;
+    margin-top: 100px;
+}
+#DeleteInput>form>input{
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 22px;
+    border-radius: 9px;
+    border: 1px solid gray;
+}
