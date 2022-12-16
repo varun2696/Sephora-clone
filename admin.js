@@ -299,6 +299,7 @@ async function AddPro(data) {
     console.log("Fetching product failed");
   }
 }
+
 function addD(finalProduct){
    document.querySelector(".dataShow").innerHTML=`
                      ${finalProduct.map((el)=>{
@@ -403,12 +404,14 @@ function update_Product() {
 
              </form>
          </div>
+         <div class="dataShow">
+         </div> 
        `;
     up_DAte();
   });
 }
 
-function up_DAte() {
+function up_DAte() {  
   document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -422,6 +425,7 @@ function up_DAte() {
 }
 
 async function InputTag_3(data) {
+  var arr1 =[];
   try {
     let ids = document.querySelector("#id").value;
     let product = await fetch(
@@ -444,12 +448,29 @@ async function InputTag_3(data) {
         document.querySelector("#title").value = "";
         document.querySelector("#price").value = "";
       }, 1000);
+      arr1.push(finalProduct)
+      addU(arr1)
     } else {
       alert("Product Not Updated ! Please try again !");
     }
   } catch (error) {
     console.log("Fetching product failed");
   }
+}
+
+function addU(finalProduct){
+  document.querySelector(".dataShow").innerHTML=`
+                    ${finalProduct.map((el)=>{
+                        return `<div class="displayCard">
+                                        <img src="${el.image}" alt="Error">
+                                        <p>${el.id}</p>
+                                        <p>${el.category}</p>
+                                        <p>${el.title}</p>
+                                        <p>Rs. ${el.price}</p>
+                                </div>`
+
+                    }).join(" ")}
+        `
 }
 
 //User Detais
@@ -482,4 +503,50 @@ function InsideUserBtn() {
       </div>
     `;
   back();
+  WelcomeRegister()
+}
+
+function WelcomeRegister() {
+  document.getElementById('regis_btn').addEventListener("click", () => {
+    document.querySelector("#Right").innerHTML = "";
+    document.querySelector("#Right").innerHTML = `
+          <div class="wel">
+            <h1> Register DashBoard ! </h1>
+          </div>
+    `;
+    setTimeout(()=>{
+      document.querySelector("#Right").innerHTML = "";
+      tableStructure();
+    },1000)
+  });
+}
+
+
+function tableStructure(){
+  document.querySelector("#Right").innerHTML = `
+        <table>
+              <thead id="head">
+                    <tr class="navRow">
+                        <td class="details">Id</td>
+                        <td class="details">Username</td>
+                        <td class="details">Mobile</td>
+                        <td class="details">Email Id</td>
+                        <td class="details">Password</td>
+                    </tr>
+              </thead>
+              <tbody id="mainContainer">
+                   
+              </tbody>
+          </table>
+  `
+}
+
+async function Register() {
+
+  try {
+    
+  } catch (error) {
+    
+  }
+
 }
