@@ -1,15 +1,27 @@
 
-function showUsername(){
+import { navbar } from '../components/navbar.js';
 
-    const showName = document.querySelector('h2');
+ const ShowNavbar = document.getElementById('Navbar_div');
+//  ShowNavbar.innerHTML = navbar();
+//  console.log(navbar)
 
-    let userName = sessionStorage.getItem('c4raUser') || "Login"
-    showName.innerHTML = userName;
-    
-    // const showName = document.querySelector('#pTag');
 
-    // let userName = sessionStorage.getItem('c4raUser') || "Login"
-    // showName.innerHTML = userName;
-}
+ const userName = sessionStorage.getItem('c4raUser') || "Login"
 
-export default showUsername
+ const LoginName = document.querySelector('#LoginName');
+
+ LoginName.innerHTML = userName;
+
+
+ const signout = document.getElementById('signout');
+ signout.addEventListener('click', () => {
+     if (userName !== "Login") {
+         alert('You are signout from the site')
+         sessionStorage.removeItem('c4raUser');
+         window.location.reload();
+     }
+ })
+
+
+
+
