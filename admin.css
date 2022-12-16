@@ -19,7 +19,7 @@
     margin-top: 40px;
     /* border: 1px solid red; */
     width: 99%;
-    height: 6100px;
+    height:1640vh;
     display: flex;
     justify-content: space-between;
     /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
@@ -181,6 +181,15 @@
     color: rgb(26, 3, 3);
 }
 
+#loading{
+    text-align: center;
+    padding-top: 80px;
+}
+#loading>img{
+    width: 9%;
+}
+
+
 #de_btn{
     font-size: 25px;
     height: 70px;
@@ -321,4 +330,37 @@ input[type="submit"]:hover{
     font-size: 22px;
     border-radius: 9px;
     border: 1px solid gray;
+}
+
+
+.dataShow{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    border: 1px solid grey;
+    /* grid-template-rows: auto; */
+    gap: 8px;
+    width: 98%;
+    height: auto;
+    /* border: 1px solid green; */
+    margin: auto;
+    margin-top: 70px;
+   
+}
+
+.displayCard{
+    /* border: 1px solid rgb(32, 29, 29); */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 9px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: rgb(12, 1, 1);
+    font-weight: bolder;
+}
+
+.displayCard>img{
+    border-radius: 9px;
+    padding-top: 2px;
+    width: 100%;
+    height: 50%;
 }

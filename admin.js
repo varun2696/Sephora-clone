@@ -155,11 +155,13 @@ function fetch_button() {
   fetch_btn.addEventListener("click", (e) => {  
     Rightdiv.style.background="white";
     Rightdiv.innerHTML=''
+ 
     Rightdiv.innerHTML=`
-      <div id="loading" style=" background-color:white; height:6100px;" >
-          <img src="./Spinner-5.gif" alt="error">
-      </div>
-    `
+    <div id="loading" style=" background-color:white; height:6100px;" >
+        <img src="./Spinner-5.gif" alt="error">
+        <p>Please wait page is loading ...</p>
+    </div>
+  `
       FetchProduct();
       Rightdiv.style.background="rgb(251, 243, 244)"
   });
@@ -242,10 +244,13 @@ function add_button() {
 
              </form>
          </div>
+         <div class="dataShow">
+         </div> 
        `;
     InputTag();
   });
 }
+var arr=[];
 
 function InputTag() {
   document.querySelector("form").addEventListener("submit", (e) => {
@@ -256,7 +261,7 @@ function InputTag() {
     for (let i = 0; i < productInput.length - 1; i++) {
       newProduct[productInput[i].id] = productInput[i].value;
     }
-    AddPro(newProduct);
+    AddPro(newProduct); 
   });
 }
 
@@ -283,6 +288,10 @@ async function AddPro(data) {
         document.querySelector("#title").value = "";
         document.querySelector("#price").value = "";
       }, 1000);
+      
+      arr.push(finalProduct)
+      console.log(arr)
+      addD(arr)
     } else {
       alert("Product Not Added ! Please try again !");
     }
@@ -290,6 +299,21 @@ async function AddPro(data) {
     console.log("Fetching product failed");
   }
 }
+function addD(finalProduct){
+   document.querySelector(".dataShow").innerHTML=`
+                     ${finalProduct.map((el)=>{
+                         return `<div class="displayCard">
+                                         <img src="${el.image}" alt="Error">
+                                         <p>${el.id}</p>
+                                         <p>${el.category}</p>
+                                         <p>${el.title}</p>
+                                         <p>Rs. ${el.price}</p>
+                                 </div>`
+
+                     }).join(" ")}
+         `
+}
+
 
 // Delete product
 
