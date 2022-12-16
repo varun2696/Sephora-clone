@@ -63,7 +63,7 @@ function click() {
             <h1> Admin DashBoard ! </h1>
           </div>
         `;
-      }, 2000);
+      }, 1000);
     } else {
       alert("Please Enter Correct Details !");
     }
@@ -99,7 +99,7 @@ function ClickFunction() {
 
     setTimeout(() => {
       InsideProductBtn();
-    }, 1000);
+    }, 0);
     document.querySelector("#Right").innerHTML = "";
     document.querySelector("#Right").innerHTML = `
           <div class="wel">
@@ -131,7 +131,7 @@ function InsideProductBtn() {
   fetch_button();
   add_button();
   deleteProduct();
-  update_Product()
+  update_Product();
 }
 
 function back() {
@@ -152,8 +152,8 @@ function back() {
 function fetch_button() {
   let fetch_btn = document.querySelector("#ft_btn");
 
-  fetch_btn.addEventListener("click", (e) => {
-    FetchProduct();
+  fetch_btn.addEventListener("click", (e) => {  
+      FetchProduct();
   });
 }
 
@@ -183,15 +183,17 @@ function DisplayProduct(data) {
   Rightdiv.innerHTML = "";
   Rightdiv.innerHTML = `
         <div id="Cards">
-                ${data.map((el) => {
-                  return `<div Class="SmallCards">
+                ${data
+                  .map((el) => {
+                    return `<div Class="SmallCards">
                                 <img src="${el.image}" alt="Error">
                                 <p>${el.id}</p>
                                 <p>${el.category}</p>
                                 <p>${el.title}</p>
                                 <p>Rs. ${el.price}</p>
                             </div>`;
-                  }).join(" ")} 
+                  })
+                  .join(" ")} 
         </div> `;
 }
 
@@ -233,9 +235,8 @@ function add_button() {
              </form>
          </div>
        `;
-       InputTag();
+    InputTag();
   });
-  
 }
 
 function InputTag() {
@@ -243,49 +244,51 @@ function InputTag() {
     e.preventDefault();
 
     let productInput = document.querySelectorAll("input");
-      let newProduct={};
-      for(let i = 0; i < productInput.length-1 ; i++) {
-        newProduct[productInput[i].id]=productInput[i].value;
-      }
-      AddPro(newProduct); 
+    let newProduct = {};
+    for (let i = 0; i < productInput.length - 1; i++) {
+      newProduct[productInput[i].id] = productInput[i].value;
+    }
+    AddPro(newProduct);
   });
 }
 
-async function AddPro(data){
-    try {
-      let product = await fetch("https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products",{
+async function AddPro(data) {
+  try {
+    let product = await fetch(
+      "https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products",
+      {
         method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body : JSON.stringify(data)
-      });
+        body: JSON.stringify(data),
+      }
+    );
 
-      if(product.ok){
-        let finalProduct = await product.json();
-          alert("Product Added Successfully");
-          setTimeout(()=>{
-            document.querySelector("#id").value="";
-            document.querySelector("#image").value="";
-            document.querySelector("#category").value="";
-            document.querySelector("#title").value="";
-            document.querySelector("#price").value="";
-          },1000)
-      }else{
-        alert("Product Not Added ! Please try again !");
-      } 
-    } catch (error) {
-        console.log("Fetching product failed");
+    if (product.ok) {
+      let finalProduct = await product.json();
+      alert("Product Added Successfully");
+      setTimeout(() => {
+        document.querySelector("#id").value = "";
+        document.querySelector("#image").value = "";
+        document.querySelector("#category").value = "";
+        document.querySelector("#title").value = "";
+        document.querySelector("#price").value = "";
+      }, 1000);
+    } else {
+      alert("Product Not Added ! Please try again !");
     }
+  } catch (error) {
+    console.log("Fetching product failed");
+  }
 }
-
 
 // Delete product
 
-function deleteProduct(){
-  document.querySelector("#de_btn").addEventListener("click", ()=>{
-      Rightdiv.innerHTML = "";
-          Rightdiv.innerHTML = `
+function deleteProduct() {
+  document.querySelector("#de_btn").addEventListener("click", () => {
+    Rightdiv.innerHTML = "";
+    Rightdiv.innerHTML = `
               <div id="DeleteInput">
                   <form>
                       <input type="text" id="id" placeholder="Enter Product Id" required maxlength="2">
@@ -295,46 +298,48 @@ function deleteProduct(){
                       <input type="submit">
                   </form>   
               </div>
-          ` 
-        InputTag_2();
-  })
+          `;
+    InputTag_2();
+  });
 }
 
-function InputTag_2(){
+function InputTag_2() {
   document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault();
-      let ids = document.querySelector("#id").value;
-      InputTag_2_1(ids)
-    });   
+    let ids = document.querySelector("#id").value;
+    InputTag_2_1(ids);
+  });
 }
 
-async function InputTag_2_1(ids){
+async function InputTag_2_1(ids) {
   try {
-    let product = await fetch(`https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products/${ids}`,{
-      method: "Delete",
-      headers: {
-        'Content-Type': 'application/json'
-      },
-    });
-    if(product.ok){
+    let product = await fetch(
+      `https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products/${ids}`,
+      {
+        method: "Delete",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    if (product.ok) {
       let finalProduct = await product.json();
-        alert("Product Deleted Successfully");
-        setTimeout(()=>{
-          document.querySelector("#id").value="";
-        },1000)
-    }else{
+      alert("Product Deleted Successfully");
+      setTimeout(() => {
+        document.querySelector("#id").value = "";
+      }, 1000);
+    } else {
       alert("Product Not Deleted ! Please try again !");
-    } 
+    }
   } catch (error) {
-      console.log("Fetching product failed");
+    console.log("Fetching product failed");
   }
 }
 
-
 // Update Product
 
-function update_Product(){
-  document.getElementById("up_btn").addEventListener("click",()=>{
+function update_Product() {
+  document.getElementById("up_btn").addEventListener("click", () => {
     Rightdiv.innerHTML = "";
 
     Rightdiv.innerHTML = `
@@ -367,61 +372,66 @@ function update_Product(){
              </form>
          </div>
        `;
-       up_DAte();
-  })
+    up_DAte();
+  });
 }
 
-function up_DAte(){
+function up_DAte() {
   document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault();
 
     let productInput = document.querySelectorAll("input");
-      let newProduct={};
-      for(let i = 0; i < productInput.length-1 ; i++) {
-        newProduct[productInput[i].id]=productInput[i].value;
-      }
-      InputTag_3(newProduct); 
+    let newProduct = {};
+    for (let i = 0; i < productInput.length - 1; i++) {
+      newProduct[productInput[i].id] = productInput[i].value;
+    }
+    InputTag_3(newProduct);
   });
 }
 
-async function InputTag_3(data){
+async function InputTag_3(data) {
   try {
-    let ids = document.querySelector("#id").value; 
-    let product = await fetch(`https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products/${ids}`,{
-      method: "PUT",
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
-    if(product.ok){
+    let ids = document.querySelector("#id").value;
+    let product = await fetch(
+      `https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products/${ids}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
+    if (product.ok) {
       let finalProduct = await product.json();
-        alert("Product Updated Successfully");
-        setTimeout(()=>{
-          document.querySelector("#id").value="";
-          document.querySelector("#image").value="";
-          document.querySelector("#category").value="";
-          document.querySelector("#title").value="";
-          document.querySelector("#price").value="";
-        },1000)
-    }else{
+      alert("Product Updated Successfully");
+      setTimeout(() => {
+        document.querySelector("#id").value = "";
+        document.querySelector("#image").value = "";
+        document.querySelector("#category").value = "";
+        document.querySelector("#title").value = "";
+        document.querySelector("#price").value = "";
+      }, 1000);
+    } else {
       alert("Product Not Updated ! Please try again !");
-    } 
+    }
   } catch (error) {
-      console.log("Fetching product failed");
+    console.log("Fetching product failed");
   }
 }
 
+//User Detais
 
-
-//User Detais 
-
-function ClickFunction_1(){
+function ClickFunction_1() {
   let userBtn = document.querySelector("#ur_btn");
 
   userBtn.addEventListener("click", (e) => {
     e.target.parentNode.remove();
+
+    setTimeout(() => {
       InsideUserBtn();
+    }, 0);
+
     document.querySelector("#Right").innerHTML = "";
     document.querySelector("#Right").innerHTML = `
           <div class="wel">
