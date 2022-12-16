@@ -374,7 +374,7 @@ table{
     /* border-top: 1px solid black; */
     /* border-right: 1px solid black; */
 }
-.details{
+.details,.details_1{
     border-right: 1px solid rgb(143, 143, 163);
     font-size: 22px;
     text-align: center;
@@ -392,14 +392,13 @@ table{
 #mainContainer_tb{
     margin-top: 20px;
 }
-#mainContainer_tb>.navRow>.details{
+#mainContainer_tb>.navRow>.details,#mainContainer_tc>.navRow>.details_1{
     color: black;
     font-size: 20px;
     border: none;
     border-right: 1px solid grey;
     border-bottom: 1px solid #000;
 }
-
 #cat{
     border-top: 1px solid pink;
     text-align: center;
@@ -407,4 +406,20 @@ table{
     border-bottom: 1px solid pink;
     font-size: 30px;
     margin-top: -18px;
+}
+
+.navRow>.details_1:nth-child(2){
+    width:40%
+}
+.navRow>.details_1:nth-child(3){
+    width:40%
+}
+.navRow>.details_1:nth-child(4){
+    width:10%;
+    background-color: red;
+    color: black
+}
+
+#head>.navRow>#del_1{
+    background-color:rgb(226, 96, 96);
 }

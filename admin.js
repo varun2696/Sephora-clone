@@ -506,6 +506,7 @@ function InsideUserBtn() {
     `;
   back();
   WelcomeRegister();
+  WelcomeLogin()
 }
 
 function WelcomeRegister() {
@@ -579,6 +580,86 @@ function tableStructu(data) {
                       <td class="details">${el.mobileNo}</td>
                       <td class="details">${el.email}</td>
                       <td class="details">${el.password}</td>
+                  </tr>`;
+          })
+          .join(" ")}
+  </tr>
+  `;
+}
+
+
+// Login 
+
+function WelcomeLogin() {
+  document.getElementById("user_btn").addEventListener("click", () => {
+    document.querySelector("#Right").innerHTML = "";
+    document.querySelector("#Right").innerHTML = `
+      <div id="loading" style=" background-color:white; height:6100px;" >
+        <img src="./Spinner-5.gif" alt="error">
+        <p>Please wait page is loading ...</p>
+     </div>
+    `;
+    setTimeout(() => {
+      document.querySelector("#Right").innerHTML = "";
+        tableStructure_lo();
+    }, 1000);
+  });
+}
+
+function tableStructure_lo() {
+  document.querySelector("#Right").innerHTML = `
+        <table>
+              <thead id="head">
+                    <tr class="navRow">
+                        <td class="details_1">Id</td>
+                        <td class="details_1">Username</td>
+                        <td class="details_1">Password</td>
+                        <td class="details_1" id="del_1">Delete</td>
+                    </tr>
+              </thead>
+              <tbody id="mainContainer_tc">
+                   
+              </tbody>
+          </table>
+  `;
+  login_1()
+}
+
+
+async function login_1() {
+  try {
+    let res = await fetch(
+      "https://6398172cfe03352a94c47ae1.mockapi.io/login_user",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (res.ok) {
+      let data = await res.json();
+      tableStruc_1(data);
+    }
+  } catch (error) {
+    alert("Problem in Fetching");
+  }
+}
+
+function tableStruc_1(data) {
+  tableStructu_1(data);
+}
+
+function tableStructu_1(data) {
+  document.querySelector("#mainContainer_tc").innerHTML = `
+        ${data
+          .map((el) => {
+            return `<tr class="navRow">
+                      <td class="details_1">${el.id}</td>
+                      <td class="details_1">${el.Username}</td>
+                      <td class="details_1">${el.Password}</td>
+                      <td class="details_1 id="delete_1"">Delete</td>
                   </tr>`;
           })
           .join(" ")}
