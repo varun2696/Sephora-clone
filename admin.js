@@ -83,6 +83,7 @@ function WelcomeScreen() {
 function details() {
   leftdiv.innerHTML = `
       <div id="Container">
+            <h2 id="cat">Categories</h2>
             <button id="pr_btn">Product details</button>
             <button id="ur_btn">User details</button>
       </div>
@@ -152,18 +153,18 @@ function back() {
 function fetch_button() {
   let fetch_btn = document.querySelector("#ft_btn");
 
-  fetch_btn.addEventListener("click", (e) => {  
-    Rightdiv.style.background="white";
-    Rightdiv.innerHTML=''
- 
-    Rightdiv.innerHTML=`
+  fetch_btn.addEventListener("click", (e) => {
+    Rightdiv.style.background = "white";
+    Rightdiv.innerHTML = "";
+
+    Rightdiv.innerHTML = `
     <div id="loading" style=" background-color:white; height:6100px;" >
         <img src="./Spinner-5.gif" alt="error">
         <p>Please wait page is loading ...</p>
     </div>
-  `
-      FetchProduct();
-      Rightdiv.style.background="rgb(251, 243, 244)"
+  `;
+    FetchProduct();
+    Rightdiv.style.background = "rgb(251, 243, 244)";
   });
 }
 
@@ -250,7 +251,7 @@ function add_button() {
     InputTag();
   });
 }
-var arr=[];
+var arr = [];
 
 function InputTag() {
   document.querySelector("form").addEventListener("submit", (e) => {
@@ -261,7 +262,7 @@ function InputTag() {
     for (let i = 0; i < productInput.length - 1; i++) {
       newProduct[productInput[i].id] = productInput[i].value;
     }
-    AddPro(newProduct); 
+    AddPro(newProduct);
   });
 }
 
@@ -288,10 +289,10 @@ async function AddPro(data) {
         document.querySelector("#title").value = "";
         document.querySelector("#price").value = "";
       }, 1000);
-      
-      arr.push(finalProduct)
-      console.log(arr)
-      addD(arr)
+
+      arr.push(finalProduct);
+      console.log(arr);
+      addD(arr);
     } else {
       alert("Product Not Added ! Please try again !");
     }
@@ -300,21 +301,21 @@ async function AddPro(data) {
   }
 }
 
-function addD(finalProduct){
-   document.querySelector(".dataShow").innerHTML=`
-                     ${finalProduct.map((el)=>{
+function addD(finalProduct) {
+  document.querySelector(".dataShow").innerHTML = `
+                     ${finalProduct
+                       .map((el) => {
                          return `<div class="displayCard">
                                          <img src="${el.image}" alt="Error">
                                          <p>${el.id}</p>
                                          <p>${el.category}</p>
                                          <p>${el.title}</p>
                                          <p>Rs. ${el.price}</p>
-                                 </div>`
-
-                     }).join(" ")}
-         `
+                                 </div>`;
+                       })
+                       .join(" ")}
+         `;
 }
-
 
 // Delete product
 
@@ -411,7 +412,7 @@ function update_Product() {
   });
 }
 
-function up_DAte() {  
+function up_DAte() {
   document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -425,7 +426,7 @@ function up_DAte() {
 }
 
 async function InputTag_3(data) {
-  var arr1 =[];
+  var arr1 = [];
   try {
     let ids = document.querySelector("#id").value;
     let product = await fetch(
@@ -448,8 +449,8 @@ async function InputTag_3(data) {
         document.querySelector("#title").value = "";
         document.querySelector("#price").value = "";
       }, 1000);
-      arr1.push(finalProduct)
-      addU(arr1)
+      arr1.push(finalProduct);
+      addU(arr1);
     } else {
       alert("Product Not Updated ! Please try again !");
     }
@@ -458,19 +459,20 @@ async function InputTag_3(data) {
   }
 }
 
-function addU(finalProduct){
-  document.querySelector(".dataShow").innerHTML=`
-                    ${finalProduct.map((el)=>{
+function addU(finalProduct) {
+  document.querySelector(".dataShow").innerHTML = `
+                    ${finalProduct
+                      .map((el) => {
                         return `<div class="displayCard">
                                         <img src="${el.image}" alt="Error">
                                         <p>${el.id}</p>
                                         <p>${el.category}</p>
                                         <p>${el.title}</p>
                                         <p>Rs. ${el.price}</p>
-                                </div>`
-
-                    }).join(" ")}
-        `
+                                </div>`;
+                      })
+                      .join(" ")}
+        `;
 }
 
 //User Detais
@@ -503,26 +505,26 @@ function InsideUserBtn() {
       </div>
     `;
   back();
-  WelcomeRegister()
+  WelcomeRegister();
 }
 
 function WelcomeRegister() {
-  document.getElementById('regis_btn').addEventListener("click", () => {
+  document.getElementById("regis_btn").addEventListener("click", () => {
     document.querySelector("#Right").innerHTML = "";
     document.querySelector("#Right").innerHTML = `
-          <div class="wel">
-            <h1> Register DashBoard ! </h1>
-          </div>
+      <div id="loading" style=" background-color:white; height:6100px;" >
+        <img src="./Spinner-5.gif" alt="error">
+        <p>Please wait page is loading ...</p>
+     </div>
     `;
-    setTimeout(()=>{
+    setTimeout(() => {
       document.querySelector("#Right").innerHTML = "";
       tableStructure();
-    },1000)
+    }, 1000);
   });
 }
 
-
-function tableStructure(){
+function tableStructure() {
   document.querySelector("#Right").innerHTML = `
         <table>
               <thead id="head">
@@ -534,19 +536,52 @@ function tableStructure(){
                         <td class="details">Password</td>
                     </tr>
               </thead>
-              <tbody id="mainContainer">
+              <tbody id="mainContainer_tb">
                    
               </tbody>
           </table>
-  `
+  `;
+  Register();
 }
 
 async function Register() {
-
   try {
-    
-  } catch (error) {
-    
-  }
+    let res = await fetch(
+      "https://636f9027f2ed5cb047e01947.mockapi.io/reg_mail",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
+    if (res.ok) {
+      let data = await res.json();
+      tableStruc(data);
+    }
+  } catch (error) {
+    alert("Problem in Fetching");
+  }
+}
+
+function tableStruc(data) {
+  tableStructu(data);
+}
+
+function tableStructu(data) {
+  document.querySelector("#mainContainer_tb").innerHTML = `
+        ${data
+          .map((el) => {
+            return `<tr class="navRow">
+                      <td class="details">${el.id}</td>
+                      <td class="details">${el.username}</td>
+                      <td class="details">${el.mobileNo}</td>
+                      <td class="details">${el.email}</td>
+                      <td class="details">${el.password}</td>
+                  </tr>`;
+          })
+          .join(" ")}
+  </tr>
+  `;
 }

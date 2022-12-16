@@ -52,10 +52,10 @@
     text-align: center;
     border: 1px solid skyblue;
     margin: auto;
-    margin-top: 20px;
     background-color: rgb(181, 213, 226);
     border-radius: 8px;
     color: rgb(111, 8, 8);
+    margin-top: 2px;
 }
 
 
@@ -153,7 +153,7 @@
     height: 70px;
     width: 80%;
     margin: auto;
-    margin-bottom: 320px;
+    margin-bottom: 227px;
     border: none;
     border: 1px solid gainsboro;
     border-radius: 8px;
@@ -165,7 +165,7 @@
 #user_btn:hover
 {
     cursor: pointer !important;
-    background-color: pink;
+    background-color: #e87f92;
     color: rgba(23, 16, 16, 0.683);
 }
 
@@ -218,7 +218,7 @@
     height: 70px;
     width: 80%;
     margin: auto;
-    margin-top: -20px;
+    margin-top: -134px;
     border: none;
     border: 1px solid gainsboro;
     border-radius: 8px;
@@ -229,7 +229,7 @@
     height: 70px;
     width: 80%;
     margin: auto;
-    margin-top: -100px;
+    margin-top: -202px;
     border: none;
     border: 1px solid gainsboro;
     border-radius: 8px;
@@ -266,8 +266,9 @@
 }
 
 #Back{
-    width: 8%;
+    width: 10%;
     height: 60%;
+    padding-top: 1px;
     margin-top: -19px;
     display: block;
     justify-content: center;
@@ -275,6 +276,7 @@
     color: rgb(128, 24, 24);
     font-weight: bolder;
     font-size: 20px;
+    border-radius: 15px;
 }
 
 #Back:hover{
@@ -365,6 +367,7 @@ input[type="submit"]:hover{
     height: 50%;
 }
 
+/* User Details */
 
 table{
     width: 100%;
@@ -385,4 +388,23 @@ table{
 }
 .navRow>.details:nth-child(4){
     width:35%
+}
+#mainContainer_tb{
+    margin-top: 20px;
+}
+#mainContainer_tb>.navRow>.details{
+    color: black;
+    font-size: 20px;
+    border: none;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid #000;
+}
+
+#cat{
+    border-top: 1px solid pink;
+    text-align: center;
+    padding-top: 19px;
+    border-bottom: 1px solid pink;
+    font-size: 30px;
+    margin-top: -18px;
 }
