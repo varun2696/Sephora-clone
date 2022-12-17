@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./product.css">
     <link rel="stylesheet" href="./sidebar.css">
     <link rel="stylesheet" href="./feedback.css">
-    <link rel="stylesheet" href="./hamberger.css">
+    <link rel="stylesheet" href="./hamberger.css"> 
     <link rel="stylesheet" href="./navbar.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
       <div class="topNav">
         <div id="Image">
             <a href="">
-                <img src="./C4RA.png" alt="" href="">
+                <img src="./c.jpg" alt="" href="">
             </a>
         </div>
         <div id="slash"></div>
@@ -54,6 +54,18 @@
             <p>Loyality</p>
 
         </div>
+        <button style = "visibility: hidden" class="show-modal" >Cart</button>
+    <span class="overlay"></span>
+
+    <div class="modal-box">
+      <img src="./added to bag.png" alt="">
+      <h2>Success</h2>
+      <h3>Successfully added to bag !</h3>
+
+      <div class="buttons">
+        <button class="close-btn">Ok, done !</button>
+      </div>
+    </div>
     </div>
 
     <div id="webName">
@@ -62,7 +74,7 @@
                 <i class="fas fa-search fa-xs" id="searchbar"></i>
             </a>
           
-            <input  placeholder="Search C4RA">
+            <input style="font-size:16px" placeholder="Search C4RA">
         </div>
         <div id="BrandName">
             <h4>C&nbsp;4&nbsp;R&nbsp;A</h4>
@@ -90,7 +102,7 @@
 
     </div>
 
-    <div class="top-nav">
+    <div id="stickyNav" style="background-color:rgb(215, 40, 133)" class="top-nav">
         <div></div>
         <input id="menu-toggle" type="checkbox" />
         <label class='menu-button-container' for="menu-toggle">
@@ -101,25 +113,14 @@
             <li><a href="#">MAKEUP</a></li>
             <li><a href="#">SKINCARE</a></li>
             <li><a href="#">FRAGRANCE</a></li>
-            <li><a href="#">TOOLS & BRUSHES</a></li>
+            <li><a href="#">BRUSHES</a></li>
             <li><a href="#">BRANDS</a></li>
         </ul>
     </div>
 
 
     <!-- End of Navbar -->
-    <button style = "visibility: hidden" class="show-modal" >Cart</button>
-    <span class="overlay"></span>
-
-    <div class="modal-box">
-      <img src="./added to bag.png" alt="">
-      <h2>Success</h2>
-      <h3>Successfully added to bag !</h3>
-
-      <div class="buttons">
-        <button class="close-btn">Ok, done !</button>
-      </div>
-    </div>
+     
 
     <!-- <a href="./product2.html">Products</a> -->
     
@@ -127,7 +128,7 @@
     <div id="products-container">
         <div class="filter">
             <label for="SortedByPrice" class="Sorting" data-icon="u">Sorted By</label><br>
-            <select onChange="handleSort()">
+            <select id="sorted" onChange="handleSort()">
                 <option value="LTH">Low</option>
                 <option value="HTL">High</option>
             </select><br>
@@ -137,20 +138,16 @@
                 <option value="ALL">ALL</option>
                 <option value="Perfume"> <h2>Perfume</h2></option>
                 <option value="Mists and Deodrants"> <h2>Mists and Deodrants</h2> </option>
-              </select>
+              </select><br>
 
               
 <!-- drop down menu -->
            <div class="dropdown">
             <button onclick="dropdownGender()"  id="dropbtn">Gender </button>
          <div id="Gender" class="dropdown-content">
-            <a href="#about">Sephora Collection(12)</a>
-            <a href="#base">CLINIQUE(8)</a>
-            <a href="#blog"> SHISEIDO(7)</a>
-            <a href="#contact"> Estee Lauder(6)</a>
-            <a href="#custom"> Kama Ayurveda(6)</a>
-            <a href="#support">Wishful(5)</a>
-            <a href="#tools">Mario Badescu(3)</a>
+            <a href="#about">MEN</a>
+            <a href="#base">WOMEN</a>
+            <a href="#blog">UNISEX</a>
             </div>
           </div><br>
 

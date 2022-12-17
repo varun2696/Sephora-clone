@@ -19,7 +19,7 @@
       <div class="topNav">
         <div id="Image">
             <a href="">
-                <img src="./C4RA.png" alt="" href="">
+                <img src="./c.jpg" alt="" href="">
             </a>
         </div>
         <div id="slash"></div>
@@ -54,15 +54,27 @@
             <p>Loyality</p>
 
         </div>
+        <button  style = "visibility: hidden;" class=show-modal >Cart</button>
+        <span class="overlay"></span>
+
+        <div class="modal-box">
+            <img src="./added to bag.png" alt="">
+            <h2>Success</h2>
+            <h3>Successfully added to bag !</h3>
+
+            <div class="buttons">
+                <button class="close-btn">Ok, done !</button>
+            </div>
+        </div>
     </div>
 
     <div id="webName">
         <div id="search">
             <a href="#">
-                <i class="fas fa-search fa-xs" id="searchbar"></i>
+                <i  class="fas fa-search fa-xs" id="searchbar"></i>
             </a>
           
-            <input  placeholder="Search C4RA">
+            <input style="font-size:16px" placeholder="Search C4RA">
         </div>
         <div id="BrandName">
             <h4>C&nbsp;4&nbsp;R&nbsp;A</h4>
@@ -104,41 +116,30 @@
             <li><a href="#">TOOLS & BRUSHES</a></li>
             <li><a href="#">BRANDS</a></li>
         </ul>
-    </div>
+    </div><br><br>
 
 
     <!-- End of Navbar -->
-        <button  style = "visibility: hidden;" class=show-modal >Cart</button>
-        <span class="overlay"></span>
-
-        <div class="modal-box">
-            <img src="./added to bag.png" alt="">
-            <h2>Success</h2>
-            <h3>Successfully added to bag !</h3>
-
-            <div class="buttons">
-                <button class="close-btn">Ok, done !</button>
-            </div>
-        </div>
+       
 
  
 
         <div id="products-container">
 
             <div class="filter">
-                <label for="SortedByPrice" class="Sorting" data-icon="u">Sorted By</label><br>
+                <label for="SortedByPrice" class="Sorting" data-icon="u">Sort By  </label><br>
                 <select onChange="handleSort()">
                     <option value="LTH">Low</option>
                     <option value="HTL">High</option>
                 </select><br>
-                <label for="filterByCategory" class="filtering" data-icon="u">Filter By</label><br>
+                <label for="filterByCategory" class="filtering" data-icon="u">Filter By </label><br>
                 <select id="filtered" onChange="filterByCategory()">
                     <option value="ALL">ALL</option>
                     <option value="SEPHORA COLLECTION">SEPHORA COLLECTION</option>
                     <option value="FOREST ESSENTIALS">FOREST ESSENTIALS</option>
                     <option value="BENEFIT COSMETICS">BENEFITS COSMETICS</option>
                     <option value="GIVENCHY">GIVENCHY</option>
-                </select>
+                </select><br>
 
                 <!-- drop down menu -->
                 <div class="dropdown">

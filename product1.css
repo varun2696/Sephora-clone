@@ -9,7 +9,7 @@ label{
 }
 
 .filter{
-    width: 300px;
+    width: 200px;
     /* background-color: rgb(127, 125, 125); */
     background-color: white;
 }
@@ -17,7 +17,7 @@ label{
 select{
     width: 200px;
     margin-left : 30px;
-    margin-top: 20px;
+    margin-top: 10px;
     padding:10px;
     margin-bottom: 40px;
 }
@@ -81,6 +81,9 @@ input{
  @media  all and (min-width:701px) and (max-width:1000px) {
     .container{
       grid-template-columns: repeat(2,1fr);
+    }
+    .container>div{
+       margin:auto;
     }
 }
 @media screen and (min-width:100px) and (max-width:700px) {
