@@ -13,7 +13,7 @@ let cartItemCountDecreaseBtn = document.querySelector("#cartItemCountDecrease");
 let LocalUserData = JSON.parse(localStorage.getItem("userData"))|[];
 let userId = LocalUserData.id||2;
 //let userName = LocalUserData.name|"No name in local storage";
-
+let promoCodeDiv = document.getElementById("promocode");
 
 
 //checkOutBtn
@@ -248,6 +248,35 @@ function getStars(rating) {
 
 
 
+
+
+
+
+
+//promocode
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+
+promoCodeDiv.addEventListener("click",()=>{
+    modal.style.display = "block";
+    
+})
+span.addEventListener("click",()=>{
+    modal.style.display = "none";
+});
+
+
+//to make the close btn working outside box
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
+
   ////////////////////////////////json template making
 
 //   {
@@ -296,3 +325,6 @@ function getStars(rating) {
 //     "additionalInfo":[]
     
 //   }
+
+
+
