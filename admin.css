@@ -16,20 +16,18 @@
 /* Main Container */
 #mainContainer{
     margin: auto;
-    margin-top: 40px;
-    /* border: 1px solid red; */
+    margin-top: 20px;
     width: 99%;
-    height:1640vh;
+    height:auto;
     display: flex;
     justify-content: space-between;
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
-}
+    }
 
 /* Left Side  */
 #Left{
     /* border: 1px solid green;   */
     width: 31%;
-    height: 100%; 
+    height:auto; 
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     background-color: rgb(251, 243, 244);
     border-radius :9px;
@@ -40,7 +38,7 @@
     
     /* border: 1px solid red; */
     width: 68%;
-    height: 100%;
+    height: auto;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     background-color:  rgb(251, 243, 244);
     border-radius :9px;
@@ -56,6 +54,7 @@
     border-radius: 8px;
     color: rgb(111, 8, 8);
     margin-top: 2px;
+    margin-bottom: 1px;
 }
 
 
@@ -70,12 +69,12 @@
 /* login button */
 #login_btn{
    width: 65%;
-   height: 70px;
+   height: 100%;
    font-size: 28px;
    font-family: Georgia, 'Times New Roman', Times, serif;
    font-weight: bolder ;
    border: none;
-   border-radius: 7px;
+   border-radius: 7px; 
 }
 
 #login_btn:hover{
@@ -396,14 +395,14 @@ table{
     color: black;
     font-size: 20px;
     border: none;
-    border-right: 1px solid grey;
+    border-right: 1px solid rgb(214, 202, 202);
     border-bottom: 1px solid #000;
 }
 #cat{
-    border-top: 1px solid pink;
+    border-top: 1px solid #e66077;
     text-align: center;
     padding-top: 19px;
-    border-bottom: 1px solid pink;
+    border-bottom: 1px solid #e66077;
     font-size: 30px;
     margin-top: -18px;
 }
@@ -422,4 +421,11 @@ table{
 
 #head>.navRow>#del_1{
     background-color:rgb(226, 96, 96);
+}
+
+.anchortag{
+    text-decoration: none;
+    font-size: 20px;
+    border-bottom: 1px solid rgb(233, 221, 221);
+    display: block;
 }
