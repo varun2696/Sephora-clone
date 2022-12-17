@@ -65,7 +65,7 @@ function displayCard(data){
    Category.innerText= elem.category;
 
     let title=document.createElement("p");
-    title.innerText=elem.title;
+    title.innerText=elem.title.substring(0,20);
 
     let Price=document.createElement("h4");
     Price.innerText="Rs. "+elem.price;
@@ -107,14 +107,14 @@ section.classList.add("active");
 overlay.addEventListener("click", addedtoBag);
 function addedtoBag(){
 section.classList.remove("active");
-window.location.href="cart.html";
+// window.location.href="cart.html";
 }
 
 closeBtn.addEventListener("click", cancel);
 
 function cancel(){
   section.classList.remove("active");
-  window.location.href="cart.html";
+  // window.location.href="cart.html";
 }
 
 

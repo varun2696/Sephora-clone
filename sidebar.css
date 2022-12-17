@@ -1,4 +1,4 @@
-#dropbtn {
+  #dropbtn {
     width:230px;
     background-color:  black;
     color: white;
@@ -6,7 +6,7 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
-    margin-left: 30px;
+    margin-left: 50px;
   }
   .dropdown {
     position: relative;
@@ -29,6 +29,7 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    text-transform: uppercase;
   }
   
   .dropdown a:hover {
@@ -37,7 +38,23 @@
   
   .show {
       display: block;
-      margin-left: 30px;
+      margin-left: 50px;
+      font-weight: bold;
   }
   
- 
+  @media screen and (min-width:701px) and (max-width:1100px) {
+    #dropbtn {
+      width:220px;
+    }
+
+  }
+  @media screen and (min-width:300px) and (max-width:700px) {
+    #dropbtn {
+      width:220px;
+      margin-left:130px;
+    }
+    .dropdown-content{
+      margin-left: 125px;
+      border-radius: 10px;
+    }
+  }

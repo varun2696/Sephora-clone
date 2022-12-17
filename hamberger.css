@@ -98,7 +98,8 @@ html, body {
 
     .top-nav {
         color:white;
-        background-color:  rgb(11, 11, 11);
+        /* background-color:  rgb(11, 11, 11); */
+        background: linear-gradient(to left, rgb(186, 108, 174), rgb(115, 108, 115)); 
     }
   .menu-button-container {
     display: flex;
