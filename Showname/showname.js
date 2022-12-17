@@ -1,7 +1,7 @@
 
-import { navbar } from '../components/navbar.js';
+// import { navbar } from '../components/navbar.js';
 
- const ShowNavbar = document.getElementById('Navbar_div');
+//  const ShowNavbar = document.getElementById('Navbar_div');
 //  ShowNavbar.innerHTML = navbar();
 //  console.log(navbar)
 

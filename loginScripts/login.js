@@ -4,7 +4,7 @@ const login_Url = 'https://6398172cfe03352a94c47ae1.mockapi.io/login_user'
 const registerUrl = 'https://636f9027f2ed5cb047e01947.mockapi.io/reg_mail'
 
 const login_btn = document.getElementById('login_btn');
-
+let LoginData;
 
 
 // showUsername();
@@ -28,7 +28,7 @@ login_btn.addEventListener('click', () => {
 })
 
 const LoginUser = async (username, password) => {
-    let DATA;
+
     try {
         let login_res = await fetch(registerUrl, {
             method: 'GET'
@@ -36,8 +36,8 @@ const LoginUser = async (username, password) => {
         // console.log(login_res);
         if (login_res.ok) {
             let data = await login_res.json();
-            // console.log(data);
-             DATA = data.filter((el) => {
+            // console.log('data',data);
+            let DATA = data.filter((el) => {
                 if (el.username == username) {
                     // let Name = el.username
                     // console.log(el)
@@ -45,13 +45,20 @@ const LoginUser = async (username, password) => {
                 }
             });
             
-            console.log(DATA)
+            console.log('LoginDATA',DATA)
             if(username == DATA[0].username && password == DATA[0].password){
                 alert('login sucees');
                 sessionStorage.setItem('c4raUser', username);
 
                 let postData = DATA[0]
-                PostLoginData(postData)
+                // console.log('LogedDATA', postData)
+
+                LoginData = {
+                    Username: postData.username,
+                    Password: postData.password
+                }
+                let loginUserName = LoginData.Username
+                CheckUserIfExists(loginUserName)
                 // window.location.reload();
                 // window.location.href = './Mypage.html'
             } 
@@ -78,12 +85,12 @@ const LoginUser = async (username, password) => {
 // })
 
 
-async function PostLoginData (postData){
+async function PostLoginData (LoginData){
 
     try {
         let reg_req = await fetch(login_Url, {
             method: 'POST',
-            body: JSON.stringify(postData),
+            body: JSON.stringify(LoginData),
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -92,12 +99,54 @@ async function PostLoginData (postData){
         // console.log(reg_req)
         if (reg_req.ok) {
             let data = await reg_req.json()
-            console.log('LoginData', data)
+            console.log('PostData', data)
         }
 
         // console.log(data)
     }
     catch (error) {
         console.log('er', error)
+    }
+}
+
+
+
+
+
+const CheckUserIfExists = async (loginUserName) => {
+    
+    try {
+        let Check_res = await fetch(login_Url, {
+            method: 'GET'
+        })
+        // console.log(Check_res);
+        if (Check_res.ok) {
+            let data = await Check_res.json();
+            // console.log('resDATA', data);
+            let DATA = data.filter((el) => {
+                if (el.Username == loginUserName) {
+                    return el;
+                }
+            });
+
+            console.log('llllDATA', DATA)
+            if (DATA.length !== 0) {
+                if (loginUserName == DATA[0].Username) {
+                    console.log('User Already exists');
+                }
+                else {
+                    PostLoginData (LoginData)
+                }
+            }
+            else {
+                PostLoginData (LoginData)
+            }
+
+        }
+
+    }
+    catch (error) {
+        alert('Error while fetching')
+        console.log('error', error)
     }
 }
