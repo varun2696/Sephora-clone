@@ -1,7 +1,36 @@
+
+// do not touch this *********
 const login_Url = 'https://6398172cfe03352a94c47ae1.mockapi.io/login_user'
 
 
 const registerUrl = 'https://636f9027f2ed5cb047e01947.mockapi.io/reg_mail'
+
+        // **************
+
+
+
+// this is for pop pup modal
+
+    const LoginName = document.querySelector('#loginName');
+    LoginName.addEventListener('click', showModal)
+
+    function showModal() {
+        document.querySelector('.loginform').classList.add('showLoginform');
+    }
+
+    function closeModal(){
+        document.querySelector('.loginform').classList.remove('showLoginform');
+    }
+     
+    let crossbtn = document.querySelector('#crossbtn');
+    crossbtn.addEventListener('click', closeModal);
+
+
+// ************************
+
+
+
+
 
 const login_btn = document.getElementById('login_btn');
 let LoginData;
@@ -59,8 +88,9 @@ const LoginUser = async (username, password) => {
                 }
                 let loginUserName = LoginData.Username
                 CheckUserIfExists(loginUserName)
+
                 // window.location.reload();
-                // window.location.href = './Mypage.html'
+                // window.location.href = './Homepage.html'
             } 
             else{
                 alert('Please enter valid username and password')
@@ -132,14 +162,17 @@ const CheckUserIfExists = async (loginUserName) => {
             console.log('llllDATA', DATA)
             if (DATA.length !== 0) {
                 if (loginUserName == DATA[0].Username) {
-                    console.log('User Already exists');
+                    console.log('User is Already exists in LoginUrl');
+                    // window.location.href = './Homepage.html'
                 }
                 else {
                     PostLoginData (LoginData)
+                    // window.location.href = './Homepage.html'
                 }
             }
             else {
                 PostLoginData (LoginData)
+                // window.location.href = './Homepage.html'
             }
 
         }

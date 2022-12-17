@@ -1,0 +1,75 @@
+.loginform {
+    width: 350px;
+    height: 400px;
+    padding: 50px 40px;
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 3px lemonchiffon;
+    transition: 1s;
+    z-index: 9;
+}
+
+.loginform input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    padding-left: 5px;
+    border: 1px solid;
+}
+
+
+.showLoginform {
+    top: 50%;
+}
+
+.loginform span {
+    position: absolute;
+    right: 0px;
+    width: 130px;
+    height: 100px;
+    color: #ff3399;
+    top: 0px;
+    text-align: center;
+    line-height: 80px;
+    cursor: pointer;
+    font-size: 45px;
+    font-weight: 900;
+
+}
+
+
+.loginform h1 {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+ 
+
+.loginform label {
+    padding-left: 5px;
+    /* margin-bottom: 50px; */
+
+}
+
+#login_btn {
+    width: 102%;
+    height: 40px;
+    background-color: #ff3399;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    /* margin-bottom: 50px; */
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+#login_btn:hover {
+    cursor: pointer;
+}
