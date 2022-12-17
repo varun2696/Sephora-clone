@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="Homepage.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="navbarfooter.css" /> -->
     
     <title>HomePage</title>
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
@@ -54,17 +55,12 @@
             <img src="https://th.bing.com/th/id/OIP.02mw2NwyDPdKutRVQhplDAHaHa?pid=ImgDet&w=187&h=187&c=7&dpr=2" alt="">
             <p>Loyality</p>
         </div>
-        <div id="git">
-            <a href="https://github.com/varun2696/faithful-night-9583" id="socialmedialinks">
-                <i class="fa fa-github">&nbsp;GitHub</i>
-            </a>
-        </div>
     </div>
     <div class="topNav1">
         <div id="webName">
             <div id="search">
                 <a href="product1.html">
-                    <i class="fas fa-search fa-xs" id="searchbar"></i>
+                    <i class="fas fa-search fa-xs" id="searchbaricon"></i>
                 </a>
               
                 <input  placeholder="Search C4RA">
@@ -74,20 +70,23 @@
             </div>
             <div id="icons">
                 <a href="admin.html">
-                    <i class="fas fa-user fa-xs" id="searchbar">&nbsp;Admin</i>
+                    <i class="fas fa-user fa-xs" id="admin">&nbsp;Admin</i>
                 </a>
                 <a href="cart.html">
                     <img src="https://th.bing.com/th/id/OIP.wV394P0dINJ15K2rCqkK9QHaHa?pid=ImgDet&rs=1" alt="cart">
                 </a>
-                <div id="login">
-                    <a href="login.html">
-                        <i class="fas fa-user fa-xs" id="searchbar">&nbsp;LogIn</i>
-                    </a>
-                    <!-- <a href="" id="pTag">
-                        
-                    </a> -->
-                    
-                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="login.html">
+                      <i class="fas fa-user fa-xs" id="loginName">&nbsp;&nbsp;LogIn </i>
+                      </a>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="#">My Account</a>
+                      <a href="#">My Orders</a>
+                      <a href="#" id="signout">SignOut</a>
+                    </div>
+                  </div> 
                 
                 
             </div>
@@ -103,13 +102,11 @@
                 </li>
                 <li>
                     <a href="product1.html">MAKEUP
-                        <!-- <span class="arrow">&#x25BC;</span> -->
                     </a>
                     
                     <ul class="submenu">
                         <li>
                             <a href="#">FACE
-                                <!-- <span class="arrow">&#x25B6;</span> -->
                             </a>
                             <ul class="submenu-2">
                                 <li>
@@ -257,6 +254,11 @@
     </div>
 
       <!-- End of the Navbar -->
+
+
+                <!-- *************************************************************************************   -->
+
+
 
     <div class="imageContainer"></div>
     <div class="deal">
