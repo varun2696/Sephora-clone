@@ -63,7 +63,7 @@ function click() {
             <h1> Admin DashBoard ! </h1>
           </div>
         `;
-      }, 1000);
+      }, 2000);
     } else {
       alert("Please Enter Correct Details !");
     }
