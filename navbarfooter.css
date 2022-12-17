@@ -278,7 +278,7 @@ body{
   /* border:1px solid black; */
   float: left;
   overflow: hidden;
-  padding-bottom: px;
+  padding-bottom: 0px;
 }
 
 .dropdown .dropbtn {
@@ -317,8 +317,9 @@ body{
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
-  color: black;
+  
+  /* color: black; */
+  color: rgb(236, 29, 122);
 }
 
 .dropdown:hover .dropdown-content {

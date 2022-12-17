@@ -251,7 +251,7 @@ body{
 .dropdown {
   float: left;
   overflow: hidden;
-  padding-bottom: px;
+  padding-bottom: 0px;
 }
 
 .dropdown .dropbtn {
@@ -289,8 +289,7 @@ body{
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
-  color: black;
+  color: rgb(236, 29, 122);
 }
 
 .dropdown:hover .dropdown-content {
@@ -485,6 +484,8 @@ text-align: center;
     height: 300px;
    
   }
+  
+
   .TomFord>div>img{
     padding-top: 8px;
     height:400px;
@@ -1056,3 +1057,9 @@ text-align: center;
 
 
 
+/* @media  screen and (max-width: 300px) {
+  .TomFord{
+   grid-template-columns: repeat(1,1fr);
+  }
+  
+} */
