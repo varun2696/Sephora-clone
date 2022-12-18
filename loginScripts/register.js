@@ -1,5 +1,44 @@
 
-const registerUrl = 'https://636f9027f2ed5cb047e01947.mockapi.io/reg_mail'
+
+// ********* POpPup message **********
+
+const Modal_div = document.querySelector('.PopPupMessage');
+const AlertMessage = document.querySelector('#alertMessage');
+const CloseAlert = document.querySelector('.modal-close');
+
+CloseAlert.addEventListener('click', event => {
+    Modal_div.style.display = 'none';
+    AlertMessage.innerHTML = ''
+})
+
+//  *********** end *********
+
+
+
+// ******** SHOW REGISTER MODAL  latest changes ***********
+
+const registerbtn = document.querySelector('#registerbtn');
+
+const RegisterModal_div = document.querySelector('.RegisterModalform');
+
+const RegisterCloseModal = document.querySelector('#crossbtnforRegister');
+
+RegisterCloseModal.addEventListener('click', event => {
+    RegisterModal_div.style.display = 'none';
+})
+
+registerbtn.addEventListener('click', ()=>{
+    RegisterModal_div.style.display = 'flex'
+})
+
+// ********* end ************
+
+
+
+
+//  ******** CRUD operations start *******
+
+const RegisterUrl = 'https://636f9027f2ed5cb047e01947.mockapi.io/reg_mail'
 
 let sub_btn = document.querySelector('#submit_btn');
 
@@ -13,7 +52,9 @@ sub_btn.addEventListener('click', () => {
     let mobileNo = document.getElementById('mobileNo').value;
 
     if (username == '' || email == '' || password == '' || mobileNo == '') {
-        alert('Please enter all fields')
+        // alert('Please enter all fields')
+        Modal_div.style.display = 'flex';
+        AlertMessage.innerHTML = 'Please enter all the fields';
     }
     else {
         CheckUserIfExists(username)
@@ -30,39 +71,10 @@ sub_btn.addEventListener('click', () => {
 
 
 
-const RegisterNewUser = async (userObj) => {
-
-    try {
-        let reg_req = await fetch(registerUrl, {
-            method: 'POST',
-            body: JSON.stringify(userObj),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-
-        })
-        // console.log(reg_req)
-        if (reg_req.ok) {
-            let data = await reg_req.json()
-            console.log(data)
-            alert("Registerd Sucessfully")
-        }
-
-        // console.log(data)
-    }
-    catch (error) {
-        console.log('er', error)
-    }
-
-}
-
-
-
-
 const CheckUserIfExists = async (username) => {
-    
+
     try {
-        let Check_res = await fetch(registerUrl, {
+        let Check_res = await fetch(RegisterUrl, {
             method: 'GET'
         })
         // console.log(Check_res);
@@ -80,7 +92,9 @@ const CheckUserIfExists = async (username) => {
             // console.log('DATA', DATA)
             if (DATA.length !== 0) {
                 if (username == DATA[0].username) {
-                    alert('User Already exists');
+                    // alert('User Already exists');
+                    Modal_div.style.display = 'flex';
+                    AlertMessage.innerHTML = 'User Already Exists';
                 }
                 else {
                     RegisterNewUser(userObj)
@@ -94,7 +108,45 @@ const CheckUserIfExists = async (username) => {
 
     }
     catch (error) {
-        alert('Error while fetching')
+        // alert('Error while fetching')
         console.log('error', error)
     }
 }
+
+
+
+
+const RegisterNewUser = async (userObj) => {
+
+    try {
+        let reg_req = await fetch(RegisterUrl, {
+            method: 'POST',
+            body: JSON.stringify(userObj),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+
+        })
+        // console.log(reg_req)
+        if (reg_req.ok) {
+            let data = await reg_req.json()
+            console.log(data)
+            // alert("Registerd Sucessfully")
+            Modal_div.style.display = 'flex';
+            AlertMessage.innerHTML = 'Registered SucessFully';
+            setTimeout(function(){
+                window.location.reload();
+             }, 3000);
+
+        }
+
+        // console.log(data)
+    }
+    catch (error) {
+        console.log('er', error)
+    }
+
+}
+
+
+//   ***** CRUD operations end *****
