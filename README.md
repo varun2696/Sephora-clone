@@ -7,6 +7,8 @@ Cloning Sephora website
 
 API's      👇👇👇
 
+Netlify Link : https://dancing-granita-c0897e.netlify.app
+
 Users    : https://636f9027f2ed5cb047e01947.mockapi.io/reg_mail
 
 Products : https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products
