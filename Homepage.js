@@ -41,8 +41,13 @@ let image=document.createElement("img");
         let images=document.createElement("img");
         images.setAttribute("src",arr[i]);
         Div.append(images);
+        
         document.querySelector(".TomFord").append(Div);
+        Div.addEventListener("click",()=>{
+          window.location.href="./product1.html"
+        })
     }
+   
 }
 
 displaycard(arr);
@@ -153,14 +158,16 @@ $(".slider").each(function () {
 function displaylazrgirlcard(data){
     document.querySelector("#LazyGirlCard").innerHTML=`
         ${ data.map((el)=>{
-                return `<div id="smallCard">
+                return `<div id="smallCard" onclick="girl()">
                           <img src="${el}" alt="err">
                          </div>`
                           }).join(" ")}
                         `
                  }
 
-
+function girl(){
+  window.location.href="./product2.html";
+}
 // New On The Block
       
      
@@ -177,13 +184,17 @@ displayNewBlockCard(newBlock);
 function displayNewBlockCard(data){
     document.querySelector("#BlockContainer").innerHTML=`
     ${data.map((el)=>{
-        return `<div id="newblocksmallcard">
+        return `<div id="newblocksmallcard" onclick="fun()">
         <img src="${el}" alt="newcard">
         </div>
         `
     }).join(" ")}
     `
-}              
+}       
+   
+function fun(){
+  window.location.href="./product2.html";
+} 
 
 let Diaries=[
 
@@ -217,3 +228,19 @@ function displayC4RADiary(data){
                           }).join(" ")}
                         `
                  }
+
+
+
+//adding user structure to local storage to faciliate add to cart functoinality
+let userStructure={
+  "id": 1,
+  "userName": "",
+  "profilePic":"https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/985.jpg",
+  "Address" : "",
+  "cartItems": [],
+  "orders":[],
+  "additionalInfo":[],
+  "payment":0
+  
+}
+localStorage.setItem("userdata",JSON.stringify(userStructure));

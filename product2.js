@@ -78,6 +78,8 @@ function displayCard(data){
       cartproducts.push(elem);
       localStorage.setItem("cart",JSON.stringify(cartproducts));
       showfeed()
+      
+      addToCart(elem)
     });
 
     div.append(imageProduct,Category,title,Price,btn);
@@ -127,17 +129,5 @@ function dropdownBrand() {
 function dropdownGender() {
   document.getElementById("Gender").classList.toggle("show");
 }
-
-// sticky navbar Properties
-window.onscroll = function() {myFunction()};
-
-var navbar = document.querySelector(".top-nav");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
+ 
 }
