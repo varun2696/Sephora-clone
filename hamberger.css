@@ -94,6 +94,18 @@ html, body {
   transform: rotate(-405deg);
 }
 
+#loading{
+  /* border: 1px solid red; */
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  margin-left: 300px;
+  margin-top: -300px;
+}
+#loading>img{
+  width: 11%;
+}
+
 @media (max-width: 1100px) {
 
     .top-nav {
