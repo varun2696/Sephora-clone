@@ -42,10 +42,10 @@ let url="https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products_2";
     }
 // Search functionality
     function search(){
-      let q=document.querySelector("#search").value;
+      let q=document.querySelector("#Search").value;
       console.log(q);
       let newData=bag.filter(function (elem){
-        return elem.category.toLowerCase().includes(q.toLowerCase());
+        return elem.title.toLowerCase().includes(q.toLowerCase());
       });
       console.log(newData);
       displayCard(newData);

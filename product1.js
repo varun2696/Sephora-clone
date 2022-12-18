@@ -43,7 +43,7 @@ let url="https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products";
  
   // Search functionality 
   function search(){
-      let q=document.querySelector("#search").value;
+      let q=document.querySelector("#Search").value;
       console.log(q);
       let newData=bag.filter(function (elem){
         return elem.title.toLowerCase().includes(q.toLowerCase());
@@ -51,6 +51,7 @@ let url="https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products";
       console.log(newData);
       displayCard(newData);
     }
+    search()
 // appending on DOM
 function displayCard(data){
   document.querySelector(".container").innerHTML="";    
