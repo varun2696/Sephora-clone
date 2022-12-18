@@ -27,14 +27,9 @@ async function addcount  (id){
     
     //lets PUT
     
-   let res2 = await fetch(`https://639c5a3b16d1763ab1472b90.mockapi.io/cart/${id}`,{
-    method:"PUT",
-    headers:{ 'Content-Type':"application/json"}
-   ,
-    body:JSON.stringify(obj)
-   })
-   let data1 = await res2.json();
-   console.log(data1)
+  async function put (id,obj){
+       
+  }
 
 
     }

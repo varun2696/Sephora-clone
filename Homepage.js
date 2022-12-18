@@ -228,3 +228,19 @@ function displayC4RADiary(data){
                           }).join(" ")}
                         `
                  }
+
+
+
+//adding user structure to local storage to faciliate add to cart functoinality
+let userStructure={
+  "id": 1,
+  "userName": "",
+  "profilePic":"https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/985.jpg",
+  "Address" : "",
+  "cartItems": [],
+  "orders":[],
+  "additionalInfo":[],
+  "payment":0
+  
+}
+localStorage.setItem("userdata",JSON.stringify(userStructure));
