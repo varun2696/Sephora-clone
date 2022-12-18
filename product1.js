@@ -77,9 +77,14 @@ function displayCard(data){
     
     btn.addEventListener("click", function () {
       cartproducts.push(elem);
+     
       localStorage.setItem("cart",JSON.stringify(cartproducts));
+      
       // alert("Product added to cart");
       showfeed()
+      //add to user data for cart page
+ 
+      addToCart(elem)
     });
 
     div.append(imageProduct,Category,title,Price,btn);
@@ -148,8 +153,18 @@ function myFunction() {
 function addToCart(item){
   let larr = JSON.parse(localStorage.getItem("userdata"))||[];
   
+}
+  //***************************** */
+
+
+//local storage usage for cart page
+
+function addToCart(item){
+  let larr = JSON.parse(localStorage.getItem("userdata"));
+  
   
   //***************************** */
+  console.log(item)
   item["count"]=1;
   larr.cartItems.push(item)
   

@@ -1,15 +1,25 @@
 
-function showUsername(){
 
-    const showName = document.querySelector('h2');
+ const userName = sessionStorage.getItem('c4raUser') || "LogIn"
 
-    let userName = sessionStorage.getItem('c4raUser') || "Login"
-    showName.innerHTML = userName;
-    
-    // const showName = document.querySelector('#pTag');
+ const LoginName = document.querySelector('#loginName');
 
-    // let userName = sessionStorage.getItem('c4raUser') || "Login"
-    // showName.innerHTML = userName;
-}
+ LoginName.innerHTML = userName;
 
-export default showUsername
+//  if(LoginName.innerHTML == "LogIn"){
+
+//     LoginName.addEventListener('click', ()=>{
+//         window.location.href = './login.html'
+//     })
+//  }
+
+
+
+ const signout = document.getElementById('signout');
+ signout.addEventListener('click', () => {
+     if (userName !== "LogIn") {
+         alert('You are signout from the site')
+         sessionStorage.removeItem('c4raUser');
+         window.location.reload();
+     }
+ })
