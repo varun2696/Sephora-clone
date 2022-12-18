@@ -167,7 +167,7 @@ function fetch_button() {
     </div>
   `;
     FetchProduct();
-    Rightdiv.style.background = "rgb(251, 243, 244)";
+    Rightdiv.style.background = "White";
   });
 }
 
@@ -790,6 +790,7 @@ function InsideUserBtn() {
 
 function WelcomeRegister() {
   document.getElementById("regis_btn").addEventListener("click", () => {
+    Rightdiv.style.background="linear-gradient(to left, rgb(120 139 109), rgb(231, 170, 231))"
     document.querySelector("#Right").innerHTML = "";
     document.querySelector("#Right").innerHTML = `
       <div id="loading" style=" background-color:white; height:6100px;" >
@@ -869,8 +870,9 @@ function tableStructu(data) {
 
 // Login
 
-function WelcomeLogin() {
+function WelcomeLogin() {(251, 243, 244)
   document.getElementById("user_btn").addEventListener("click", () => {
+    Rightdiv.style.background="linear-gradient(to left, rgb(120 139 109), rgb(231, 170, 231))"
     document.querySelector("#Right").innerHTML = "";
     document.querySelector("#Right").innerHTML = `
       <div id="loading" style=" background-color:white; height:6100px;" >

@@ -29,7 +29,8 @@
     width: 31%;
     height:auto; 
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    background-color: rgb(251, 243, 244);
+    background:  linear-gradient(to left, rgb(193, 70, 174), rgb(231, 170, 231))
+    ;
     border-radius :9px;
 }
 
@@ -40,17 +41,17 @@
     width: 68%;
     height: auto;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    background-color:  rgb(251, 243, 244);
+    background:  linear-gradient(to left, rgb(193, 70, 174), rgb(231, 170, 231))
+    ;
     border-radius :9px;
 }
 
 .wel{
     width: 80%;
-    border: 1px solid red;
     text-align: center;
-    border: 1px solid skyblue;
+    /* border: 1px solid rgb(182 193 70);/ */
     margin: auto;
-    background-color: rgb(181, 213, 226);
+    background: linear-gradient(to left, rgb(182 193 70), rgb(231, 170, 231));
     border-radius: 8px;
     color: rgb(111, 8, 8);
     margin-top: 2px;
@@ -164,7 +165,7 @@
 #user_btn:hover
 {
     cursor: pointer !important;
-    background-color: #e87f92;
+    background-color: #f39;
     color: rgba(23, 16, 16, 0.683);
 }
 
@@ -255,6 +256,7 @@
     height: 90%;
     width: 100%;
     text-align: center;
+    background-color:#e7dee6;
 }
 
 .SmallCards>img{
@@ -426,7 +428,7 @@ table{
     /* border: 1px solid red; */
     margin-top: 0px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-    background-color: rgb(210, 223, 235);
+    background-color: #d5c298;
     padding: 5px;
     border-radius: 8px ;
 }
