@@ -162,7 +162,6 @@ body{
     padding-right: 25px;
 }
 .topNav1{
-  /* border: 1px solid red; */
     height: 200px;
     width:90%;
     background-color: white;
@@ -171,7 +170,6 @@ body{
     
 }
 #webName{
-  /* border: 3px solid black; */
     height: 90px;
     display: flex;
 
@@ -181,21 +179,15 @@ body{
     height: 80px;
     width: 400px;
     margin: auto;
-    /* margin-top: 5px; */
 }
 #webName >div:nth-child(1){
-  /* border: 1px solid black; */
     display: flex;
-    /* margin-left: 20px; */
     text-align: center;
-    /* width: 400px; */
 
 }
 #webName >div:nth-child(2){
-  /* border: 1px solid black; */
   padding-right: 150px;
   padding-top: 15px;
-    /* width: 600px; */
     text-align: center;
     font-size:xx-large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -206,7 +198,6 @@ body{
 #webName >div:nth-child(3){
     display: flex;
     margin-top: 15px;
-    /* padding-left: 10px; */
     text-align: center;
     width: auto;
 }
@@ -237,11 +228,9 @@ body{
     color: black;
 }
 #loginName{
- /* border: 5px solid black; */
     margin-top: -2px;
     color: rgb(236, 29, 122);
     font-size:medium;
-    /* margin-right: 0px; */
     width: auto;
 
 }
@@ -258,7 +247,6 @@ body{
 }
 
 .dropdown {
-  /* border: 1px solid black; */
   float: left;
   overflow: hidden;
   padding-bottom: 0px;
@@ -327,6 +315,7 @@ body{
     margin: 2px;
 }
 #productlist{
+  /* border: 1px solid black; */
     height: 105px;
     position: relative;
     display: flex;
@@ -336,6 +325,7 @@ body{
     margin-left: 1px;
   }
 .Main{
+  /* border: 1px solid black; */
     padding-left: 0px;
     padding-top: 0px;
     margin-top: 0px;
@@ -347,7 +337,6 @@ body{
   margin-left: 40px;
 }
 #sale{
-  /* border: 1px solid black; */
   margin-left: 60px;
 }
 #productlist a{
@@ -368,6 +357,7 @@ transition: background 0.4s;
 #productlist a:hover{
     color: rgb(242, 59, 181);
 }
+
 #productlist ul{
 list-style: none;
 display: flex;
@@ -394,12 +384,13 @@ text-align: center;
     flex-direction: column;
     position: absolute;
     width: 200px;
-    height: 60px;
+    height: 40px;
 }
 .submenu li{
     position: relative;
     height: 60px;
     margin-top: 0px;
+    
 }
 .submenu li:hover .submenu-2 li{
     display: block;
@@ -440,7 +431,6 @@ text-align: center;
     height: 170px;
     width: 80%;
     display: flex;
-    /* text-align: center; */
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
@@ -450,27 +440,21 @@ text-align: center;
     padding-right: 20px;
   }
   .deal>div{
-    /* border: 2px solid red; */
     height: 50px;
     width: 14%;
     margin-top: 10px;
-    /* margin-left: 40px;
-    margin-right: 40px; */
     padding-top: 15px;
     text-align: center;
     color: white;
     background-color: black;
   }
   #heading{
-    /* border: 3px solid black; */
     align-items: center;
     text-align: center;
     margin-top: 3px;
-    /* padding-top: 6px; */
     height: 90px;
   }
   #heading>h2{
-    /* border: 3px solid black; */
     margin-top: 30px;
   }
   #tomimg{
@@ -514,7 +498,6 @@ text-align: center;
  
   }
   #JustLand{
-    /* border: 2px solid black; */
     height: 90px;
     width: 90%;
     margin-top: 110px;
@@ -524,13 +507,11 @@ text-align: center;
   }
   #JustLand>img{ 
     margin-top: 5px;
-    /* margin-left: 20px; */
     text-align: center;
     height: 80px;
     width: 100%;
   }
   .slivid{
-    /* border: 2px solid black; */
     margin-top: 90px;
     height: 400px;
     width: 80%;
@@ -539,16 +520,10 @@ text-align: center;
     justify-content: flex-start;
   }
   .slivid>div{
-    /* border: 2px solid red; */
     height: 350;
     width: 50%;
     margin-top: 5px;
   }
-
-  /* #slid{
-    display: flex;
-
-  } */
 
   .slider {
     margin: 0 auto;
@@ -569,17 +544,14 @@ text-align: center;
   }
   
   .slide {
-    /* border: 1px solid black; */
     display: none;
     height: 100%;
     position: absolute;
     width: 100%;
-    /* margin: auto; */
     margin-left: 10px;
     text-align: center;
   }
   .slide>img{
-    /* border: 1px solid black; */
     width: auto;
     height: 200px;
     margin-left: 13px;
@@ -588,28 +560,11 @@ text-align: center;
   .slide>p{
     text-align: center;
     margin-top: 1px;
-     /* border: 1px solid black; */
   }
   .slide:first-child {
     display: block;
     
   }
-  /* 
-  .slide:nth-of-type(1) {
-    background: #D7A151;
-  }
-  
-  .slide:nth-of-type(2) {
-    background: #F4E4CD;
-  }
-  
-  .slide:nth-of-type(3) {
-    background: #C75534;
-  }
-  
-  .slide:nth-of-type(4) {
-    background: #D1D1D4;
-  } */
   
   .slide_buttons {
     left: 0;
@@ -643,25 +598,20 @@ text-align: center;
   }
   
   .previous_btn {
-    /* border: 1px solid black; */
     bottom: 0;
     left: 10px;
-    /* margin: auto; */
     margin-top: 25px;
     margin-left: 0px;
     position: absolute;
     top: 100px;
-    /* background-color: rgb(241, 26, 62); */
   }
   
   .next_btn {
     bottom: 0;
-    /* margin: auto; */
     margin-top: 25px;
     position: absolute;
     right: 5px;
     top: 100px;
-    /* font-display: rgb(241, 26, 62); */
   }
   
   .previous_btn, .next_btn {
@@ -696,13 +646,11 @@ text-align: center;
     margin-top: 40px;
     margin-left: 25px;
     width: 90%;
-    /* background-color: teal; */
   }
   #Videop>p{
     text-align: center;
   }
   .C4RAImage{
-    /* border: 5px solid red; */
     width: 90%;
     height: 170px;
     margin-top: 10px;
@@ -710,14 +658,12 @@ text-align: center;
     text-align: center;
   }
   .C4RAImage>img{
-    /* border: 2px solid red; */
     width: 1200px;
     margin-top: 30px;
     margin-left: 70px;
   }
 
 .LazyGirl{
-    /* border: 2px solid black; */
     height: 90px;
     width: 90%;
     margin-top: 1px;
@@ -727,13 +673,11 @@ text-align: center;
   }
   .LazyGirl>img{ 
     margin-top: 5px;
-    /* margin-left: 20px; */
     text-align: center;
     height: 80px;
     width: 100%;
   }
   #LazyGirlCard{
-    /* border: 1px solid black; */
     width: 1200px;
     height: 360px;
     margin: auto;
@@ -747,7 +691,6 @@ text-align: center;
   }
  
   #smallCard>img{
-    /* border: 1px solid yellow; */
     padding-top: 8px;
     height:350px;
     width:380px;
@@ -756,7 +699,6 @@ text-align: center;
 
 
   #favouriteBrand{
-      /* border: 2px solid black; */
       height: 90px;
       width: 90%;
       margin-top: 15px;
@@ -767,17 +709,14 @@ text-align: center;
  
   #favouriteBrand>img{ 
     margin-top: 5px;
-    /* margin-left: 20px; */
     text-align: center;
     height: 80px;
     width: 100%;
   }
   .BrandContainer{
-    /* border: 3px solid black; */
     height: 150px;
     width: 80%;
     display: flex;
-    /* text-align: center; */
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
@@ -787,16 +726,11 @@ text-align: center;
     padding-right: 20px;
   }
   .BrandContainer>div{
-    /* border: 2px solid red; */
     height: 80px;
     width: 16%;
     margin-top: 1px;
-    /* margin-left: 40px;
-    margin-right: 40px; */
-    /* padding-top: 15px; */
     text-align: center;
     color: white;
-    /* background-color: black; */
   }
   .BrandContainer>div>img{
     height: 80px;
@@ -804,7 +738,6 @@ text-align: center;
     
   }
   #Block{
-    /* border: 2px solid black; */
     height: 90px;
     width: 90%;
     margin-top: 10px;
@@ -819,7 +752,6 @@ text-align: center;
   width: 100%;
 }
 #BlockContainer{
-    /* border: 2px solid black; */
     width: 85%;
     margin: auto;
     height: 550px;
@@ -829,11 +761,9 @@ text-align: center;
     row-gap:0px;
 }
 #BlockContainer>div{
-    /* border: 2px solid black; */
     margin-left: 5spx;
     margin-top: 5px;
    height: 250px;
-/* width: ; */
 }
 #BlockContainer>div>img{
     height: 250px;
@@ -841,11 +771,9 @@ text-align: center;
 }
 
 #C4RADiary{
-    /* border: 3px solid black; */
     align-items: center;
     text-align: center;
     margin-top: 1px;
-    /* padding-top: 6px; */
     height: 100px;
   }
   #C4RADiary>img{
@@ -855,7 +783,6 @@ text-align: center;
     width: 100%;
   }
   .C4RADiarierContainer{
-    /* border: 1px solid red; */
     height: 450px;
     width: 75%;
     display: grid;
@@ -869,8 +796,6 @@ text-align: center;
 
   }
   #smallCard{
-    /* border: 2px solid black; */
-    /* height: 400px; */
     height: 100%;
     width: 360px;
     text-align: left;
@@ -879,15 +804,11 @@ text-align: center;
   }
   
   #smallCard>img{
-    /* border:1px solid red; */
     padding-top: 0px;
-    /* height: 330px;
-    width: 350px */
     height: 358.86px;
     width: 358.86px;
   }
   #btn1{
-    /* border: 1px solid black; */
     height: 50px;
     width: 170px;
     font-size: medium;
@@ -903,7 +824,6 @@ text-align: center;
   }
 
   .Subscribe{
-    /* border: 1px solid black; */
     margin-top: 0px;
     height: 120px;
     width: 100%;
@@ -918,7 +838,6 @@ text-align: center;
     margin-top: 5px;
   }
   .Subscribe>div{
-    /* border: 1px solid black; */
     display: flex;
     width: 400px;
     height: 50px;
@@ -1075,11 +994,3 @@ text-align: center;
     text-align: center;
 }
 
-
-
-/* @media  screen and (max-width: 300px) {
-  body{
-
-  }
-  
-} */
