@@ -35,6 +35,7 @@ input{
     font-size: 30px;
 }
 .container{
+    /* border: 1px solid green; */
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap:20px;

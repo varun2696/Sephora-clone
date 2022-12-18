@@ -1,6 +1,17 @@
  
 let cartproducts=JSON.parse(localStorage.getItem("cart"))||[];
 // Fetching api from the JSON Server :-
+// append spinner
+// let productgrid=document.getElementsByClassName("container");
+
+function showdata(){
+  document.querySelector(".container").innerHTML=`
+  <div id="loading" style=" background-color:white; height:100px; width:100%"; >
+  <img src="./Spinner-5.gif" alt="error">
+  <p>Please wait page is loading ...</p>
+   </div>
+  `
+}
 let bag=[];
 // let url="https://fakestoreapi.com/products";
 let url="https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products";
@@ -8,8 +19,11 @@ let url="https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products";
     .then((res)=>res.json())
     .then((data)=>{
         bag=data;
-        console.log(data);
+        showdata()
+        // console.log(data);
+       setTimeout(()=>{
         displayCard(data);
+       },1000)
     });
 
     // Sorting functionaly
