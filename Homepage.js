@@ -243,4 +243,7 @@ let userStructure={
   "payment":0
   
 }
+if(localStorage.getItem("userdata")){}
+else{
 localStorage.setItem("userdata",JSON.stringify(userStructure));
+}

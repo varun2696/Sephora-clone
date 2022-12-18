@@ -205,6 +205,8 @@ const CheckUserIfAlreagyLogin = async (loginUserName) => {
 
 
 
+<<<<<<< HEAD
+=======
 
 
 async function PostLoginData(LoginData) {
@@ -236,3 +238,4 @@ async function PostLoginData(LoginData) {
 
 
 
+>>>>>>> 0ed04c8999a1ac1ab59af9505001d391b8973551
