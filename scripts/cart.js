@@ -147,7 +147,7 @@ shopMoreBtn.addEventListener("click",()=>{
 
 renderCardItems(localUserData);
 let arr = localUserData.cartItems;
-displayCart(arr)
+
 
 
 

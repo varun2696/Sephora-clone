@@ -186,7 +186,3 @@ const CheckUserIfExists = async (loginUserName) => {
 
 
 
-///local storage
-// login_btn.addEventListener("click",()=>{
-//     localStorage.setItem("cart",234);
-// })
