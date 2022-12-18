@@ -233,4 +233,4 @@ drodown.addEventListener("click",()=>{
 
 const userName1111 = document.querySelector("#id3");
 const userNameCart11 = sessionStorage.getItem('c4raUser') || "LogIn";
-userName1111.innerHTML = ' ' + userNameCart11;
+userName1111.innerHTML = `${userNameCart11} <i class="fa-solid fa-circle-chevron-down"> `
