@@ -149,6 +149,12 @@ function myFunction() {
   }
 }
  
+///add to cart functionality
+function addToCart(item){
+  let larr = JSON.parse(localStorage.getItem("userdata"))||[];
+  
+}
+  //***************************** */
 
 
 //local storage usage for cart page

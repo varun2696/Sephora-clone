@@ -130,4 +130,29 @@ function dropdownGender() {
   document.getElementById("Gender").classList.toggle("show");
 }
  
+///add to cart functionality
+function addToCart(item){
+  let larr = JSON.parse(localStorage.getItem("userdata"))||[];
+  
+}
+  //***************************** */
+
+
+//local storage usage for cart page
+
+function addToCart(item){
+  let larr = JSON.parse(localStorage.getItem("userdata"));
+  
+  
+  //***************************** */
+  console.log(item)
+  item["count"]=1;
+  larr.cartItems.push(item)
+  
+  console.log(JSON.stringify(larr,null,2))
+
+ //***************************** */
+
+  localStorage.setItem("userdata",JSON.stringify(larr))
+  
 }
