@@ -162,6 +162,7 @@ body{
     padding-right: 25px;
 }
 .topNav1{
+  /* border: 1px solid red; */
     height: 200px;
     width:90%;
     background-color: white;
@@ -170,28 +171,31 @@ body{
     
 }
 #webName{
+  /* border: 3px solid black; */
     height: 90px;
     display: flex;
 
 }
 #webName >div{
+  
     height: 80px;
-    width: 300px;
-    margin-top: 5px;
+    width: 400px;
+    margin: auto;
+    /* margin-top: 5px; */
 }
 #webName >div:nth-child(1){
-
+  /* border: 1px solid black; */
     display: flex;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     text-align: center;
-    width: 400px;
+    /* width: 400px; */
 
 }
 #webName >div:nth-child(2){
   /* border: 1px solid black; */
   padding-right: 150px;
   padding-top: 15px;
-    width: 600px;
+    /* width: 600px; */
     text-align: center;
     font-size:xx-large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -201,11 +205,10 @@ body{
 }
 #webName >div:nth-child(3){
     display: flex;
-    justify-content: space-evenly;
-    margin-left: 50px;
     margin-top: 15px;
+    /* padding-left: 10px; */
     text-align: center;
-    width: 250px;
+    width: auto;
 }
 #webName >div:nth-child(3) img{
     margin-left: 20px;
@@ -234,11 +237,13 @@ body{
     color: black;
 }
 #loginName{
-
+ /* border: 5px solid black; */
     margin-top: -2px;
     color: rgb(236, 29, 122);
     font-size:medium;
-    margin-right: 5px;
+    /* margin-right: 0px; */
+    width: auto;
+
 }
 #admin{
   margin-top: 15px;
@@ -253,6 +258,7 @@ body{
 }
 
 .dropdown {
+  /* border: 1px solid black; */
   float: left;
   overflow: hidden;
   padding-bottom: 0px;
