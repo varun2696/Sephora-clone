@@ -81,7 +81,7 @@ checkOutBtn.addEventListener("click",()=>{
 });
 //shopMoreBtn 
 shopMoreBtn.addEventListener("click",()=>{
-    window.location.replace("../product.html")
+    window.location.replace("../product1.html")
 });
 
 
@@ -559,6 +559,7 @@ localStorage.setItem("userdata",JSON.stringify(larr))
 
 
 
-shopMoreBtn.addEventListener("click",()=>{
-    window.location.href="./product1.html"
-})
+// shopMoreBtn.addEventListener("click",()=>{
+//     console.log("checked")
+//      window.location.href= "../product1.html";
+// })
