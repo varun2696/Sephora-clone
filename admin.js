@@ -52,6 +52,7 @@ function click() {
 
   function data() {
     if (userNameValue.value == "admin" && userPassValue.value == "C4RA") {
+      console.log(document.getElementById);
       WelcomeScreen();
       alert("Hello Admin !");
       document.querySelector("#submit_btn").parentNode.remove();
@@ -121,7 +122,7 @@ function InsideProductBtn() {
   leftdiv.innerHTML = `
       <div id="Container_1">
             <button id="Back"><</button>
-            <button id="ft_btn">Fetch Products</button>
+            <button id="ft_btn">Products</button>
             <button id="ad_btn">Add Product</button>
             <button id="de_btn">Delete Product</button>
             <button id="up_btn">Update Product(if existing)</button>
@@ -149,6 +150,8 @@ function back() {
 }
 
 // After InsideProductBtn has been called
+
+//  Fetch && Pagination
 
 function fetch_button() {
   let fetch_btn = document.querySelector("#ft_btn");
@@ -193,6 +196,13 @@ async function FetchProduct() {
 function DisplayProduct(data) {
   Rightdiv.innerHTML = "";
   Rightdiv.innerHTML = `
+       <div id="but">
+          <button id="pg_1">1</button>
+          <button id="pg_2">2</button>
+          <button id="pg_3">3</button>
+          <button id="pg_4">4</button>
+          <button id="pg_5">5</button>
+       </div>
         <div id="Cards">
                 ${data
                   .map((el) => {
@@ -206,6 +216,275 @@ function DisplayProduct(data) {
                   })
                   .join(" ")} 
         </div> `;
+  callBut();
+}
+
+function callBut() {
+  document.getElementById("pg_1").addEventListener("click", (e) => {
+    document.getElementById("but").nextElementSibling.innerHTML = "";
+    document.getElementById("but").nextElementSibling.innerHTML = `
+        <div id="loading" style="width: 410%;" >
+            <img src="./Spinner-5.gif" alt="error">
+            <p>Please wait page is loading ...</p>
+        </div>
+      `;
+    fetch_2();
+  });
+  document.getElementById("pg_2").addEventListener("click", (e) => {
+    document.getElementById("but").nextElementSibling.innerHTML = "";
+    document.getElementById("but").nextElementSibling.innerHTML = `
+       <div id="loading" style="width: 410%;" >
+          <img src="./Spinner-5.gif" alt="error">
+          <p>Please wait page is loading ...</p>
+       </div>
+      `;
+    fetch_3();
+  });
+  document.getElementById("pg_3").addEventListener("click", (e) => {
+    document.getElementById("but").nextElementSibling.innerHTML = "";
+    document.getElementById("but").nextElementSibling.innerHTML = `
+       <div id="loading" style="width: 410%;" >
+          <img src="./Spinner-5.gif" alt="error">
+          <p>Please wait page is loading ...</p>
+       </div>
+      `;
+    fetch_4();
+  });
+  document.getElementById("pg_4").addEventListener("click", (e) => {
+    document.getElementById("but").nextElementSibling.innerHTML = "";
+    document.getElementById("but").nextElementSibling.innerHTML = `
+       <div id="loading" style="width: 410%;" >
+          <img src="./Spinner-5.gif" alt="error">
+          <p>Please wait page is loading ...</p>
+       </div>
+      `;
+    fetch_5();
+  });
+  document.getElementById("pg_5").addEventListener("click", (e) => {
+    document.getElementById("but").nextElementSibling.innerHTML = "";
+    document.getElementById("but").nextElementSibling.innerHTML = `
+       <div id="loading" style="width: 410%;" >
+          <img src="./Spinner-5.gif" alt="error">
+          <p>Please wait page is loading ...</p>
+       </div>
+      `;
+    fetch_6();
+  });
+}
+
+// 1
+
+function DisplayProduct_2(data) {
+  document.getElementById("but").nextElementSibling.innerHTML = "";
+  let dt = [];
+  for (let i = 0; i < 20; i++) {
+    dt.push(data[i]);
+  }
+  document.getElementById("but").nextElementSibling.innerHTML = `
+        ${dt
+          .map((el) => {
+            return `<div Class="SmallCards">
+                        <img src="${el.image}" alt="Error">
+                        <p>${el.id}</p>
+                        <p>${el.category}</p>
+                        <p>${el.title}</p>
+                        <p>Rs. ${el.price}</p>
+                    </div>`;
+          })
+          .join(" ")} 
+  `;
+}
+
+async function fetch_2() {
+  try {
+    let res = await fetch(
+      "https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    if (res.ok == true) {
+      let data = await res.json();
+      DisplayProduct_2(data);
+    }
+  } catch {
+    console.log("Failed to fetch Product");
+  }
+}
+
+// 2
+
+function DisplayProduct_3(data) {
+  document.getElementById("but").nextElementSibling.innerHTML = "";
+  let dt = [];
+  for (let i = 20; i < 40; i++) {
+    dt.push(data[i]);
+  }
+  document.getElementById("but").nextElementSibling.innerHTML = `
+        ${dt
+          .map((el) => {
+            return `<div Class="SmallCards">
+                        <img src="${el.image}" alt="Error">
+                        <p>${el.id}</p>
+                        <p>${el.category}</p>
+                        <p>${el.title}</p>
+                        <p>Rs. ${el.price}</p>
+                    </div>`;
+          })
+          .join(" ")} 
+  `;
+}
+
+async function fetch_3() {
+  try {
+    let res = await fetch(
+      "https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    if (res.ok == true) {
+      let data = await res.json();
+      DisplayProduct_3(data);
+    }
+  } catch {
+    console.log("Failed to fetch Product");
+  }
+}
+
+// 3
+
+function DisplayProduct_4(data) {
+  document.getElementById("but").nextElementSibling.innerHTML = "";
+  let dt = [];
+  for (let i = 40; i < 60; i++) {
+    dt.push(data[i]);
+  }
+  document.getElementById("but").nextElementSibling.innerHTML = `
+        ${dt
+          .map((el) => {
+            return `<div Class="SmallCards">
+                        <img src="${el.image}" alt="Error">
+                        <p>${el.id}</p>
+                        <p>${el.category}</p>
+                        <p>${el.title}</p>
+                        <p>Rs. ${el.price}</p>
+                    </div>`;
+          })
+          .join(" ")} 
+  `;
+}
+
+async function fetch_4() {
+  try {
+    let res = await fetch(
+      "https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    if (res.ok == true) {
+      let data = await res.json();
+      DisplayProduct_4(data);
+    }
+  } catch {
+    console.log("Failed to fetch Product");
+  }
+}
+
+// 4
+
+function DisplayProduct_5(data) {
+  document.getElementById("but").nextElementSibling.innerHTML = "";
+  let dt = [];
+  for (let i = 60; i < 80; i++) {
+    dt.push(data[i]);
+  }
+  document.getElementById("but").nextElementSibling.innerHTML = `
+        ${dt
+          .map((el) => {
+            return `<div Class="SmallCards">
+                        <img src="${el.image}" alt="Error">
+                        <p>${el.id}</p>
+                        <p>${el.category}</p>
+                        <p>${el.title}</p>
+                        <p>Rs. ${el.price}</p>
+                    </div>`;
+          })
+          .join(" ")} 
+  `;
+}
+
+async function fetch_5() {
+  try {
+    let res = await fetch(
+      "https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    if (res.ok == true) {
+      let data = await res.json();
+      DisplayProduct_5(data);
+    }
+  } catch {
+    console.log("Failed to fetch Product");
+  }
+}
+
+// 5
+
+function DisplayProduct_6(data) {
+  document.getElementById("but").nextElementSibling.innerHTML = "";
+  let dt = [];
+  for (let i = 80; i < data.length; i++) {
+    dt.push(data[i]);
+  }
+  document.getElementById("but").nextElementSibling.innerHTML = `
+        ${dt
+          .map((el) => {
+            return `<div Class="SmallCards">
+                        <img src="${el.image}" alt="Error">
+                        <p>${el.id}</p>
+                        <p>${el.category}</p>
+                        <p>${el.title}</p>
+                        <p>Rs. ${el.price}</p>
+                    </div>`;
+          })
+          .join(" ")} 
+  `;
+}
+
+async function fetch_6() {
+  try {
+    let res = await fetch(
+      "https://636f9027f2ed5cb047e01947.mockapi.io/Project_2_Products",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    if (res.ok == true) {
+      let data = await res.json();
+      DisplayProduct_6(data);
+    }
+  } catch {
+    console.log("Failed to fetch Product");
+  }
 }
 
 // Add Product
@@ -506,7 +785,7 @@ function InsideUserBtn() {
     `;
   back();
   WelcomeRegister();
-  WelcomeLogin()
+  WelcomeLogin();
 }
 
 function WelcomeRegister() {
@@ -527,6 +806,7 @@ function WelcomeRegister() {
 
 function tableStructure() {
   document.querySelector("#Right").innerHTML = `
+  <h2 id="head_regDetails">Register User Details</h2>
         <table>
               <thead id="head">
                     <tr class="navRow">
@@ -587,8 +867,7 @@ function tableStructu(data) {
   `;
 }
 
-
-// Login 
+// Login
 
 function WelcomeLogin() {
   document.getElementById("user_btn").addEventListener("click", () => {
@@ -601,20 +880,20 @@ function WelcomeLogin() {
     `;
     setTimeout(() => {
       document.querySelector("#Right").innerHTML = "";
-        tableStructure_lo();
+      tableStructure_lo();
     }, 1000);
   });
 }
 
 function tableStructure_lo() {
   document.querySelector("#Right").innerHTML = `
+  <h2 id="head_regDetails">Login User Details</h2>
         <table>
               <thead id="head">
                     <tr class="navRow">
                         <td class="details_1">Id</td>
                         <td class="details_1">Username</td>
                         <td class="details_1">Password</td>
-                        <td class="details_1" id="del_1">Delete</td>
                     </tr>
               </thead>
               <tbody id="mainContainer_tc">
@@ -622,9 +901,8 @@ function tableStructure_lo() {
               </tbody>
           </table>
   `;
-  login_1()
+  login_1();
 }
-
 
 async function login_1() {
   try {
@@ -659,7 +937,6 @@ function tableStructu_1(data) {
                       <td class="details_1">${el.id}</td>
                       <td class="details_1">${el.Username}</td>
                       <td class="details_1">${el.Password}</td>
-                      <td class="details_1 id="delete_1"">Delete</td>
                   </tr>`;
           })
           .join(" ")}

@@ -413,19 +413,43 @@ table{
 .navRow>.details_1:nth-child(3){
     width:40%
 }
-.navRow>.details_1:nth-child(4){
-    width:10%;
-    background-color: red;
-    color: black
-}
-
-#head>.navRow>#del_1{
-    background-color:rgb(226, 96, 96);
-}
 
 .anchortag{
     text-decoration: none;
     font-size: 20px;
     border-bottom: 1px solid rgb(233, 221, 221);
     display: block;
+}
+
+#head_regDetails{
+    text-align: center;
+    /* border: 1px solid red; */
+    margin-top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    background-color: rgb(210, 223, 235);
+    padding: 5px;
+    border-radius: 8px ;
+}
+
+#but{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+#pg_1,#pg_2,#pg_3,#pg_4,#pg_5{
+    padding: 5px;
+    width: 35px;
+    font-size: 20px;
+    color: black;
+    border-radius: 50px;
+    border: 1px solid gray;
+}
+
+#pg_1:hover,#pg_2:hover,#pg_3:hover,#pg_4:hover,#pg_5:hover{
+    cursor: pointer;
+    background-color:#f39;
+    border: none;
 }
