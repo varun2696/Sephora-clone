@@ -11,6 +11,7 @@ body{
     margin: 0px;
     padding: 0px;
     background-color: rgb(244, 243, 243);
+    
 }
 #Image{
     margin-top: 1px;
@@ -187,6 +188,9 @@ body{
 
 }
 #webName >div:nth-child(2){
+  /* border: 1px solid black; */
+  padding-right: 150px;
+  padding-top: 15px;
     width: 600px;
     text-align: center;
     font-size:xx-large;
@@ -313,12 +317,10 @@ body{
 }
 
 #webName p{
-    /* border: 2px solid black; */
     height: 20px;
     margin: 2px;
 }
 #productlist{
-  /* border: 2px solid black; */
     height: 105px;
     position: relative;
     display: flex;
@@ -328,7 +330,6 @@ body{
     margin-left: 1px;
   }
 .Main{
-  /* border: 2px solid black; */
     padding-left: 0px;
     padding-top: 0px;
     margin-top: 0px;
@@ -337,7 +338,6 @@ body{
     margin-left: 5px;
 }
 #brand{
-  /* border: 1px solid black; */
   margin-left: 40px;
 }
 #sale{
@@ -1072,8 +1072,8 @@ text-align: center;
 
 
 /* @media  screen and (max-width: 300px) {
-  .TomFord{
-   grid-template-columns: repeat(1,1fr);
+  body{
+
   }
   
 } */
