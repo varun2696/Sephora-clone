@@ -119,11 +119,11 @@ const LoginUser = async (username, password) => {
                 }
             });
 
-            console.log('LoginDATA', DATA)
+            // console.log('LoginDATA', DATA)
             if (username == DATA[0].username && password == DATA[0].password) {
                 // alert('login sucees');
                 modal_div.style.display = 'flex';
-                alertMessage.innerHTML = 'Login Sucess';
+                alertMessage.innerHTML = 'Login Success !';
                 sessionStorage.setItem('c4raUser', username);
 
                 setTimeout(function () {
@@ -181,7 +181,7 @@ const CheckUserIfAlreagyLogin = async (loginUserName) => {
             console.log('llllDATA', DATA)
             if (DATA.length !== 0) {
                 if (loginUserName == DATA[0].Username) {
-                    console.log('User is Already exists in LoginUrl');
+                    // console.log('User is Already exists in LoginUrl');
                     // window.location.reload();
                 }
                 else {

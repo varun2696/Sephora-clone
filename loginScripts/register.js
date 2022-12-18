@@ -54,7 +54,7 @@ sub_btn.addEventListener('click', () => {
     if (username == '' || email == '' || password == '' || mobileNo == '') {
         // alert('Please enter all fields')
         Modal_div.style.display = 'flex';
-        AlertMessage.innerHTML = 'Please enter all the fields';
+        AlertMessage.innerHTML = 'Please enter all the fields !';
     }
     else {
         CheckUserIfExists(username)
@@ -94,7 +94,7 @@ const CheckUserIfExists = async (username) => {
                 if (username == DATA[0].username) {
                     // alert('User Already exists');
                     Modal_div.style.display = 'flex';
-                    AlertMessage.innerHTML = 'User Already Exists';
+                    AlertMessage.innerHTML = 'User Already Exists !';
                 }
                 else {
                     RegisterNewUser(userObj)
@@ -130,10 +130,10 @@ const RegisterNewUser = async (userObj) => {
         // console.log(reg_req)
         if (reg_req.ok) {
             let data = await reg_req.json()
-            console.log(data)
+            // console.log(data)
             // alert("Registerd Sucessfully")
             Modal_div.style.display = 'flex';
-            AlertMessage.innerHTML = 'Registered SucessFully';
+            AlertMessage.innerHTML = 'Registered Successfully !';
             setTimeout(function(){
                 window.location.reload();
              }, 3000);
