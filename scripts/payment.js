@@ -223,3 +223,8 @@ forms.forEach((item)=>{
 // }
 
 //place order modal ends here
+
+let drodown = document.querySelector("#nav-dropdown");
+drodown.addEventListener("click",()=>{
+  windows.location.href="./index.html"
+})

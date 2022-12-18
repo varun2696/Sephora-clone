@@ -11,6 +11,7 @@ body{
     margin: 0px;
     padding: 0px;
     background-color: rgb(244, 243, 243);
+    
 }
 #Image{
     margin-top: 1px;
@@ -161,6 +162,7 @@ body{
     padding-right: 25px;
 }
 .topNav1{
+  /* border: 1px solid red; */
     height: 200px;
     width:90%;
     background-color: white;
@@ -169,25 +171,31 @@ body{
     
 }
 #webName{
+  /* border: 3px solid black; */
     height: 90px;
     display: flex;
 
 }
 #webName >div{
+  
     height: 80px;
-    width: 300px;
-    margin-top: 5px;
+    width: 400px;
+    margin: auto;
+    /* margin-top: 5px; */
 }
 #webName >div:nth-child(1){
-
+  /* border: 1px solid black; */
     display: flex;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     text-align: center;
-    width: 400px;
+    /* width: 400px; */
 
 }
 #webName >div:nth-child(2){
-    width: 600px;
+  /* border: 1px solid black; */
+  padding-right: 150px;
+  padding-top: 15px;
+    /* width: 600px; */
     text-align: center;
     font-size:xx-large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -197,11 +205,10 @@ body{
 }
 #webName >div:nth-child(3){
     display: flex;
-    justify-content: space-evenly;
-    margin-left: 50px;
     margin-top: 15px;
+    /* padding-left: 10px; */
     text-align: center;
-    width: 250px;
+    width: auto;
 }
 #webName >div:nth-child(3) img{
     margin-left: 20px;
@@ -230,11 +237,13 @@ body{
     color: black;
 }
 #loginName{
-
+ /* border: 5px solid black; */
     margin-top: -2px;
     color: rgb(236, 29, 122);
     font-size:medium;
-    margin-right: 5px;
+    /* margin-right: 0px; */
+    width: auto;
+
 }
 #admin{
   margin-top: 15px;
@@ -249,6 +258,7 @@ body{
 }
 
 .dropdown {
+  /* border: 1px solid black; */
   float: left;
   overflow: hidden;
   padding-bottom: 0px;
@@ -313,20 +323,32 @@ body{
 }
 
 #webName p{
-    border: 2px solid black;
     height: 20px;
     margin: 2px;
 }
 #productlist{
-
     height: 105px;
     position: relative;
-}
+    display: flex;
+    justify-content: space-evenly;
+    width: 99%;
+    margin-right: 100px;
+    margin-left: 1px;
+  }
 .Main{
-
     padding-left: 0px;
     padding-top: 0px;
     margin-top: 0px;
+    width: 4000px;
+    margin-right: 90px;
+    margin-left: 5px;
+}
+#brand{
+  margin-left: 40px;
+}
+#sale{
+  /* border: 1px solid black; */
+  margin-left: 60px;
 }
 #productlist a{
 background: white;
@@ -362,14 +384,12 @@ text-align: center;
 
 }
 .submenu li{
-  
     display: none;
     position: absolute;
     top: 0px;
     height: 100px;
 }
 .submenu{
-  
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -1058,8 +1078,8 @@ text-align: center;
 
 
 /* @media  screen and (max-width: 300px) {
-  .TomFord{
-   grid-template-columns: repeat(1,1fr);
+  body{
+
   }
   
 } */

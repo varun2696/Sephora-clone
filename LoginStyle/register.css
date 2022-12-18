@@ -1,18 +1,33 @@
-.loginform {
-    width: 350px;
-    height: 400px;
-    padding: 50px 40px;
-    position: absolute;
-    left: 50%;
-    top: -50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    box-shadow: 0px 0px 10px 3px lemonchiffon;
-    transition: 1s;
-    z-index: 9;
+
+.RegisterModalform{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 10;
+    overflow: auto;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.loginform input {
+
+.RegisterModalform-content{
+    position: relative;
+    background-color: #fff;
+    width: 25%;
+    max-height: 90%;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 20px rgb(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+
+.registerform input {
     width: 100%;
     height: 40px;
     margin-bottom: 25px;
@@ -22,19 +37,15 @@
 }
 
 
-.showLoginform {
-    top: 50%;
-}
-
-.loginform span {
+#crossbtnforRegister {
     position: absolute;
     right: 0px;
-    width: 130px;
-    height: 100px;
+    width: 100px;
+    height: 150px;
     color: #ff3399;
     top: 0px;
     text-align: center;
-    line-height: 80px;
+    line-height: 110px;
     cursor: pointer;
     font-size: 45px;
     font-weight: 900;
@@ -42,7 +53,7 @@
 }
 
 
-.loginform h1 {
+.registerform h1 {
     width: 60%;
     text-align: center;
     margin: auto;
@@ -51,13 +62,12 @@
 }
  
 
-.loginform label {
+.registerform label {
     padding-left: 5px;
-    /* margin-bottom: 50px; */
 
 }
 
-#login_btn {
+#submit_btn {
     width: 102%;
     height: 40px;
     background-color: #ff3399;
@@ -65,11 +75,14 @@
     color: white;
     font-weight: 600;
     font-size: 18px;
-    /* margin-bottom: 50px; */
     margin-bottom: 25px;
     margin-top: 10px;
 }
 
-#login_btn:hover {
+#submit_btn:hover {
     cursor: pointer;
 }
+
+
+
+

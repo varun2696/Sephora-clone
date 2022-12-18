@@ -14,6 +14,7 @@
 //  }
 
 
+
  const signout = document.getElementById('signout');
  signout.addEventListener('click', () => {
      if (userName !== "LogIn") {
