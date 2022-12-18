@@ -5,7 +5,7 @@
  section {
    height: 100%;
    width: 100%;
-   background: white;
+   background: rgb(255, 255, 255);
  }
  button {
    font-size: 18px;
@@ -13,12 +13,12 @@
    color: #fff;
    padding: 14px 22px;
    border: none;
-   background: #40f44c;
+   background: #7ee685;
    border-radius: 6px;
    cursor: pointer;
  }
  button:hover {
-   background-color: #26f22d;
+   background-color: #6af226;
  }
   
  .modal-box {
@@ -40,7 +40,7 @@
    pointer-events: none;
  }
  section.active .overlay {
-   opacity: 1;
+   opacity: 6;
    pointer-events: auto;
  }
  .modal-box {

@@ -1,7 +1,13 @@
 #products-container {
     display: flex;
     margin-top: 20px;
+    width:auto;
 }
+
+#sticky {
+    position: fixed;
+    width: 100%;
+  }
 
 label {
     font-weight: bold;
@@ -48,7 +54,7 @@ input {
 }
 
 .container>div>img {
-    width: 70%;
+    width: 50%;
     height: 55%;
 }
 
@@ -57,7 +63,7 @@ input {
     border-radius: 10px;
     text-align: center;
     font-size: 20px;
-    height: auto;
+    height: 100%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
@@ -129,7 +135,7 @@ input {
 @media all and (min-width:200px) and (max-width:700px) {
     #products-container {
         flex-direction: column;
-        width:auto;
+        width:100% ;
     }
 
     .container {
@@ -160,4 +166,4 @@ input {
         font-size: 25px;
     }
 }
-
+ 
