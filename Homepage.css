@@ -497,6 +497,9 @@ text-align: center;
     text-align: center;
  
   }
+  .TomFord>div>img:hover{
+    cursor:pointer;
+  }
   #JustLand{
     height: 90px;
     width: 90%;
@@ -768,6 +771,9 @@ text-align: center;
 #BlockContainer>div>img{
     height: 250px;
     width: 395px;
+}
+#BlockContainer>div>img:hover{
+  cursor:pointer;
 }
 
 #C4RADiary{
