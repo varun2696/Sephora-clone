@@ -313,20 +313,36 @@ body{
 }
 
 #webName p{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 20px;
     margin: 2px;
 }
 #productlist{
-
+  /* border: 2px solid black; */
     height: 105px;
     position: relative;
-}
+    display: flex;
+    justify-content: space-evenly;
+    width: 99%;
+    margin-right: 100px;
+    margin-left: 1px;
+  }
 .Main{
-
+  /* border: 2px solid black; */
     padding-left: 0px;
     padding-top: 0px;
     margin-top: 0px;
+    width: 4000px;
+    margin-right: 90px;
+    margin-left: 5px;
+}
+#brand{
+  /* border: 1px solid black; */
+  margin-left: 40px;
+}
+#sale{
+  /* border: 1px solid black; */
+  margin-left: 60px;
 }
 #productlist a{
 background: white;
@@ -362,14 +378,12 @@ text-align: center;
 
 }
 .submenu li{
-  
     display: none;
     position: absolute;
     top: 0px;
     height: 100px;
 }
 .submenu{
-  
     display: flex;
     flex-direction: column;
     position: absolute;
