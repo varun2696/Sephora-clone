@@ -1,23 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="Homepage.css" />
     <!-- <link rel="stylesheet" type="text/css" href="navbarfooter.css" /> -->
-    
-    <title>HomePage</title>
-    
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>HomePage</title>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-    
-    
+
+
+    <!-- this is for login and register css -->
+    <link rel="stylesheet" href="./LoginStyle/login.css">
+    <link rel="stylesheet" href="./LoginStyle/register.css">
+    <!-- ******  end  **** -->
+
 </head>
+
 <body>
 
-                  <!-- Navbar -->
+          <!-- Login MODAL latest -->
+    <div class="loginModal">
+        <div class="login-content">
+            <div class="loginform">
+                <span id="loginCrossbtn">&times;</span>
+                <h1>LOGIN</h1>
+                <label for="">Enter your Username</label><br>
+                <input type="text" placeholder="username" id="UserName"> <br>
+                <label for="">Enter your Password</label><br>
+                <input type="password" placeholder="password" id="PassWord"><br>
+                <button id="login_btn">CONTINUE</button>
+            </div>
+        </div>
+    </div>
+    
+                <!-- login END -->
+
+
+
+            <!-- Register Modal latest -->
+
+<div class="RegisterModalform">
+    <div class="RegisterModalform-content">
+        <div class="registerform">
+            <span id="crossbtnforRegister">&times;</span>
+            <h1>CREATE ACCOUNT</h1>
+            <label for="">Username</label><br>
+            <input type="text" placeholder="Enter a username" id="username"><br>
+            <label for="">Email Address</label><br>
+            <input type="email" placeholder="Enter your email" id="email"><br>
+            <label for="">Password</label><br>
+            <input type="password" placeholder="Password" id="password"><br>
+            <label for="">Phone Number</label><br>
+            <input type="number" placeholder="Phone Number" id="mobileNo"><br>
+            <button id="submit_btn">CONTINUE</button>
+        </div>
+    </div>
+</div>
+
+                    <!-- Register Modal END --> 
+
+
+
+<!-- This is for alert messages -->
+<div class="PopPupMessage">
+    <div class="message">
+        <span class="modal-close">&times;</span>
+        <p id="alertMessage"></p>
+    </div>
+</div>
+     <!--  END   -->
+
+
+
+
+    <!-- Navbar -->
     <div class="topNav">
         <div id="Image">
             <a href="">
@@ -26,7 +89,8 @@
         </div>
         <div id="slash"></div>
         <div id="StoreLocator">
-            <img src="https://cdn1.vectorstock.com/i/thumb-large/66/20/map-pointer-location-icon-pink-pin-on-white-vector-21806620.jpg" alt="">
+            <img src="https://cdn1.vectorstock.com/i/thumb-large/66/20/map-pointer-location-icon-pink-pin-on-white-vector-21806620.jpg"
+                alt="">
             <p>Store Locator</p>
         </div>
 
@@ -37,12 +101,12 @@
         </div>
         <div id="coupon">
             <p>Get 10% OFF on your first purchase.<br>Use Code: BEAUTY10</p>
-        </div>   
+        </div>
         <div id="star">
             <i class="fas fa-star fa-xs" id="str1"></i>
             <i class="fas fa-star fa-xs" id="str2"></i>
             <i class="fas fa-star fa-xs" id="str3"></i>
-        </div> 
+        </div>
         <div id="GetApp">
             <img src="https://th.bing.com/th/id/OIP.M4D-XaQiJ-Z5rygt_UfNKQAAAA?pid=ImgDet&rs=1" alt="">
             <p>Get App</p>
@@ -62,8 +126,8 @@
                 <a href="product1.html">
                     <i class="fas fa-search fa-xs" id="searchbaricon"></i>
                 </a>
-              
-                <input  placeholder="Search C4RA">
+
+                <input placeholder="Search C4RA">
             </div>
             <div id="BrandName">
                 <h4>C&nbsp;4&nbsp;R&nbsp;A</h4>
@@ -77,18 +141,18 @@
                 </a>
 
                 <div class="dropdown">
-                    <button class="dropbtn"><a href="login.html">
-                      <i class="fas fa-user fa-xs" id="loginName">&nbsp;&nbsp;LogIn </i>
-                      </a>
+                    <button class="dropbtn"><a href="#">
+                            <i class="fas fa-user fa-xs" id="loginName">&nbsp;&nbsp;&nbsp;&nbsp;LogIn </i>
+                        </a>
                     </button>
                     <div class="dropdown-content">
-                      <a href="#">My Account</a>
-                      <a href="#">My Orders</a>
-                      <a href="#" id="signout">SignOut</a>
+                        <a id="registerbtn" href="#">Register</a>
+                        <a href="#">My Orders</a>
+                        <a href="#" id="signout">SignOut</a>
                     </div>
-                  </div> 
-                
-                
+                </div>
+
+
             </div>
 
         </div>
@@ -98,12 +162,12 @@
         <div id="productlist">
             <ul class="Main">
                 <li>
-                    <a href="#" id="sale">SALE</a>
+                    <a href="#">SALE</a>
                 </li>
                 <li>
                     <a href="product1.html">MAKEUP
                     </a>
-                    
+
                     <ul class="submenu">
                         <li>
                             <a href="#">FACE
@@ -247,16 +311,16 @@
                     <a href="#">TOOLS & BRUSHES</a>
                 </li>
                 <li>
-                    <a href="#" id="brand">BRANDS</a>
+                    <a href="#">BRANDS</a>
                 </li>
             </ul>
         </div>
     </div>
 
-      <!-- End of the Navbar -->
+    <!-- End of the Navbar -->
 
 
-                <!-- *************************************************************************************   -->
+    <!-- *************************************************************************************   -->
 
 
 
@@ -273,7 +337,8 @@
         <h2>#&nbsp;C4RA Brand Of The Week</h2>
     </div>
     <div id="tomimg">
-        <img src="https://logan.nnnow.com/content/dam/nnnow-project/12-dec-2022/se/TomFord_BOTWstrip_Desktop.jpg" alt="">
+        <img src="https://logan.nnnow.com/content/dam/nnnow-project/12-dec-2022/se/TomFord_BOTWstrip_Desktop.jpg"
+            alt="">
     </div>
     <div class="TomFord">
     </div>
@@ -287,100 +352,117 @@
         <div id="slid">
             <div class="slider">
                 <div class="slide_viewer">
-                  <div class="slide_group">
-                    <div class="slide">
-                      <img src="https://cdn01.nnnow.com/web-images/medium/styles/G2435F9QRSJ/1670846318656/1.jpg",alt="">
-                      <p>SHISEIDO</p>
-                      <p>Power Infusing Concentrate Serum</p>
-                      <p>Price: ₹9000</p>
+                    <div class="slide_group">
+                        <div class="slide">
+                            <img src="https://cdn01.nnnow.com/web-images/medium/styles/G2435F9QRSJ/1670846318656/1.jpg"
+                                ,alt="">
+                            <p>SHISEIDO</p>
+                            <p>Power Infusing Concentrate Serum</p>
+                            <p>Price: ₹9000</p>
 
-                    </div>
-                    <div class="slide">
-                      <img src="https://cdn04.nnnow.com/web-images/medium/styles/VVGNMVPMYCF/1670484145775/1.jpg">
-                      <p>SHISEIDO</p>
-                      <P>Benefiance Wrinkle Smoothing <br>Contour Serum</P>
-                      <p>Price: ₹6800</p>
-            
-                    </div>
-                    <div class="slide">
-                      <img src="https://cdn02.nnnow.com/web-images/medium/styles/WD8IMW9TIRA/1670406434967/1.jpg" alt="">
-                      <p>HUGO BOSS</p>
-                      <P>Hugo Man Eau De Toilette</P>
-                      <p>Price: ₹7750</p>
-                    </div>
-                    <div class="slide">
-                      <img src="https://cdn14.nnnow.com/web-images/medium/styles/MJZKQ7NSJGU/1670406435052/1.jpg" alt="">
-                      <p>HUGO BOSS</p>
-                      <p>Hugo Man Deodorant Spray</p>
-                      <p>Price: ₹1850</p>
-                    </div>
+                        </div>
+                        <div class="slide">
+                            <img src="https://cdn04.nnnow.com/web-images/medium/styles/VVGNMVPMYCF/1670484145775/1.jpg">
+                            <p>SHISEIDO</p>
+                            <P>Benefiance Wrinkle Smoothing <br>Contour Serum</P>
+                            <p>Price: ₹6800</p>
 
-                    <div class="slide">
-                        <img src="https://cdn17.nnnow.com/web-images/medium/styles/Q97NSZ832N2/1669710810036/1.jpg" alt="">
-                        <p>C4RA COLLECTION”</p>
-                        <p>Wishing You 16 Eyeshadow <br>Palette (Limited Edition)</p>
-                        <p>Price: ₹3100</p>
-                      </div>
-                      <div class="slide">
-                        <img src="https://cdn03.nnnow.com/web-images/medium/styles/U6W83XZQPM9/1667541260140/1.jpg" alt="">
-                        <p>MOROCCAN OIL</p>
-                        <p>Shower Gel Oud Mineral”</p>
-                        <p>Price: ₹1650</p>
-                      </div>
-                      <div class="slide">
-                        <img src="https://cdn17.nnnow.com/web-images/medium/styles/OD3F9CEPVXG/1667889799278/1.jpg" alt="">
-                        <p>MOROCCAN OIL</p>
-                        <p>Pure Argan Oil</p>
-                        <p>Price: ₹6120</p>
-                      </div>
-                  </div>
+                        </div>
+                        <div class="slide">
+                            <img src="https://cdn02.nnnow.com/web-images/medium/styles/WD8IMW9TIRA/1670406434967/1.jpg"
+                                alt="">
+                            <p>HUGO BOSS</p>
+                            <P>Hugo Man Eau De Toilette</P>
+                            <p>Price: ₹7750</p>
+                        </div>
+                        <div class="slide">
+                            <img src="https://cdn14.nnnow.com/web-images/medium/styles/MJZKQ7NSJGU/1670406435052/1.jpg"
+                                alt="">
+                            <p>HUGO BOSS</p>
+                            <p>Hugo Man Deodorant Spray</p>
+                            <p>Price: ₹1850</p>
+                        </div>
+
+                        <div class="slide">
+                            <img src="https://cdn17.nnnow.com/web-images/medium/styles/Q97NSZ832N2/1669710810036/1.jpg"
+                                alt="">
+                            <p>C4RA COLLECTION”</p>
+                            <p>Wishing You 16 Eyeshadow <br>Palette (Limited Edition)</p>
+                            <p>Price: ₹3100</p>
+                        </div>
+                        <div class="slide">
+                            <img src="https://cdn03.nnnow.com/web-images/medium/styles/U6W83XZQPM9/1667541260140/1.jpg"
+                                alt="">
+                            <p>MOROCCAN OIL</p>
+                            <p>Shower Gel Oud Mineral”</p>
+                            <p>Price: ₹1650</p>
+                        </div>
+                        <div class="slide">
+                            <img src="https://cdn17.nnnow.com/web-images/medium/styles/OD3F9CEPVXG/1667889799278/1.jpg"
+                                alt="">
+                            <p>MOROCCAN OIL</p>
+                            <p>Pure Argan Oil</p>
+                            <p>Price: ₹6120</p>
+                        </div>
+                    </div>
                 </div>
-              </div><!-- End // .slider -->
-              
-              <div class="slide_buttons">
-              </div>
-              
-              <div class="directional_nav">
+            </div><!-- End // .slider -->
+
+            <div class="slide_buttons">
+            </div>
+
+            <div class="directional_nav">
                 <div class="previous_btn" title="Previous">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
-                    <g>
-                      <g>
-                        <path fill="red" d="M-10.5,22.118C-10.5,4.132,4.133-10.5,22.118-10.5S54.736,4.132,54.736,22.118
-                    c0,17.985-14.633,32.618-32.618,32.618S-10.5,40.103-10.5,22.118z M-8.288,22.118c0,16.766,13.639,30.406,30.406,30.406 c16.765,0,30.405-13.641,30.405-30.406c0-16.766-13.641-30.406-30.405-30.406C5.35-8.288-8.288,5.352-8.288,22.118z"/>
-                        <path fill="red" d="M25.43,33.243L14.628,22.429c-0.433-0.432-0.433-1.132,0-1.564L25.43,10.051c0.432-0.432,1.132-0.432,1.563,0	c0.431,0.431,0.431,1.132,0,1.564L16.972,21.647l10.021,10.035c0.432,0.433,0.432,1.134,0,1.564	c-0.215,0.218-0.498,0.323-0.78,0.323C25.929,33.569,25.646,33.464,25.43,33.243z"/>
-                      </g>
-                    </g>
-                  </svg>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
+                        <g>
+                            <g>
+                                <path fill="red"
+                                    d="M-10.5,22.118C-10.5,4.132,4.133-10.5,22.118-10.5S54.736,4.132,54.736,22.118
+                    c0,17.985-14.633,32.618-32.618,32.618S-10.5,40.103-10.5,22.118z M-8.288,22.118c0,16.766,13.639,30.406,30.406,30.406 c16.765,0,30.405-13.641,30.405-30.406c0-16.766-13.641-30.406-30.405-30.406C5.35-8.288-8.288,5.352-8.288,22.118z" />
+                                <path fill="red"
+                                    d="M25.43,33.243L14.628,22.429c-0.433-0.432-0.433-1.132,0-1.564L25.43,10.051c0.432-0.432,1.132-0.432,1.563,0	c0.431,0.431,0.431,1.132,0,1.564L16.972,21.647l10.021,10.035c0.432,0.433,0.432,1.134,0,1.564	c-0.215,0.218-0.498,0.323-0.78,0.323C25.929,33.569,25.646,33.464,25.43,33.243z" />
+                            </g>
+                        </g>
+                    </svg>
                 </div>
                 <div class="next_btn" title="Next">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
-                    <g>
-                      <g>
-                        <path fill="red" d="M22.118,54.736C4.132,54.736-10.5,40.103-10.5,22.118C-10.5,4.132,4.132-10.5,22.118-10.5	c17.985,0,32.618,14.632,32.618,32.618C54.736,40.103,40.103,54.736,22.118,54.736z M22.118-8.288	c-16.765,0-30.406,13.64-30.406,30.406c0,16.766,13.641,30.406,30.406,30.406c16.768,0,30.406-13.641,30.406-30.406 C52.524,5.352,38.885-8.288,22.118-8.288z"/>
-                        <path fill="red" d="M18.022,33.569c 0.282,0-0.566-0.105-0.781-0.323c-0.432-0.431-0.432-1.132,0-1.564l10.022-10.035 			L17.241,11.615c 0.431-0.432-0.431-1.133,0-1.564c0.432-0.432,1.132-0.432,1.564,0l10.803,10.814c0.433,0.432,0.433,1.132,0,1.564 L18.805,33.243C18.59,33.464,18.306,33.569,18.022,33.569z"/>
-                      </g>
-                    </g>
-                  </svg>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
+                        <g>
+                            <g>
+                                <path fill="red"
+                                    d="M22.118,54.736C4.132,54.736-10.5,40.103-10.5,22.118C-10.5,4.132,4.132-10.5,22.118-10.5	c17.985,0,32.618,14.632,32.618,32.618C54.736,40.103,40.103,54.736,22.118,54.736z M22.118-8.288	c-16.765,0-30.406,13.64-30.406,30.406c0,16.766,13.641,30.406,30.406,30.406c16.768,0,30.406-13.641,30.406-30.406 C52.524,5.352,38.885-8.288,22.118-8.288z" />
+                                <path fill="red"
+                                    d="M18.022,33.569c 0.282,0-0.566-0.105-0.781-0.323c-0.432-0.431-0.432-1.132,0-1.564l10.022-10.035 			L17.241,11.615c 0.431-0.432-0.431-1.133,0-1.564c0.432-0.432,1.132-0.432,1.564,0l10.803,10.814c0.433,0.432,0.433,1.132,0,1.564 L18.805,33.243C18.59,33.464,18.306,33.569,18.022,33.569z" />
+                            </g>
+                        </g>
+                    </svg>
                 </div>
-              </div><!-- End // .directional_nav -->
+            </div><!-- End // .directional_nav -->
         </div>
+        <!-- #474544 -->
         <div id="Videop">
-        
-            <iframe id="playvideo"
-            width="560" height="300" src="https://www.youtube.com/embed/E-GhPxngXCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p>Explore MoroccanOil Body</p>
+            <!-- <video src="https://youtu.be/E-GhPxngXCg"></video> -->
+            <iframe id="playvideo" width="560" height="300" src="https://www.youtube.com/embed/E-GhPxngXCg"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <p>Explore MoroccanOil Body</p>
         </div>
     </div>
     <div class="C4RAImage">
         <img src="https://logan.nnnow.com/content/dam/nnnow-project/22-march-2022/Loyalty_Strip_Desk.jpg" alt="">
     </div>
     <div class="LazyGirl">
-        <img src="https://logan.nnnow.com/content/dam/nnnow-project/05-nov-2022/Sephora_HeaderStrip_LazyGirl'sBFFstext(1).jpg" alt="">
+        <img src="https://logan.nnnow.com/content/dam/nnnow-project/05-nov-2022/Sephora_HeaderStrip_LazyGirl'sBFFstext(1).jpg"
+            alt="">
     </div>
     <div id="LazyGirlCard">
     </div>
     <div id="favouriteBrand">
-        <img src="https://logan.nnnow.com/content/dam/nnnow-project/01-oct-2020/sephora/2OCT20_PREHEADER_4_DESK.jpg" alt="Favourite Brand">
+        <img src="https://logan.nnnow.com/content/dam/nnnow-project/01-oct-2020/sephora/2OCT20_PREHEADER_4_DESK.jpg"
+            alt="Favourite Brand">
     </div>
 
     <div class="BrandContainer">
@@ -404,20 +486,22 @@
         </div>
     </div>
     <div id="Block">
-        <img src="https://logan.nnnow.com/content/dam/nnnow-project/01-oct-2020/sephora/2OCT20_PREHEADER_5_DESK.jpg" alt="Favourite Brand">
+        <img src="https://logan.nnnow.com/content/dam/nnnow-project/01-oct-2020/sephora/2OCT20_PREHEADER_5_DESK.jpg"
+            alt="Favourite Brand">
     </div>
     <div id="BlockContainer">
-   
+        <!-- <div></div> -->
     </div>
     <div id="C4RADiary">
-        <img src="https://logan.nnnow.com/content/dam/nnnow-project/01-oct-2020/sephora/2OCT20_PREHEADER_7_DESK.jpg" alt="">
+        <img src="https://logan.nnnow.com/content/dam/nnnow-project/01-oct-2020/sephora/2OCT20_PREHEADER_7_DESK.jpg"
+            alt="">
     </div>
     <div class="C4RADiarierContainer"></div>
     <button id="btn1"><a href="#Image" id="back">^ BACK TO TOP</a></button>
     <div class="Subscribe">
         <h3>GET THE LATEST NEWS & OFFERS IN BEAUTY & FASHION</h3>
         <div id="mail">
-            <input type="text" placeholder="Enter your email address" id="inputbox"> 
+            <input type="text" placeholder="Enter your email address" id="inputbox">
             <button>SUBSCRIBE</button>
         </div>
     </div>
@@ -425,47 +509,68 @@
         <section class="footerdocs-section">
             <h1 class="footerdoc-sectiontitle">C4RA online India is a trailblazer in the Indian beauty scene</h1>
             <div class="footerdoc-sectionContent">
-                A leader in luxury beauty and skincare, our purpose at Sephora online India is to create an inviting online beauty shopping experience and inspire fearlessness in our community.
-               Since the Sephora India launch in 2013, we have been an industry-leading champion of diversity, and empowerment, guided by our longstanding company values.
-            <br>
-            <br>
-            <h2>
-                Discover who we are and what we entail only on NNNOW.com
-            </h2>
-            \nOwned by LVMH Moet Hennessy Louis Vuitton, the world's leading luxury goods group,
-            Sephora was founded in France by Dominique Mandonnaud in 1970 and is defined by its unique, open-sell environment with an ever-increasing assortment of best-selling lipsticks, eyeliners, foundations, eye palettes and more from carefully curated brands such as Make Up For Ever, Estee Lauder, Benefit Cosmetics, Huda Beauty and many more.
-            <br>
-            <br>
-            <h2>Shop Our unrivalled range of Sephora products for a more beautiful you</h2>    
-             \nOur array on Sephora NNNOW features trusted classics from Pixi, Elizabeth Arden, Anastasia Beverly Hills, Clinique, Tom Ford, and Sephora’s own, SEPHORA COLLECTION. Today, Sephora India online is a powerful beauty presence in the digital space, thanks to its unparalleled assortment of prestige 
-             products in every category, unbiased service from beauty experts, interactive shopping environment, and innovation.
-             <br>
-             <br>
-             Through some of our bestsellers such as Sephora lipsticks, Sephora foundations, and other Sephora products, we explore the universe of beauty and wellness with an unbiased approach to experiential retail. We also host expert tutorial videos from our top brands to help you nail the perfect smokey eye or winged eyeliner. Our team of experts in-store also works hard to assure you have a seamless shopping experience with us and helps you define your skin undertones while purchasing the right sephora foundation for you. Sephora continues to give back to communities and advance inclusion in the beauty industry by providing an unrivaled r
-             ange of shades for Sephora foundations at unbeatable prices.
-             <br>
-             <br>
-             Sephora in India also encompasses a formidable range of skincare, bath and body products, haircare, fragrances and perfumes from international brands. Many of our brands such as 
-             Botanist and Forest Essentials boast of incorporating only natural ingredients in their products, whereas award-winning such as Natasha Denona, Nudestix, Kora Organics, Aveda, Olaplex, and more 
-             promise only SLS/Paraben-free formulas in their range of products. Be sure to also check out our range of cruelty-free brands that include best-selling brands such as Caudalie, 
-             Smashbox, Dear Dahlia, Juice Beauty and much more.Sephora online hosts the entire range of makeup and skin products available in Sephora stores in India. Buy Sephora online on 
-             NNNOW and be the first to be alerted when we have a major Sephora India sale event coming up!
-            <br>
-            <br>
-            Start your Sephora India online shopping on NNNOW.com
-            <br>
-            <br>
-            Women can now shop their favorite luxury beauty brands on the Sephora site or via the NNNOW mobile app. Be spoilt for choice with a wide variety of makeup, skincare, haircare, 
-             bath and body and fragrances that you can shop from the comfort of your home.Discover online shopping that offers advantages 
-             such as Gift With Purchase, freebie sachets, and discount offers on beauty! Buy Sephora online at amazing deals and prices at the click of a button.
+                A leader in luxury beauty and skincare, our purpose at Sephora online India is to create an inviting
+                online beauty shopping experience and inspire fearlessness in our community.
+                Since the Sephora India launch in 2013, we have been an industry-leading champion of diversity, and
+                empowerment, guided by our longstanding company values.
+                <br>
+                <br>
+                <h2>
+                    Discover who we are and what we entail only on NNNOW.com
+                </h2>
+                \nOwned by LVMH Moet Hennessy Louis Vuitton, the world's leading luxury goods group,
+                Sephora was founded in France by Dominique Mandonnaud in 1970 and is defined by its unique, open-sell
+                environment with an ever-increasing assortment of best-selling lipsticks, eyeliners, foundations, eye
+                palettes and more from carefully curated brands such as Make Up For Ever, Estee Lauder, Benefit
+                Cosmetics, Huda Beauty and many more.
+                <br>
+                <br>
+                <h2>Shop Our unrivalled range of Sephora products for a more beautiful you</h2>
+                \nOur array on Sephora NNNOW features trusted classics from Pixi, Elizabeth Arden, Anastasia Beverly
+                Hills, Clinique, Tom Ford, and Sephora’s own, SEPHORA COLLECTION. Today, Sephora India online is a
+                powerful beauty presence in the digital space, thanks to its unparalleled assortment of prestige
+                products in every category, unbiased service from beauty experts, interactive shopping environment, and
+                innovation.
+                <br>
+                <br>
+                Through some of our bestsellers such as Sephora lipsticks, Sephora foundations, and other Sephora
+                products, we explore the universe of beauty and wellness with an unbiased approach to experiential
+                retail. We also host expert tutorial videos from our top brands to help you nail the perfect smokey eye
+                or winged eyeliner. Our team of experts in-store also works hard to assure you have a seamless shopping
+                experience with us and helps you define your skin undertones while purchasing the right sephora
+                foundation for you. Sephora continues to give back to communities and advance inclusion in the beauty
+                industry by providing an unrivaled r
+                ange of shades for Sephora foundations at unbeatable prices.
+                <br>
+                <br>
+                Sephora in India also encompasses a formidable range of skincare, bath and body products, haircare,
+                fragrances and perfumes from international brands. Many of our brands such as
+                Botanist and Forest Essentials boast of incorporating only natural ingredients in their products,
+                whereas award-winning such as Natasha Denona, Nudestix, Kora Organics, Aveda, Olaplex, and more
+                promise only SLS/Paraben-free formulas in their range of products. Be sure to also check out our range
+                of cruelty-free brands that include best-selling brands such as Caudalie,
+                Smashbox, Dear Dahlia, Juice Beauty and much more.Sephora online hosts the entire range of makeup and
+                skin products available in Sephora stores in India. Buy Sephora online on
+                NNNOW and be the first to be alerted when we have a major Sephora India sale event coming up!
+                <br>
+                <br>
+                Start your Sephora India online shopping on NNNOW.com
+                <br>
+                <br>
+                Women can now shop their favorite luxury beauty brands on the Sephora site or via the NNNOW mobile app.
+                Be spoilt for choice with a wide variety of makeup, skincare, haircare,
+                bath and body and fragrances that you can shop from the comfort of your home.Discover online shopping
+                that offers advantages
+                such as Gift With Purchase, freebie sachets, and discount offers on beauty! Buy Sephora online at
+                amazing deals and prices at the click of a button.
             </div>
         </section>
     </div>
 
     <div class="footerNavContainer">
         <a target="_blank" href="" id="footerNavlinks">WHO WE ARE</a>
-        <a target="_blank"  href=""  id="footerNavlinks"> FREQUENTLY ASKED QUESTION</a>
-        <a target="_blank"  href=""  id="footerNavlinks"> CONTACT US</a>
+        <a target="_blank" href="" id="footerNavlinks"> FREQUENTLY ASKED QUESTION</a>
+        <a target="_blank" href="" id="footerNavlinks"> CONTACT US</a>
     </div>
 
     <div class="socialmediacontainer">
@@ -497,13 +602,16 @@
             <div id="footerlinkstitle">BRANDS</div>
             <div class="footerlinkscontent">
                 <span class="footerlinkscontent">
-                    <a class="footerlinkscontent-link" target="_blank" alt="Sephora Collection" href="">Sephora Collection</a>&nbsp;|
+                    <a class="footerlinkscontent-link" target="_blank" alt="Sephora Collection" href="">Sephora
+                        Collection</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
-                    <a class="footerlinkscontent-link" target="_blank" alt="Benefit Cosmetics" href="">Benefit Cosmetics</a>&nbsp;|
+                    <a class="footerlinkscontent-link" target="_blank" alt="Benefit Cosmetics" href="">Benefit
+                        Cosmetics</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
-                    <a class="footerlinkscontent-link" target="_blank" alt="Make Up For Ever" href="">Make Up For Ever</a>&nbsp;|
+                    <a class="footerlinkscontent-link" target="_blank" alt="Make Up For Ever" href="">Make Up For
+                        Ever</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
                     <a class="footerlinkscontent-link" target="_blank" alt="Cover FX" href="">Cover FX</a>&nbsp;|
@@ -530,10 +638,12 @@
                     <a class="footerlinkscontent-link" target="_blank" alt="Clinique" href="">Clinique</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
-                    <a class="footerlinkscontent-link" target="_blank" alt="Estee Lauder" href="">Estee Lauder</a>&nbsp;|
+                    <a class="footerlinkscontent-link" target="_blank" alt="Estee Lauder" href="">Estee
+                        Lauder</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
-                    <a class="footerlinkscontent-link" target="_blank" alt="Elizabeth Arden" href="">Elizabeth Arden</a>&nbsp;|
+                    <a class="footerlinkscontent-link" target="_blank" alt="Elizabeth Arden" href="">Elizabeth
+                        Arden</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
                     <a class="footerlinkscontent-link" target="_blank" alt="Givenchy" href="">Givenchy</a>&nbsp;|
@@ -548,22 +658,26 @@
                     <a class="footerlinkscontent-link" target="_blank" alt="OPI" href="">OPI</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
-                    <a class="footerlinkscontent-link" target="_blank" alt="Forest Essentials" href="">Forest Essentials</a>&nbsp;|
+                    <a class="footerlinkscontent-link" target="_blank" alt="Forest Essentials" href="">Forest
+                        Essentials</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
-                    <a class="footerlinkscontent-link" target="_blank" alt="Percy &amp; Reed" href="">Percy &amp; Reed</a>&nbsp;|
+                    <a class="footerlinkscontent-link" target="_blank" alt="Percy &amp; Reed" href="">Percy &amp;
+                        Reed</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
                     <a class="footerlinkscontent-link" target="_blank" alt="Boscia" href="">Boscia</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
-                    <a class="footerlinkscontent-link" target="_blank" alt="Oscar Blandi" href="">Oscar Blandi</a>&nbsp;|
+                    <a class="footerlinkscontent-link" target="_blank" alt="Oscar Blandi" href="">Oscar
+                        Blandi</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
                     <a class="footerlinkscontent-link" target="_blank" alt="Burberry" href="">Burberry</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
-                    <a class="footerlinkscontent-link" target="_blank" alt="CK Fragrances" href="">CK Fragrances</a>&nbsp;|
+                    <a class="footerlinkscontent-link" target="_blank" alt="CK Fragrances" href="">CK
+                        Fragrances</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
                     <a class="footerlinkscontent-link" target="_blank" alt="Kenzo" href="">Kenzo</a>&nbsp;|
@@ -575,22 +689,26 @@
                     <a class="footerlinkscontent-link" target="_blank" alt="Bvlgari" href="">Bvlgari</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
-                    <a class="footerlinkscontent-link" target="_blank" alt="Carolina Herrera" href="">Carolina Herrera</a>&nbsp;|
+                    <a class="footerlinkscontent-link" target="_blank" alt="Carolina Herrera" href="">Carolina
+                        Herrera</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
                     <a class="footerlinkscontent-link" target="_blank" alt="Davidoff" href="">Davidoff</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
-                    <a class="footerlinkscontent-link" target="_blank" alt="Giorgio Armani" href="">Giorgio Armani</a>&nbsp;|
+                    <a class="footerlinkscontent-link" target="_blank" alt="Giorgio Armani" href="">Giorgio
+                        Armani</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
                     <a class="footerlinkscontent-link" target="_blank" alt="Montblanc" href="">Montblanc</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
-                    <a class="footerlinkscontent-link" target="_blank" alt="Paco Rabanne" href="">Paco Rabanne</a>&nbsp;|
+                    <a class="footerlinkscontent-link" target="_blank" alt="Paco Rabanne" href="">Paco
+                        Rabanne</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
-                    <a class="footerlinkscontent-link" target="_blank" alt="Yves Saint Laurent" href="">Yves Saint Laurent</a>&nbsp;|
+                    <a class="footerlinkscontent-link" target="_blank" alt="Yves Saint Laurent" href="">Yves Saint
+                        Laurent</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
                     <a class="footerlinkscontent-link" target="_blank" alt="Azzaro" href="">Azzaro</a>&nbsp;|
@@ -599,7 +717,8 @@
                     <a class="footerlinkscontent-link" target="_blank" alt="Nina Ricci" href="">Nina Ricci</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
-                    <a class="footerlinkscontent-link" target="_blank" alt="Roberto Cavalli" href="">Roberto Cavalli</a>&nbsp;|
+                    <a class="footerlinkscontent-link" target="_blank" alt="Roberto Cavalli" href="">Roberto
+                        Cavalli</a>&nbsp;|
                 </span>
                 <span class="footerlinkscontent">
                     <a class="footerlinkscontent-link" target="_blank" alt="Zirh" href="">Zirh</a>&nbsp;|
@@ -610,102 +729,118 @@
             </div>
         </div>
         <div id="footerlinks">
-                <div id="footerlinkstitle">MAKEUP</div>
-                <div class="footerlinkscontent">
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Face" href="">Face</a>&nbsp;|
-                    </span>
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Cheek" href="">Cheek</a>&nbsp;|
-                    </span>
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Eye" href="">Eye</a>&nbsp;|
-                    </span>
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Lip" href="">Lip</a>&nbsp;|
-                    </span>
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Nail" href="">Nail</a>&nbsp;|
-                    </span>
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Makeup Palettes" href="">Makeup Palettes</a>&nbsp;|
-                    </span>
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Accessories" href="">Accessories</a>&nbsp;
-                    </span>
-                </div>
-
+            <div id="footerlinkstitle">MAKEUP</div>
+            <div class="footerlinkscontent">
+                <span class="footerlinkscontent">
+                    <a class="footerlinkscontent-link" target="_blank" alt="Face" href="">Face</a>&nbsp;|
+                </span>
+                <span class="footerlinkscontent">
+                    <a class="footerlinkscontent-link" target="_blank" alt="Cheek" href="">Cheek</a>&nbsp;|
+                </span>
+                <span class="footerlinkscontent">
+                    <a class="footerlinkscontent-link" target="_blank" alt="Eye" href="">Eye</a>&nbsp;|
+                </span>
+                <span class="footerlinkscontent">
+                    <a class="footerlinkscontent-link" target="_blank" alt="Lip" href="">Lip</a>&nbsp;|
+                </span>
+                <span class="footerlinkscontent">
+                    <a class="footerlinkscontent-link" target="_blank" alt="Nail" href="">Nail</a>&nbsp;|
+                </span>
+                <span class="footerlinkscontent">
+                    <a class="footerlinkscontent-link" target="_blank" alt="Makeup Palettes" href="">Makeup
+                        Palettes</a>&nbsp;|
+                </span>
+                <span class="footerlinkscontent">
+                    <a class="footerlinkscontent-link" target="_blank" alt="Accessories" href="">Accessories</a>&nbsp;
+                </span>
             </div>
-        </div>
-        <div id="footerlinks">
-            <div id="footerlinkstitle">SKIN CARE</div>
-                <div class="footerlinkscontent">
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Moisturizers" href="">Moisturizers</a>&nbsp;|
-                    </span>
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Cleansers" href="">Cleansers</a>&nbsp;|
-                    </span>
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Treatments" href="">Treatments</a>&nbsp;|
-                    </span>
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Masks" href="">Masks</a>&nbsp;|
-                    </span>
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Eye Care" href="">Eye Care</a>&nbsp;|
-                    </span>
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Sun Care" href="">Sun Care</a>&nbsp;|
-                    </span>
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Lip Treatments" href="">Lip Treatments</a>
-                    </span>
-                </div>
-        </div>
-        <div id="footerlinks">
-            <div id="footerlinkstitle">OTHER CATEGORIES</div>
-                <div class="footerlinkscontent">
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Fragrances" href="">Fragrances</a>&nbsp;|
-                    </span>
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Tools &amp; Brushes" href="">Tools &amp; Brushes</a>
-                    </span>
-                </div>
-        </div>
-        <div id="footerlinks">
-            <div id="footerlinkstitle">MY C4RA</div>
-                <div class="footerlinkscontent">
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="My orders" href="">My orders</a>&nbsp;|
-                    </span>
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Store locator" href="">Store locator</a>&nbsp;|
-                    </span>
-                    <span class="footerlinkscontent">
-                        <a class="footerlinkscontent-link" target="_blank" alt="Sephora Facebook" href="">Sephora Facebook</a>
-                    </span>
-                </div>
 
         </div>
-    
+    </div>
+    <div id="footerlinks">
+        <div id="footerlinkstitle">SKIN CARE</div>
+        <div class="footerlinkscontent">
+            <span class="footerlinkscontent">
+                <a class="footerlinkscontent-link" target="_blank" alt="Moisturizers" href="">Moisturizers</a>&nbsp;|
+            </span>
+            <span class="footerlinkscontent">
+                <a class="footerlinkscontent-link" target="_blank" alt="Cleansers" href="">Cleansers</a>&nbsp;|
+            </span>
+            <span class="footerlinkscontent">
+                <a class="footerlinkscontent-link" target="_blank" alt="Treatments" href="">Treatments</a>&nbsp;|
+            </span>
+            <span class="footerlinkscontent">
+                <a class="footerlinkscontent-link" target="_blank" alt="Masks" href="">Masks</a>&nbsp;|
+            </span>
+            <span class="footerlinkscontent">
+                <a class="footerlinkscontent-link" target="_blank" alt="Eye Care" href="">Eye Care</a>&nbsp;|
+            </span>
+            <span class="footerlinkscontent">
+                <a class="footerlinkscontent-link" target="_blank" alt="Sun Care" href="">Sun Care</a>&nbsp;|
+            </span>
+            <span class="footerlinkscontent">
+                <a class="footerlinkscontent-link" target="_blank" alt="Lip Treatments" href="">Lip Treatments</a>
+            </span>
+        </div>
+    </div>
+    <div id="footerlinks">
+        <div id="footerlinkstitle">OTHER CATEGORIES</div>
+        <div class="footerlinkscontent">
+            <span class="footerlinkscontent">
+                <a class="footerlinkscontent-link" target="_blank" alt="Fragrances" href="">Fragrances</a>&nbsp;|
+            </span>
+            <span class="footerlinkscontent">
+                <a class="footerlinkscontent-link" target="_blank" alt="Tools &amp; Brushes" href="">Tools &amp;
+                    Brushes</a>
+            </span>
+        </div>
+    </div>
+    <div id="footerlinks">
+        <div id="footerlinkstitle">MY C4RA</div>
+        <div class="footerlinkscontent">
+            <span class="footerlinkscontent">
+                <a class="footerlinkscontent-link" target="_blank" alt="My orders" href="">My orders</a>&nbsp;|
+            </span>
+            <span class="footerlinkscontent">
+                <a class="footerlinkscontent-link" target="_blank" alt="Store locator" href="">Store locator</a>&nbsp;|
+            </span>
+            <span class="footerlinkscontent">
+                <a class="footerlinkscontent-link" target="_blank" alt="Sephora Facebook" href="">Sephora Facebook</a>
+            </span>
+        </div>
+
+    </div>
+
     </div>
 
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </body>
+
 </html>
 
 
 
 
-
+<!-- <div id="" onclick=""></div> -->
 
 
 
 
 
 <script src="Homepage.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+
+<!-- script for login -->
+<script src="./loginScripts/login.js"></script>
+
+
+<!-- script for Register -->
+<script src="./loginScripts/register.js"></script>
+
+
