@@ -148,3 +148,8 @@ let paymentBtn = document.querySelector(".payment-btn");
 paymentBtn.addEventListener("click",()=>{
   window.location.href ="./payment.html";
 })
+
+// id2
+const userName111 = document.querySelector("#id2");
+const userNameCart1 = sessionStorage.getItem('c4raUser') || "LogIn";
+userName111.innerHTML = ' ' + userNameCart1;

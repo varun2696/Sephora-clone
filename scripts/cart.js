@@ -563,3 +563,8 @@ localStorage.setItem("userdata",JSON.stringify(larr))
 //     console.log("checked")
 //      window.location.href= "../product1.html";
 // })
+
+
+const userName11 = document.querySelector("#userName11");
+const userNameCart = sessionStorage.getItem('c4raUser') || "LogIn";
+userName11.innerHTML = ' ' + userNameCart;
