@@ -152,4 +152,4 @@ paymentBtn.addEventListener("click",()=>{
 // id2
 const userName111 = document.querySelector("#id2");
 const userNameCart1 = sessionStorage.getItem('c4raUser') || "LogIn";
-userName111.innerHTML = ' ' + userNameCart1;
+userName111.innerHTML =  `${userNameCart1} <i class="fa-solid fa-circle-chevron-down"> `

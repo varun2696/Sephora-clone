@@ -567,4 +567,4 @@ localStorage.setItem("userdata",JSON.stringify(larr))
 
 const userName11 = document.querySelector("#userName11");
 const userNameCart = sessionStorage.getItem('c4raUser') || "LogIn";
-userName11.innerHTML = ' ' + userNameCart;
+userName11.innerHTML = `${userNameCart} <i class="fa-solid fa-circle-chevron-down"> `;
