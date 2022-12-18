@@ -401,7 +401,7 @@ background-color: #fff;
 
   #promo{
     width: 100%;
-    height: 100%;
+    height: ;
     background-color: #ea0020;
     display: flex;
     flex-direction: column;
@@ -417,4 +417,17 @@ background-color: #fff;
    width: 50%;
    margin-top: 10px;
    padding: 5px;
+  }
+
+  #removeBtn{
+    background-color:#fff ;
+    color: #ff3399;
+    border: 1px solid grey;
+    font-size: large;
+    margin: 10px;
+    margin-top: 15px;
+    padding: 3px;
+    
+    
+
   }
