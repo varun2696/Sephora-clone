@@ -132,7 +132,7 @@ function dropdownGender() {
 // sticky navbar Properties
 window.onscroll = function() {myFunction()};
 
-var navbar = document.getElementById("stickyNav");
+var navbar = document.querySelector(".top-nav");
 var sticky = navbar.offsetTop;
 
 function myFunction() {
