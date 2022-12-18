@@ -144,3 +144,19 @@ function myFunction() {
   }
 }
  
+///add to cart functionality
+function addToCart(item){
+  let larr = JSON.parse(localStorage.getItem("userdata"))||[];
+  
+  
+  //***************************** */
+  item["count"]=1;
+  larr.cartItems.push(item)
+  
+  console.log(JSON.stringify(larr,null,2))
+
+ //***************************** */
+
+  localStorage.setItem("userdata",JSON.stringify(larr))
+  
+}
