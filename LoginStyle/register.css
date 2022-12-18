@@ -18,9 +18,10 @@
     position: relative;
     background-color: #fff;
     width: 25%;
-    max-height: 90%;
-    margin: 2rem;
-    padding: 2rem;
+    /* max-height: 90%; */
+    height: auto;
+    margin: 0.5rem;
+    padding: 1.5rem;
     border-radius: 0.25rem;
     box-shadow: 0 4px 20px rgb(0, 0, 0, 0.5);
     overflow: auto;

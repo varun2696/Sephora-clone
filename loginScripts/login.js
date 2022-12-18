@@ -16,7 +16,7 @@ const userName = sessionStorage.getItem('c4raUser') || "LogIn";
 
 const LoginName = document.querySelector('#loginName');
 
-LoginName.innerHTML = userName;
+LoginName.innerHTML = ' ' + userName;
 
 // LoginName.addEventListener('click', ()=>{
 //     LModal_div.style.display = 'flex'
