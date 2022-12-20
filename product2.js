@@ -1,3 +1,12 @@
+ // this is for show userName in navbar and signout functionality
+
+const loginName = document.querySelector("#PUname");
+
+const PrUserName = sessionStorage.getItem('c4raUser') || "LogIn";
+
+
+loginName.innerHTML = ' ' + PrUserName;
+ 
  
  // Fetching api from the JSON Server :-
 
