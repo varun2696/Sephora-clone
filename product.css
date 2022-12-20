@@ -57,8 +57,7 @@ input {
     width: 50%;
     height: 55%;
 }
-
-
+ 
 .container>div {
     border-radius: 10px;
     text-align: center;
@@ -88,6 +87,14 @@ input {
     border: none;
     padding: 5px;
     margin: 5px 10px;
+}
+
+#PUname{
+    padding-top:20px;
+    font-weight: bolder;
+    color: rgb(236, 29, 122);
+    font-size: 19px;
+    padding-left: 40px;
 }
 
 .container>div>button:hover {
