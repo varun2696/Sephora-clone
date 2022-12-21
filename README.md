@@ -26,11 +26,10 @@ Tech stack: HTML CSS Javascript
 
 
 Challanges we faced                                                                                                                                                      
-Merging each other code on Github
-Read others code and make changes to it
-Exact pixel-perfect cloning of the website
-
-
+Merging each other code on Github                                                                                                                                        
+Read others code and make changes to it                                                                                                                                  
+Exact pixel-perfect cloning of the website                                                                                                                                                                                                                                                                                                
+ 
 
 API's      👇👇👇                                                                                                                                                      
 Users    : https://636f9027f2ed5cb047e01947.mockapi.io/reg_mail                                                                                                          
