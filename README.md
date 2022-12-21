@@ -14,10 +14,13 @@ https://timely-wisp-f8d982.netlify.app/
 
 **Contributors**
 
-Varun (Team Leader)
-Aman Kumar 
+Varun (Team Leader)                                                                                                                                                      
+Aman Kumar                                                                                                                                                            
+
 Ayushi Bajpai
+
 Anandhu 
+
 Hemensan Mahilange
 
 
