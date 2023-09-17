@@ -1,12 +1,11 @@
-# faithful-night-9583                                                                                                                                                    
+## Sephora clone                                                                                                                                              
 Clone of Sephora Website                                                                                                                                                
 Sephora Websit is a cosmetic products web application. A one week project for cloning the "https://sephora.nnnow.com" web application.                                                                                  
-
 
 Deployed link of project
 https://sephora-clone-c4ra.netlify.app/
 ---
-
+---
 ![2022-12-22](https://user-images.githubusercontent.com/106810850/208999215-29b192e9-53fb-48a4-a8aa-54192e093086.png)
 
 ---
